@@ -1,4 +1,3 @@
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'post_frontmatter.g.dart';
@@ -13,6 +12,7 @@ class PostFrontmatter {
     createdAt = DateTime.now();
   }
 
-  factory PostFrontmatter.fromJson(Map<String, dynamic> json) => _$PostFrontmatterFromJson(json);
+  factory PostFrontmatter.fromJson(Map<String, dynamic> json) =>
+      _$PostFrontmatterFromJson(json);
   Map<String, dynamic> toJson() => _$PostFrontmatterToJson(this);
 }

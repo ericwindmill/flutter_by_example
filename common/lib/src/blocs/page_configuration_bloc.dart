@@ -28,8 +28,9 @@ class PageConfigurationBloc
       print("mapStateToEvent: $event");
       var postConfig = await repository.loadPostByPageId(event.postId);
       yield new PageConfigurationBlocStateLoaded(postConfig);
-    } else if (event is LoadAllPages) {
-      await repository.loadAllPosts();
+    } else if (event is LoadAllPageFrontmatter) {
+      var frontmatters = await repository.loadAllPostsFrontmatter();
+      yield new AllPageFrontmatterStateLoaded(null, frontmatters);
     }
   }
 }

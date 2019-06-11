@@ -12,6 +12,6 @@ class LoadSinglePage extends PageConfigurationBlocEvent {
   LoadSinglePage(this.postId);
 }
 
-class LoadAllPages extends PageConfigurationBlocEvent {
+class LoadAllPageFrontmatter extends PageConfigurationBlocEvent {
 
 }

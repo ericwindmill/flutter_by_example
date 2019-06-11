@@ -33,7 +33,6 @@ class PostPageComponent implements OnActivate, OnDestroy {
   void onActivate(_, RouterState current) async {
     pageBloc = new PageConfigurationBloc(repository: _postsRepository);
     final id = getPostId(current.parameters);
-    print(id);
     await pageBloc.dispatch(new LoadSinglePage(id));
   }
 
