@@ -1,0 +1,5 @@
+<extend src="layout.jael">
+    <block name="content">
+        <div class="title">Angel Server running...</div>
+    </block>
+</extend>
