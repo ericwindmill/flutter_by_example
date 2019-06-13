@@ -39,6 +39,7 @@ Site is running at localhost:8080
     - implement search
     - add `User` feature, allowing users to log in and save progress.
         - Probably should use Firestore for this: easy, built in Auth.
+    - add mailing list form
     
 - server
     - validate frontmatter
