@@ -1,11 +1,7 @@
 <section *ngIf="contentLoaded">
-    <material-list>
-        <div group>
-            <material-list-item *ngFor="let post of posts"
-                                (trigger)="onSelectPost(post)"
-                                class="no-outline">
-                {{post.title}} -- {{post.author}}
-            </material-list-item>
+        <div *ngFor="let s of subCategories"
+                            class="no-outline">
+            <h3 class="title">{{s.title}}</h3>
+            <sub-category-post-list [posts]="s.posts"></sub-category-post-list>
         </div>
-    </material-list>
 </section>

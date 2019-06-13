@@ -1,6 +1,13 @@
 import 'package:common/common.dart';
 import 'package:yaml/yaml.dart';
 
+/// todo: validate frontmatter!
+/// ensure that:
+///  each field is included and correct
+///  the "category" and "subcategory" are valid options
+///
+/// todo: end
+
 PostFrontmatter extractFrontmatterOnly(String fileContents, String path) {
   const separator = '---';
   var lines = fileContents.split('\n');
@@ -28,6 +35,8 @@ PostFrontmatter extractFrontmatterOnly(String fileContents, String path) {
     author: (yaml["author"] ?? "No author") as String,
     title: (yaml["title"] ?? "No title") as String,
     category: (yaml["category"] ?? "No title") as String,
+    subSection: (yaml["subSection"] ?? "No subsection") as String,
+    order: (yaml["order"] ?? -1) as int,
     path: path,
   );
 
@@ -63,6 +72,8 @@ PostConfiguration buildPost(String fileContents, String path) {
     author: (yaml["author"] ?? "No author") as String,
     title: (yaml["title"] ?? "No title") as String,
     category: (yaml["category"] ?? "No title") as String,
+    subSection: (yaml["subSection"] ?? "No subsection") as String,
+    order: (yaml["order"] ?? -1) as int,
     path: path,
   );
 

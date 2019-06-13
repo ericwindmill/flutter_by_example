@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:common/common.dart';
-import 'package:common/src/models/post_frontmatter.dart';
 import 'package:http/http.dart';
 
 import 'package:common/src/models/post_configuration.dart';
@@ -37,6 +36,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
       allPosts = postsByCategory
           .map((dynamic posts) => new PostCategory.fromJson(posts))
           .toList();
+      allPosts.sort((a, b) => a.order.compareTo(b.order));
     } catch (e) {
       print("Respoitory.LoadAllPostsByCategory.error: $e");
     }

@@ -9,8 +9,18 @@ class PostFrontmatter {
   String path; // i.e. "content/title_of_post"
   String category;
   DateTime createdAt;
+  String subSection;
+  int order;
+  List<String> tags;
 
-  PostFrontmatter({this.title, this.author, this.path, this.category}) {
+  PostFrontmatter(
+      {this.title,
+      this.author,
+      this.path,
+      this.category,
+      this.subSection,
+      this.order,
+      this.tags}) {
     createdAt = DateTime.now();
   }
 

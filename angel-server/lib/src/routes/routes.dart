@@ -35,22 +35,81 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
     ///
     /// todo: posts should be grouped by category: Dart, Flutter, Advanced, Example
     /// todo:   AND by sub-category (i.e. Dart: Async, or Example: Redux-Auth
-    ///
     app.get('/toc', (req, res) async {
+      ///  Eventually return this:
       Map<String, PostCategory> posts = <String, PostCategory>{};
+
+      ///  It should look like:
+      /// {
+      ///    "Dart": PostCategory(
+      ///     "title": "Dart",
+      ///     "description" : "...",
+      ///     "subCategories" : [
+      ///        PostSubCategory(
+      ///          "title": "Async Dart"
+      ///          "posts": [
+      ///             PostFrontmatter(...),
+      ///             PostFrontmatter(...)
+      ///           ],
+      ///        ),
+      ///        PostSubCategory(...),
+      ///     ],
+      ///   ),
+      ///   "Flutter": ....
+      /// }
+
+      /// Get a reference to the content
+      /// Currently it doesn't support sub-directories
       await vDir.source
           .childDirectory("content")
           .list()
           .forEach((FileSystemEntity f) async {
         File file;
         try {
+          /// Extract the file
           var fileName = PathUtils.getFileName(f);
           file = vDir.source.childDirectory("content").childFile(fileName);
+
+          /// Read the file and extract frontmatter
           String content = file.readAsStringSync();
           PostFrontmatter frontmatter = extractFrontmatterOnly(
               content, PathUtils.removeFileExtension(fileName));
-          posts.putIfAbsent(frontmatter.category,
-              () => PostCategory(frontmatter.category, [frontmatter]));
+
+          /// Now I have a frontmatter object, and I need to place it in
+          /// a sub category, which needs to be placed in a category
+          var categoryTitle = frontmatter.category;
+          var subCategoryTitle = frontmatter.subSection;
+
+          /// possible outcomes:
+          /// category: exists, subcategory: exists
+          /// category: exists, subcategory: doesn't exist
+          /// category: doesn't exists, subcategory: doesn't exist
+          ///
+          bool categoryExists = posts[categoryTitle] != null;
+
+          if (categoryExists) {
+            PostSubCategory subCategory = posts[categoryTitle]
+                .subCategories
+                .firstWhere((PostSubCategory s) => s.title == subCategoryTitle);
+            if (subCategory != null) {
+              /// category: exists, subcategory: exists
+              subCategory.posts.add(frontmatter);
+            } else {
+              /// category: exists, subcategory: doesn't exist
+              // create new sub category with frontmatter
+              final newSub = PostSubCategory(subCategoryTitle, [frontmatter]);
+              // add subcategory to category
+              posts[categoryTitle].subCategories.add(newSub);
+            }
+          } else {
+            /// subcategory cannot logically exist
+            // create new subcategory with frontmatter
+            final s = PostSubCategory(subCategoryTitle, [frontmatter]);
+            // create new category with new sub
+            final c = PostCategory(categoryTitle, "", [s], postOrder[categoryTitle]);
+            // add it to the posts
+            posts[categoryTitle] = c;
+          }
         } catch (e, s) {
           prettyLog(LogRecord(Level.WARNING, "Error reading files for toc",
               "App.get.toc", e, s));

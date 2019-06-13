@@ -8,6 +8,8 @@ import 'package:angular_router/angular_router.dart';
 import 'package:common/common.dart';
 import 'package:web/src/routes/route_paths.dart';
 
+import 'sub_category_post_list_component.dart';
+
 @Component(
   selector: 'category-post-list',
   templateUrl: 'category_post_list_component.html',
@@ -15,28 +17,16 @@ import 'package:web/src/routes/route_paths.dart';
   directives: [
     NgIf,
     NgFor,
-    MaterialListComponent,
-    MaterialListItemComponent,
+    SubCategoryPostListComponent,
   ],
   providers: [],
   pipes: [BlocPipe],
 )
-class CategoryPostListComponent implements OnActivate {
-  final Router _router;
-  bool get contentLoaded => posts.isNotEmpty;
+class CategoryPostListComponent {
+  bool get contentLoaded => subCategories?.isNotEmpty;
 
   @Input()
-  List<PostFrontmatter> posts;
+  List<PostSubCategory> subCategories;
 
-  CategoryPostListComponent(this._router);
-
-  void onSelectPost(PostFrontmatter post) {
-    var path = RoutePaths.post.toUrl(parameters: {idParam: post.path});
-    _router.navigate(path);
-  }
-
-  @override
-  void onActivate(RouterState previous, RouterState current) {
-    print(this.posts);
-  }
+  CategoryPostListComponent();
 }

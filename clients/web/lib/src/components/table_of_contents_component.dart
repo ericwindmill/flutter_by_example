@@ -22,9 +22,7 @@ class TableOfContentsComponent implements OnActivate  {
   @Input()
   TableOfContentsState state;
 
-  TableOfContentsComponent() {
-    print(state ?? "constructor null");
-  }
+  TableOfContentsComponent();
 
   @override
   void onActivate(RouterState previous, RouterState current) {
