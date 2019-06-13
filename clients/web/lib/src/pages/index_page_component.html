@@ -1,16 +1,9 @@
-<header class="material-header">
-    <div class="material-header-row">
-        <span class="material-header-title">Simple Layout</span>
-        <div class="material-spacer"></div>
-        <nav class="material-navigation">
-            <a>Link 1</a>
-        </nav>
-        <nav class="material-navigation">
-            <a>Link 2</a>
-        </nav>
-        <nav class="material-navigation">
-            <a>Link 3</a>
-        </nav>
-    </div>
-</header>
-<post-list [state]="pageBloc | bloc"></post-list>
+
+<main class="site-hero">
+    <p>Flutter By Example is a collection of example tutorials that will help you master Flutter by coding real apps.</p>
+
+    <p>Whether you've been writing software for years and want to pick up Flutter quickly, of this is your first go at building an application, this is for you.</p>
+
+    <p>We encourage you to get involved, contribute and teach what you know about Dart and Flutter.</p>
+</main>
+<table-of-contents [state]="tocBloc | bloc"></table-of-contents>

@@ -9,9 +9,9 @@ import 'package:common/common.dart';
 import 'package:web/src/routes/route_paths.dart';
 
 @Component(
-  selector: 'post-list',
-  templateUrl: 'post_list_component.html',
-  styleUrls: ['post_list_component.css'],
+  selector: 'category-post-list',
+  templateUrl: 'category_post_list_component.html',
+  styleUrls: ['category_post_list_component.css'],
   directives: [
     NgIf,
     NgFor,
@@ -21,17 +21,22 @@ import 'package:web/src/routes/route_paths.dart';
   providers: [],
   pipes: [BlocPipe],
 )
-class PostListComponent {
+class CategoryPostListComponent implements OnActivate {
   final Router _router;
-  bool get contentLoaded => (state is AllPageFrontmatterStateLoaded);
+  bool get contentLoaded => posts.isNotEmpty;
 
   @Input()
-  PageConfigurationBlocState state;
+  List<PostFrontmatter> posts;
 
-  PostListComponent(this._router);
+  CategoryPostListComponent(this._router);
 
   void onSelectPost(PostFrontmatter post) {
     var path = RoutePaths.post.toUrl(parameters: {idParam: post.path});
     _router.navigate(path);
+  }
+
+  @override
+  void onActivate(RouterState previous, RouterState current) {
+    print(this.posts);
   }
 }

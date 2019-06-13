@@ -1,0 +1,6 @@
+<ul *ngIf="contentLoaded">
+    <li *ngFor="let c of state.tableOfContents">
+        <h2>{{c.title}}</h2>
+        <category-post-list [posts]="c.posts"></category-post-list>
+    </li>
+</ul>

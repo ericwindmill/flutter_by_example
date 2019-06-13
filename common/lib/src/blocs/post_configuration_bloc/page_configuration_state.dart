@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
-import '../models/models.dart';
+import '../../models/models.dart';
 
 @immutable
 abstract class PageConfigurationBlocState extends Equatable {
   final PostConfiguration pageConfiguration;
-  final List<PostFrontmatter> frontmatters;
+  final List<PostCategory> frontmatters;
 
   PageConfigurationBlocState(this.pageConfiguration, this.frontmatters,
       [List props = const []])
@@ -27,8 +27,8 @@ class PageConfigurationBlocStateLoaded extends PageConfigurationBlocState {
 }
 
 class AllPageFrontmatterStateLoaded extends PageConfigurationBlocState {
-  final List<PostFrontmatter> frontmatters;
+  final List<PostCategory> postByCategory;
   AllPageFrontmatterStateLoaded(
-      PostConfiguration pageConfiguration, this.frontmatters)
-      : super(pageConfiguration, frontmatters);
+      PostConfiguration pageConfiguration, this.postByCategory)
+      : super(pageConfiguration, postByCategory);
 }

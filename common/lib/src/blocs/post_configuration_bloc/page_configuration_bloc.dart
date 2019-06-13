@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:common/common.dart';
-import 'package:common/src/blocs/page_configuration_event.dart';
+import 'package:common/src/blocs/post_configuration_bloc/page_configuration_event.dart';
 import 'package:common/src/repositories/posts_repository_base.dart';
-import './bloc.dart';
+import 'package:common/src/blocs/post_configuration_bloc/bloc.dart';
 
 class PageConfigurationBloc
     extends Bloc<PageConfigurationBlocEvent, PageConfigurationBlocState> {
@@ -25,12 +25,8 @@ class PageConfigurationBloc
     PageConfigurationBlocEvent event,
   ) async* {
     if (event is LoadSinglePage) {
-      print("mapStateToEvent: $event");
-      var postConfig = await repository.loadPostByPageId(event.postId);
+      var postConfig = await repository.loadMarkdownPostByPageId(event.postId);
       yield new PageConfigurationBlocStateLoaded(postConfig);
-    } else if (event is LoadAllPageFrontmatter) {
-      var frontmatters = await repository.loadAllPostsFrontmatter();
-      yield new AllPageFrontmatterStateLoaded(null, frontmatters);
     }
   }
 }

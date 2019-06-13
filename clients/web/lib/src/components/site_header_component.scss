@@ -1,0 +1,9 @@
+@import 'package:angular_components/css/material/material';
+
+.site-title {
+  @include mat-font-display-3();
+}
+
+.site-subtitle {
+  @include mat-font-title();
+}

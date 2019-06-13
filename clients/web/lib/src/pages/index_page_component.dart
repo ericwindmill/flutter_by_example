@@ -7,6 +7,7 @@ import 'package:angular_bloc/angular_bloc.dart';
 import 'package:angular_router/angular_router.dart';
 import 'package:common/common.dart';
 import 'package:web/src/components/post_list_component.dart';
+import 'package:web/src/components/table_of_contents_component.dart';
 
 @Component(
   selector: 'index-page',
@@ -15,24 +16,28 @@ import 'package:web/src/components/post_list_component.dart';
     'package:angular_components/app_layout/layout.scss.css',
     'index_page_component.css'
   ],
-  directives: [PostListComponent],
+  directives: [
+    TableOfContentsComponent,
+    MaterialButtonComponent,
+    MaterialIconComponent
+  ],
   providers: [FilesystemBrowserPostsRepository],
   pipes: [BlocPipe],
 )
 class IndexPageComponent implements OnActivate, OnDestroy {
-  PageConfigurationBloc pageBloc;
+  TableOfContentsBloc tocBloc;
   final FilesystemBrowserPostsRepository _postsRepository;
 
   IndexPageComponent(this._postsRepository);
 
   @override
   void onActivate(_, RouterState current) async {
-    pageBloc = new PageConfigurationBloc(repository: _postsRepository);
-    await pageBloc.dispatch(new LoadAllPageFrontmatter());
+    tocBloc = new TableOfContentsBloc(repository: _postsRepository);
+    await tocBloc.dispatch(new LoadTableOfContents());
   }
 
   @override
   void ngOnDestroy() {
-    pageBloc.dispose();
+    tocBloc.dispose();
   }
 }

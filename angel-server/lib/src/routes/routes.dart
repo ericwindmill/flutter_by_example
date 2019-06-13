@@ -1,5 +1,6 @@
 library angel_server.src.routes;
 
+import 'dart:convert';
 import 'dart:io' as prefix0;
 
 import 'package:angel_framework/angel_framework.dart';
@@ -28,26 +29,35 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
       return post;
     });
 
+    /// This service returns all posts, but they're grouped by category
+    /// naive
+    /// todo: support sub-directories in the "web/content" dir
+    ///
+    /// todo: posts should be grouped by category: Dart, Flutter, Advanced, Example
+    /// todo:   AND by sub-category (i.e. Dart: Async, or Example: Redux-Auth
+    ///
     app.get('/toc', (req, res) async {
-      List<PostFrontmatter> posts = [];
+      Map<String, PostCategory> posts = <String, PostCategory>{};
       await vDir.source
           .childDirectory("content")
           .list()
-          .forEach((prefix0.FileSystemEntity f) async {
+          .forEach((FileSystemEntity f) async {
         File file;
         try {
           var fileName = PathUtils.getFileName(f);
           file = vDir.source.childDirectory("content").childFile(fileName);
           String content = file.readAsStringSync();
-          PostFrontmatter frontmatter =
-              extractFrontmatterOnly(content, req.path);
-          posts.add(frontmatter);
-        } catch (e) {
-          prettyLog(LogRecord(
-              Level.WARNING, "Error reading files for toc", "App.get.toc", e));
+          PostFrontmatter frontmatter = extractFrontmatterOnly(
+              content, PathUtils.removeFileExtension(fileName));
+          posts.putIfAbsent(frontmatter.category,
+              () => PostCategory(frontmatter.category, [frontmatter]));
+        } catch (e, s) {
+          prettyLog(LogRecord(Level.WARNING, "Error reading files for toc",
+              "App.get.toc", e, s));
         }
       });
-      return posts;
+      List<PostCategory> asList = posts.values.toList();
+      return asList;
     });
 
     app.fallback(vDir.handleRequest);

@@ -25,8 +25,11 @@ PostFrontmatter extractFrontmatterOnly(String fileContents, String path) {
   }
 
   PostFrontmatter frontmatter = PostFrontmatter(
-      author: (yaml["author"] ?? "No author") as String,
-      title: (yaml["title"] ?? "No title") as String);
+    author: (yaml["author"] ?? "No author") as String,
+    title: (yaml["title"] ?? "No title") as String,
+    category: (yaml["category"] ?? "No title") as String,
+    path: path,
+  );
 
   return frontmatter;
 }
@@ -57,8 +60,11 @@ PostConfiguration buildPost(String fileContents, String path) {
   var mdContent = lines.getRange(last + 1, lines.length).join('\n');
 
   PostFrontmatter frontmatter = PostFrontmatter(
-      author: (yaml["author"] ?? "No author") as String,
-      title: (yaml["title"] ?? "No title") as String);
+    author: (yaml["author"] ?? "No author") as String,
+    title: (yaml["title"] ?? "No title") as String,
+    category: (yaml["category"] ?? "No title") as String,
+    path: path,
+  );
 
   lines.removeRange(first, last + 1);
   return PostConfiguration(

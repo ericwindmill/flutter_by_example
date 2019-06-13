@@ -1,6 +1,7 @@
 ---
-title: "A Post"
+title: "post_one"
 author: "Eric"
+category: "Dart"
 ---
 # yeet
 

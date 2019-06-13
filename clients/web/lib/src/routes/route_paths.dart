@@ -10,6 +10,5 @@ class RoutePaths {
 
 String getPostId(Map<String, String> parameters) {
   final id = parameters[idParam];
-  print(id);
   return id == null ? null : id;
 }

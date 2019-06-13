@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:common/common.dart';
 import 'package:common/src/models/post_frontmatter.dart';
 import 'package:http/http.dart';
 
@@ -18,19 +19,27 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   }
 
   @override
-  Future<PostConfiguration> loadPostByPageId(String pageId) async {
-    var reqUrl = "http://localhost:3000/content/$pageId.md";
+  Future<PostConfiguration> loadMarkdownPostByPageId(String pageId) async {
+    var reqUrl = "http://localhost:3000/content/$pageId.MD";
     var response = await client.get(reqUrl);
     var body = response.body;
     return new PostConfiguration.fromJson(json.decode(body));
   }
 
   @override
-  Future<List<PostFrontmatter>> loadAllPostsFrontmatter() async {
-    var reqUrl = "http://localhost:3000/toc";
-    var response = await client.get(reqUrl);
-    var body = response.body;
-    Iterable list = json.decode(body);
-    return list.map((j) => new PostFrontmatter.fromJson(j)).toList();
+  Future<List<PostCategory>> loadAllPostsByCategory() async {
+    List<PostCategory> allPosts = [];
+    try {
+      var reqUrl = "http://localhost:3000/toc";
+      var response = await client.get(reqUrl);
+      var body = response.body;
+      List postsByCategory = json.decode(body);
+      allPosts = postsByCategory
+          .map((dynamic posts) => new PostCategory.fromJson(posts))
+          .toList();
+    } catch (e) {
+      print("Respoitory.LoadAllPostsByCategory.error: $e");
+    }
+    return allPosts;
   }
 }

@@ -1,0 +1,11 @@
+<section *ngIf="contentLoaded">
+    <material-list>
+        <div group>
+            <material-list-item *ngFor="let post of posts"
+                                (trigger)="onSelectPost(post)"
+                                class="no-outline">
+                {{post.title}} -- {{post.author}}
+            </material-list-item>
+        </div>
+    </material-list>
+</section>
