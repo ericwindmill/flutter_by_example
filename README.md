@@ -35,11 +35,17 @@ Site is running at localhost:8080
     - syntax highlighting
     - styling blog post in general
     - potentially add Disqus comments?
-    - potentially add interactive feature to run code
+    - potentially add interactive feature to run code?
     - implement search
+    - add `User` feature, allowing users to log in and save progress.
+        - Probably should use Firestore for this: easy, built in Auth.
     
 - server
     - validate frontmatter
     - support sub folders for content
     - implement API for search
+
+- deploy
+    - deploy both client and server with either k8s/GCP or Heroku
+
     
