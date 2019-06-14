@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91d22cc2-146d-4f6e-9de6-e96edb0349c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/angel-server/lib/src/utils/build_toc_utils.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/test.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/lib/src/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/lib/src/routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/lib/src/utils/path_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/lib/src/utils/path_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/web/content/about_dart.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/about_dart.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/category_post_list_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/category_post_list_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/post_header_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/post_header_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/post_list_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/post_list_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/site_header_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/site_header_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/sub_category_post_list_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/sub_category_post_list_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/table_of_contents_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/table_of_contents_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +16,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="309">
+                <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -107,7 +97,6 @@
         <option value="$PROJECT_DIR$/clients/web/lib/src/components/category_post_list_component.html" />
         <option value="$PROJECT_DIR$/clients/web/lib/src/components/category_post_list_component.scss" />
         <option value="$PROJECT_DIR$/examples/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/angel-server/web/content/post_one.md" />
         <option value="$PROJECT_DIR$/angel-server/web/content/about_dart.md" />
         <option value="$PROJECT_DIR$/angel-server/lib/src/utils/path_utils.dart" />
@@ -121,6 +110,7 @@
         <option value="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.dart" />
         <option value="$PROJECT_DIR$/angel-server/lib/src/utils/build_toc_utils.dart" />
         <option value="$PROJECT_DIR$/clients/web/lib/src/components/table_of_contents_component.dart" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -142,98 +132,6 @@
             <path>
               <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="angel-server" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="dart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_by_example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_by_example" type="462c0819:PsiDirectoryNode" />
-              <item name="clients" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index_page_component.dart" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -295,12 +193,12 @@
       <workItem from="1560126760918" duration="19000" />
       <workItem from="1560126783954" duration="50000" />
       <workItem from="1560126865839" duration="7616000" />
-      <workItem from="1560191246783" duration="60252000" />
+      <workItem from="1560191246783" duration="60360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72109000" />
+    <option name="totallyTimeSpent" value="72217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -320,8 +218,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Dart Analysis" order="7" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.22048193" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22048193" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
@@ -356,16 +254,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/lib/src/blocs/post_configuration_bloc/page_configuration_state.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clients/web/lib/src/components/post_list_component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -583,16 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="353">
-            <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/angel-server/lib/src/config/config.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -753,6 +631,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clients/web/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="309">
+            <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

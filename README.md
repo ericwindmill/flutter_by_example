@@ -43,7 +43,7 @@ Site is running at localhost:8080
     
 - server
     - validate frontmatter
-    - support sub folders for content
+    - ~~support sub folders for content~~
     - implement API for search
 
 - deploy
