@@ -1,10 +1,5 @@
-import 'dart:html';
-
 import 'package:angular/angular.dart';
-import 'package:angular_components/angular_components.dart';
-
 import 'package:angular_bloc/angular_bloc.dart';
-import 'package:angular_router/angular_router.dart';
 import 'package:common/common.dart';
 import 'package:web/src/components/category_post_list_component.dart';
 
@@ -16,21 +11,11 @@ import 'package:web/src/components/category_post_list_component.dart';
   providers: [],
   pipes: [BlocPipe],
 )
-class TableOfContentsComponent implements OnActivate  {
+class TableOfContentsComponent {
   bool get contentLoaded => (state is TableOfContentsLoadedState);
 
   @Input()
   TableOfContentsState state;
 
   TableOfContentsComponent();
-
-  @override
-  void onActivate(RouterState previous, RouterState current) {
-    print(state.tableOfContents ?? "toc null");
-  }
-
-  @override
-  void ngOnInit() {
-    print(state?.tableOfContents ?? "oninit null");
-  }
 }

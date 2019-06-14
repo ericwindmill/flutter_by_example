@@ -1,9 +1,9 @@
 ---
-title: "About Dart"
+title: "SubFolder -- About Dart"
 author: "Eric"
 category: "Dart"
-subSection: "About Dart"
-order: 1
+subSection: "More About Dart"
+order: 2
 tags:
     - dart
 ---

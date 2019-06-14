@@ -1,9 +1,13 @@
 import 'dart:io';
 
 class PathUtils {
-  static String getFileName(FileSystemEntity f) {
+  static FilePath getFileName(FileSystemEntity f) {
     var segments = f.uri.pathSegments;
-    return segments[segments.length - 1];
+
+    return FilePath(
+      segments[segments.length - 1],
+      segments.getRange(1, segments.length - 1).toList(),
+    );
   }
 
   static String removeFileExtension(String fileName) {
@@ -12,4 +16,11 @@ class PathUtils {
     var fileNameSplit = fileName.split(".");
     return fileNameSplit.getRange(0, fileNameSplit.length - 1).join("");
   }
+}
+
+class FilePath {
+  final String fileName;
+  final List<String> subDirs;
+
+  FilePath(this.fileName, this.subDirs);
 }

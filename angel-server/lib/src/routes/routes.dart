@@ -1,10 +1,8 @@
 library angel_server.src.routes;
 
-import 'dart:convert';
-import 'dart:io' as prefix0;
-
 import 'package:angel_framework/angel_framework.dart';
 import 'package:angel_server/src/pretty_logging.dart';
+import 'package:angel_server/src/utils/build_toc_utils.dart';
 import 'package:angel_server/src/utils/extract_frontmatter.dart';
 import 'package:angel_server/src/utils/path_utils.dart';
 import 'package:angel_static/angel_static.dart';
@@ -30,11 +28,6 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
     });
 
     /// This service returns all posts, but they're grouped by category
-    /// naive
-    /// todo: support sub-directories in the "web/content" dir
-    ///
-    /// todo: posts should be grouped by category: Dart, Flutter, Advanced, Example
-    /// todo:   AND by sub-category (i.e. Dart: Async, or Example: Redux-Auth
     app.get('/toc', (req, res) async {
       ///  Eventually return this:
       Map<String, PostCategory> posts = <String, PostCategory>{};
@@ -57,23 +50,21 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
       ///   ),
       ///   "Flutter": ....
       /// }
+      ///
 
-      /// Get a reference to the content
-      /// Currently it doesn't support sub-directories
-      await vDir.source
-          .childDirectory("content")
-          .list()
-          .forEach((FileSystemEntity f) async {
+      // Get Files as a flat list
+      List<FileSystemEntity> files = await TableOfContentsBuilder.build(vDir);
+      files.forEach((FileSystemEntity f) {
         File file;
         try {
-          /// Extract the file
-          var fileName = PathUtils.getFileName(f);
-          file = vDir.source.childDirectory("content").childFile(fileName);
+          // Extract the file
+          FilePath filePath = PathUtils.getFileName(f);
+          file = TableOfContentsBuilder.buildFilePath(f, vDir);
 
           /// Read the file and extract frontmatter
           String content = file.readAsStringSync();
           PostFrontmatter frontmatter = extractFrontmatterOnly(
-              content, PathUtils.removeFileExtension(fileName));
+              content, PathUtils.removeFileExtension(filePath.fileName));
 
           /// Now I have a frontmatter object, and I need to place it in
           /// a sub category, which needs to be placed in a category
@@ -87,10 +78,14 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
           ///
           bool categoryExists = posts[categoryTitle] != null;
 
+          print(categoryTitle);
+          print(subCategoryTitle);
+
           if (categoryExists) {
             PostSubCategory subCategory = posts[categoryTitle]
                 .subCategories
-                .firstWhere((PostSubCategory s) => s.title == subCategoryTitle);
+                .firstWhere((PostSubCategory s) => s.title == subCategoryTitle,
+                    orElse: () => null);
             if (subCategory != null) {
               /// category: exists, subcategory: exists
               subCategory.posts.add(frontmatter);
@@ -106,7 +101,8 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
             // create new subcategory with frontmatter
             final s = PostSubCategory(subCategoryTitle, [frontmatter]);
             // create new category with new sub
-            final c = PostCategory(categoryTitle, "", [s], postOrder[categoryTitle]);
+            final c =
+                PostCategory(categoryTitle, "", [s], postOrder[categoryTitle]);
             // add it to the posts
             posts[categoryTitle] = c;
           }
