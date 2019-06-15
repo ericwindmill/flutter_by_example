@@ -1,3 +1,5 @@
+import 'dart:io' as prefix0;
+
 import 'package:angel_server/src/utils/path_utils.dart';
 import 'package:file/file.dart';
 
@@ -32,6 +34,45 @@ class TableOfContentsBuilder {
       ));
     }
     return null;
+  }
+
+  static Future<FileSystemEntity> findFileInFilesystemByFileName(
+      Directory root, String targetPath) async {
+    List<Directory> queue = [];
+    FileSystemEntity foundFile;
+    try {
+      Stream<FileSystemEntity> files = root.list();
+      await files.forEach((FileSystemEntity f) async {
+        if (f is Directory) {
+          print("Directory: $f");
+          queue.add(f);
+        } else {
+          print("file: $f");
+          int segmentsCount = f.path.split("/").length;
+          String fileName = f.path.split("/")[segmentsCount - 1];
+          if (targetPath == fileName) {
+            print("targetPath match: ${targetPath}, ${fileName}");
+            foundFile = f;
+          }
+          ;
+        }
+      });
+      if (queue.isNotEmpty && foundFile == null) {
+        foundFile = await findFileInFilesystemByFileName(
+            queue.removeLast(), targetPath);
+      }
+    } catch (e, s) {
+      prettyLog(LogRecord(
+        Level.WARNING,
+        "Error parsing filesystem",
+        "TocBuilder.findFileInFilesystemByFileName",
+        e,
+        s,
+      ));
+    }
+    print("end of return?: ${foundFile}");
+    // if never found, this will be null
+    return foundFile;
   }
 
   static Future<List<FileSystemEntity>> _parseFilesystem(Directory root) async {

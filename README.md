@@ -32,19 +32,7 @@ Site is running at localhost:8080
     - write more!
     
 - client
-    - support subfolders in routes. Two possibilities
-        1. Make the client smarter and have routes follow this format: "posts/:category/:postTitle"
-            - pros: 
-                - faster, less code -- because its done for me by `angel_static` library 
-            - cons
-                - logic in the client is a no-no for this project
-        2. Make the server smarter and find search the filesystem for that md file
-            - pros: 
-                - more flexible
-                - this way, the file structure of the "cms" doesn't matter. it's only for the user (me)
-            - cons:
-                - could be slow, potentially have to loop through all files. # of files is limited, though.
-                - lose automatic functionality from `angel_static`.  
+    - ~~support subfolders in routes~~
     - syntax highlighting
     - styling blog post in general
     - potentially add Disqus comments?
@@ -56,7 +44,11 @@ Site is running at localhost:8080
     
 - server
     - validate frontmatter
-    - ~~support sub folders for table of contents~~
+    - support sub folders for table of contents
+        - ~~getting TOC supports sub folders~~
+        - getting single page should search through all subfolders and find the one that matches the request
+            - i.e.: "/content/test.md" will find "/content/dart/test.md"
+        - v2: implement a cache on the server
     - implement API for search
 
 - deploy

@@ -19,7 +19,10 @@ class FilesystemBrowserPostsRepository extends PostRepository {
 
   @override
   Future<PostConfiguration> loadMarkdownPostByPageId(String pageId) async {
-    var reqUrl = "http://localhost:3000/content/$pageId.MD";
+    //
+    // TODO: replace URL with ENV variable for production
+    //
+    var reqUrl = "http://localhost:3000/content/$pageId.md";
     var response = await client.get(reqUrl);
     var body = response.body;
     return new PostConfiguration.fromJson(json.decode(body));
