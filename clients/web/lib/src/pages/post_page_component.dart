@@ -4,6 +4,7 @@ import 'package:angular_bloc/angular_bloc.dart';
 import 'package:angular_router/angular_router.dart';
 import 'package:common/common.dart';
 import 'package:web/src/components/post_header_component.dart';
+import 'package:web/src/components/post_page_header_component.dart';
 import 'package:web/src/directives/markdown_directive.dart';
 import 'package:web/src/components/markdown_content_component.dart';
 import 'package:web/src/routes/route_paths.dart';
@@ -18,6 +19,7 @@ import 'package:web/src/routes/route_paths.dart';
     MarkdownContentComponent,
     NgIf,
     PostHeaderComponent,
+    PostPageHeaderComponent,
   ],
   providers: [FilesystemBrowserPostsRepository],
   pipes: [BlocPipe],

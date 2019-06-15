@@ -1,0 +1,12 @@
+@import 'package:angular_components/css/material/material';
+
+h2 {
+    @include mat-font-display-2;
+    color: #02569b;
+    margin-bottom: 0;
+}
+
+span {
+  padding-right: 15px;
+  @include mat-font-subhead-2;
+}

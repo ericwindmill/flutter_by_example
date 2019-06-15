@@ -1,3 +1,5 @@
-<div *ngIf="contentLoaded">{{state.pageConfiguration.frontmatter.title ?? "no title"}}</div>
-<div *ngIf="contentLoaded">{{state.pageConfiguration.frontmatter.author}}</div>
-<div *ngIf="contentLoaded">{{state.pageConfiguration.frontmatter.createdAt}}</div>
+<div *ngIf="contentLoaded">
+    <h2>{{state.pageConfiguration.frontmatter.title}}</h2>
+    <span>By {{state.pageConfiguration.frontmatter.author}}</span>
+    <span>On {{state.pageConfiguration.frontmatter.createdAt}}</span>
+</div>

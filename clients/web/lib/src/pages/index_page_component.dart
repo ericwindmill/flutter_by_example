@@ -4,6 +4,7 @@ import 'package:angular_components/angular_components.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 import 'package:angular_router/angular_router.dart';
 import 'package:common/common.dart';
+import 'package:web/src/components/site_header_component.dart';
 import 'package:web/src/components/table_of_contents_component.dart';
 
 @Component(
@@ -11,12 +12,13 @@ import 'package:web/src/components/table_of_contents_component.dart';
   templateUrl: 'index_page_component.html',
   styleUrls: [
     'package:angular_components/app_layout/layout.scss.css',
-    'index_page_component.css'
+    'index_page_component.css',
   ],
   directives: [
     TableOfContentsComponent,
     MaterialButtonComponent,
-    MaterialIconComponent
+    MaterialIconComponent,
+    SiteHeaderComponent,
   ],
   providers: [FilesystemBrowserPostsRepository],
   pipes: [BlocPipe],
