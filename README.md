@@ -46,8 +46,8 @@ Site is running at localhost:8080
     - validate frontmatter
     - support sub folders for table of contents
         - ~~getting TOC supports sub folders~~
-        - getting single page should search through all subfolders and find the one that matches the request
-            - i.e.: "/content/test.md" will find "/content/dart/test.md"
+        - ~~getting single page should search through all subfolders and find the one that matches the request~~
+            - ~~i.e.: "/content/test.md" will find "/content/dart/test.md"~~
         - v2: implement a cache on the server
     - implement API for search
 
