@@ -52,6 +52,7 @@ Site is running at localhost:8080
     - implement API for search
 
 - deploy
+    - Add Travis CI/CD with github hook
     - deploy both client and server with either k8s/GCP or Heroku
 
     
