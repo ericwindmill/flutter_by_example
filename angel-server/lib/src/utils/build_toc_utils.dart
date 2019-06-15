@@ -19,7 +19,6 @@ class TableOfContentsBuilder {
     try {
       FilePath filePath = PathUtils.getFileName(f);
       var dir = vDir.source;
-      print(filePath.subDirs);
       for (var subDir in filePath.subDirs) {
         dir = dir.childDirectory(subDir);
       }
@@ -44,14 +43,11 @@ class TableOfContentsBuilder {
       Stream<FileSystemEntity> files = root.list();
       await files.forEach((FileSystemEntity f) async {
         if (f is Directory) {
-          print("Directory: $f");
           queue.add(f);
         } else {
-          print("file: $f");
           int segmentsCount = f.path.split("/").length;
           String fileName = f.path.split("/")[segmentsCount - 1];
           if (targetPath == fileName) {
-            print("targetPath match: ${targetPath}, ${fileName}");
             foundFile = f;
           }
           ;
@@ -70,7 +66,7 @@ class TableOfContentsBuilder {
         s,
       ));
     }
-    print("end of return?: ${foundFile}");
+
     // if never found, this will be null
     return foundFile;
   }
