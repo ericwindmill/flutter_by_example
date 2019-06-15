@@ -3,13 +3,25 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'post_categories.g.dart';
 
-Map<String, int> postOrder = {
-  "Dart": 1,
-  "Flutter": 2,
-  "AdvancedTopics": 3,
-  "ExampleApp": 4,
-  "etc": 5
-};
+class PostOrder {
+  static const int Dart = 1;
+  static const int Flutter = 2;
+  static const int AdvancedTopics = 3;
+  static const int ExampleApp = 4;
+  static const int ETC = 5;
+
+  static final Map<String, int> postOrder = {
+    "Dart": PostOrder.Dart,
+    "Flutter": PostOrder.Flutter,
+    "AdvancedTopics": PostOrder.AdvancedTopics,
+    "ExampleApp": PostOrder.ExampleApp,
+    "etc": PostOrder.ETC,
+  };
+
+  static int fromString(String s) {
+    return postOrder[s];
+  }
+}
 
 @JsonSerializable()
 class PostCategory {
