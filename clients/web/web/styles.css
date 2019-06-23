@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Material+Icons);
 
 body {
-  max-width: 900px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 0 5vw 5vw;
 }
@@ -11,4 +11,130 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
+html {
+  font-size: 10px;
+}
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul {
+  color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 40px 0;
+}
+
+
+
+p,
+a,
+li,
+dt,
+dd,
+tr,
+th {
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+a {
+  color: #02569b;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+label,
+button,
+input,
+select {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+blockquote {
+  padding: 15px 20px 15px 45px;
+  margin: 50px 0 ;
+  position: relative;
+  border-radius: 5px;
+
+  /*Font*/
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+
+  /*Borders - (Optional)*/
+  border: 2px solid #13b9fd;
+}
+
+blockquote::before {
+  content: '\201C'; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 12rem;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: -25px;
+  top: 5px;
+}
+
+blockquote > h3,
+h4,
+h5 {
+  margin: 15px 0;
+}
+
+
+.aside {
+  padding: 15px 20px;
+  margin: 50px 0;
+  position: relative;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+  box-shadow: none;
+  border: 2px solid #13b9fd;
+}

@@ -1,0 +1,36 @@
+@import 'package:angular_components/css/material/material';
+
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    .image {
+        margin-right: 20px;
+    }
+
+    h3 {
+        margin: 30px 0;
+    }
+
+    margin-bottom: 40px;
+}
+
+.post-header_container{
+    padding: 50px 0 50px 0;
+}
+
+.post-title {
+    @include mat-font-display-3;
+    margin: 0;
+    padding: 0;
+}
+
+.post-author {
+    margin: 0 20px 0 0;
+    @include mat-font-headline;
+}
+
+.post-created-at {
+    @include mat-font-headline;
+}

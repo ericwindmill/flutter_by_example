@@ -18,6 +18,7 @@ import 'package:web/src/routes/route_paths.dart';
     MarkdownContentComponent,
     NgIf,
     PostHeaderComponent,
+    routerDirectives
   ],
   providers: [FilesystemBrowserPostsRepository],
   pipes: [BlocPipe],
@@ -26,8 +27,9 @@ class PostPageComponent implements OnActivate, OnDestroy {
   PageConfigurationBloc pageBloc;
   final FilesystemBrowserPostsRepository _postsRepository;
   Location location;
+  Router _router;
 
-  PostPageComponent(this._postsRepository, this.location);
+  PostPageComponent(this._postsRepository, this.location, this._router);
 
   @override
   void onActivate(_, RouterState current) async {
@@ -39,5 +41,9 @@ class PostPageComponent implements OnActivate, OnDestroy {
   @override
   void ngOnDestroy() {
     pageBloc.dispose();
+  }
+
+  navigateHome() {
+    _router.navigate("/");
   }
 }

@@ -33,8 +33,8 @@ Site is running at localhost:8080
     
 - client
     - ~~support subfolders in routes~~
-    - syntax highlighting
-    - styling blog post in general
+    - ~~syntax highlighting~~
+    - ~~initial styling blog post in general~~
     - potentially add Disqus comments?
     - potentially add interactive feature to run code?
     - implement search

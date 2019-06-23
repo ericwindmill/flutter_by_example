@@ -1,11 +1,11 @@
 @import 'package:angular_components/css/material/material';
 
 header {
+  cursor: pointer;
   display: flex;
   align-items: center;
   padding: 30px 0;
   margin: 30px 0;
-  border-bottom: 1px solid black;
 }
 
 .image {
