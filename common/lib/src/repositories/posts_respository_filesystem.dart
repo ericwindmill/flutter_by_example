@@ -36,10 +36,9 @@ class FilesystemBrowserPostsRepository extends PostRepository {
       var response = await client.get(reqUrl);
       var body = response.body;
       List postsByCategory = json.decode(body);
-      allPosts = postsByCategory
-          .map((dynamic posts) => new PostCategory.fromJson(posts))
-          .toList();
+      allPosts = postsByCategory.map((dynamic posts) => new PostCategory.fromJson(posts)).toList();
       allPosts.sort((a, b) => a.order.compareTo(b.order));
+      return allPosts;
     } catch (e) {
       print("Respoitory.LoadAllPostsByCategory.error: $e");
     }

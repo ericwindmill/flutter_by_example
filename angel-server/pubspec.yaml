@@ -11,7 +11,7 @@ dependencies:
   angel_jael: ^2.0.0 # Server-side templating engine
   angel_production: ^1.0.0 # Production application runner.
   angel_static: ^2.0.0 # Static file server
-  angel_validate: ^2.0.0 # Allows for validation of input data
+  angel_validate: ^2.0.2 # Allows for validation of input data
   angel_cors: ^2.0.0
   common:
     path: ../common

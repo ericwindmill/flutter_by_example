@@ -12,7 +12,7 @@ import 'src/routes/routes.dart';
   ''', directives: [
   routerDirectives,
   SiteHeaderComponent
-], providers: const [
+], providers: [
   FilesystemBrowserPostsRepository
 ], exports: [
   RoutePaths,

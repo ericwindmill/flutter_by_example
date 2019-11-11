@@ -1,5 +1,3 @@
-import 'dart:io' as prefix0;
-
 import 'package:angel_server/src/utils/path_utils.dart';
 import 'package:file/file.dart';
 
@@ -53,9 +51,8 @@ class TableOfContentsBuilder {
           ;
         }
       });
-      if (queue.isNotEmpty && foundFile == null) {
-        foundFile = await findFileInFilesystemByFileName(
-            queue.removeLast(), targetPath);
+      while (queue.isNotEmpty && foundFile == null) {
+        foundFile = await findFileInFilesystemByFileName(queue.removeLast(), targetPath);
       }
     } catch (e, s) {
       prettyLog(LogRecord(
@@ -66,7 +63,6 @@ class TableOfContentsBuilder {
         s,
       ));
     }
-
     // if never found, this will be null
     return foundFile;
   }
@@ -75,31 +71,29 @@ class TableOfContentsBuilder {
     List<FileSystemEntity> returnFiles = [];
     List<Directory> queue = [];
     try {
-      Stream<FileSystemEntity> files = root.list();
-      await files.forEach((FileSystemEntity f) async {
+      Stream<FileSystemEntity> files = root.list().asBroadcastStream();
+      await for (FileSystemEntity f in files) {
         if (f is Directory) {
           queue.add(f);
         } else {
           returnFiles.add(f);
         }
-      });
-
-      if (queue.isNotEmpty) {
-        List<FileSystemEntity> subDirFiles =
-            await _parseFilesystem(queue.removeLast());
-        returnFiles.addAll(subDirFiles);
       }
 
-      return returnFiles;
-    } catch (e, s) {
+      while (queue.isNotEmpty) {
+        List<FileSystemEntity> subDirFiles = await _parseFilesystem(queue.removeLast());
+        returnFiles.addAll(subDirFiles);
+      }
+    } catch (error, stacktrace) {
       prettyLog(LogRecord(
         Level.WARNING,
         "Error parsing filesystem",
         "TocBuilder._parseFilesystem",
-        e,
-        s,
+        error,
+        stacktrace,
       ));
     }
-    return [];
+
+    return returnFiles;
   }
 }

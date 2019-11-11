@@ -31,8 +31,8 @@ class IndexPageComponent implements OnActivate, OnDestroy {
 
   @override
   void onActivate(_, RouterState current) async {
-    tocBloc = new TableOfContentsBloc(repository: _postsRepository);
-    await tocBloc.dispatch(new LoadTableOfContents());
+    tocBloc = TableOfContentsBloc(repository: _postsRepository);
+    await tocBloc.dispatch(LoadTableOfContents());
   }
 
   @override

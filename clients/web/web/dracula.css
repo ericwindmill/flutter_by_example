@@ -1,7 +1,7 @@
 /*Eric Styles*/
 
 .language-dart, .language-javascript {
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 2.5rem;
 }
 
@@ -23,7 +23,7 @@ code, pre code, code, .language-dart *, .language-javascript * {
 /* Atelier-Cave Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #655f6d;
+  color: #a2a2aa;
 }
 
 /* Atelier-Cave Red */
@@ -49,14 +49,14 @@ code, pre code, code, .language-dart *, .language-javascript * {
 .hljs-literal,
 .hljs-type,
 .hljs-params {
-  color: #aa573c;
+  color: #adf0e6;
 }
 
 /* Atelier-Cave Green */
 .hljs-string,
 .hljs-symbol,
 .hljs-bullet {
-  color: #2a9292;
+  color: #42e6e6;
 }
 
 /* Atelier-Cave Blue */
@@ -68,7 +68,7 @@ code, pre code, code, .language-dart *, .language-javascript * {
 /* Atelier-Cave Purple */
 .hljs-keyword,
 .hljs-selector-tag {
-  color: #955ae7;
+  color: #e4e3e7;
 }
 
 .hljs-deletion,
@@ -79,18 +79,18 @@ code, pre code, code, .language-dart *, .language-javascript * {
 }
 
 .hljs-deletion {
-  background-color: #be4678;
+  background-color: #ec5795;
 }
 
 .hljs-addition {
-  background-color: #2a9292;
+  background-color: #41e1e1;
 }
 
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #d5d7da;
-  color: #585260;
+  background: #020026;
+  color: #00d0f5;
   padding: 1.5em;
 }
 

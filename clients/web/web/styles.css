@@ -131,10 +131,16 @@ h5 {
   padding: 15px 20px;
   margin: 50px 0;
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1.6rem;
   line-height: 1.2;
   text-align: justify;
   box-shadow: none;
   border: 2px solid #13b9fd;
+}
+
+
+img {
+  max-width: 750px;
+  border-radius: 10px;
 }

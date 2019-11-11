@@ -1,8 +1,6 @@
 library angel_server.src.routes;
 
 import 'dart:async';
-import 'dart:io' as prefix0;
-
 import 'package:angel_framework/angel_framework.dart';
 import 'package:angel_server/src/pretty_logging.dart';
 import 'package:angel_server/src/utils/build_toc_utils.dart';
@@ -35,6 +33,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
       fileSystem,
       source: fileSystem.directory('web'),
       callback: (File f, RequestContext req, ResponseContext resp) async {
+        print("vDir.callback: $f");
         String content = await f.readAsString();
         PostConfiguration post = buildPost(content, req.path);
         return post;
@@ -82,8 +81,8 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
 
           /// Read the file and extract frontmatter
           String content = file.readAsStringSync();
-          PostFrontmatter frontmatter = extractFrontmatterOnly(
-              content, PathUtils.removeFileExtension(filePath.fileName));
+          PostFrontmatter frontmatter =
+              extractFrontmatterOnly(content, PathUtils.removeFileExtension(filePath.fileName));
 
           /// Now I have a frontmatter object, and I need to place it in
           /// a sub category, which needs to be placed in a category
@@ -110,8 +109,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
           if (categoryExists) {
             PostSubCategory subCategory = posts[categoryTitle]
                 .subCategories
-                .firstWhere((PostSubCategory s) => s.title == subCategoryTitle,
-                    orElse: () => null);
+                .firstWhere((PostSubCategory s) => s.title == subCategoryTitle, orElse: () => null);
             if (subCategory != null) {
               /// category: exists, subcategory: exists
               subCategory.posts.add(frontmatter);
@@ -129,8 +127,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
             final s = PostSubCategory(subCategoryTitle, [frontmatter]);
 
             /// create new category with new sub
-            final c = PostCategory(
-                categoryTitle, "", [s], PostOrder.fromString(categoryTitle));
+            final c = PostCategory(categoryTitle, "", [s], PostOrder.fromString(categoryTitle));
 
             /// add it to the posts
             posts[categoryTitle] = c;
@@ -146,6 +143,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
         }
       });
       List<PostCategory> asList = posts.values.toList();
+      asList.sort((a, b) => a.order);
       return asList;
     });
 
@@ -154,8 +152,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
     /// they're defined.
     ///
     app.fallback(
-      (RequestContext req, ResponseContext res) =>
-          serveLocalFile(req, res, vDir),
+      (RequestContext req, ResponseContext res) => serveLocalFile(req, res, vDir),
     );
 
     app.fallback((req, res) => throw AngelHttpException.notFound());
@@ -164,8 +161,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
     app.errorHandler = (e, req, res) async {
       if (req.accepts('text/html', strict: true)) {
         if (e.statusCode == 404 && req.accepts('text/html', strict: true)) {
-          await res
-              .render('error', {'message': 'No file exists at ${req.uri}.'});
+          await res.render('error', {'message': 'No file exists at ${req.uri}.'});
         } else {
           await res.render('error', {'message': e.message});
         }
@@ -181,9 +177,8 @@ FutureOr<dynamic> serveLocalFile(
   try {
     int segmentsCount = req.path.split("/").length;
     String fileName = req.path.split("/")[segmentsCount - 1];
-    FileSystemEntity foundFile =
-        await TableOfContentsBuilder.findFileInFilesystemByFileName(
-            vDir.source.childDirectory("content"), fileName);
+    FileSystemEntity foundFile = await TableOfContentsBuilder.findFileInFilesystemByFileName(
+        vDir.source.childDirectory("content"), fileName);
     if (foundFile == null) return false;
     var path = foundFile.uri.path.replaceAll(_straySlashes, '');
     var stat = await vDir.fileSystem.stat(foundFile.absolute.path);

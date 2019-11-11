@@ -28,9 +28,9 @@ class SimpleBlocDelegate extends BlocDelegate {
 FilesystemBrowserPostsRepository _repo;
 FilesystemBrowserPostsRepository repoFactory() => _repo;
 
-@GenerateInjector(const [
+@GenerateInjector([
   routerProvidersHash,
-  const FactoryProvider(FilesystemBrowserPostsRepository, repoFactory),
+  FactoryProvider(FilesystemBrowserPostsRepository, repoFactory),
 ])
 final InjectorFactory appInjector = mainGenerated.appInjector$Injector;
 

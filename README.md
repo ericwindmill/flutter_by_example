@@ -41,6 +41,7 @@ Site is running at localhost:8080
     - add `User` feature, allowing users to log in and save progress.
         - Probably should use Firestore for this: easy, built in Auth.
     - add mailing list form
+    - rewrite in Flutter for web
     
 - server
     - validate frontmatter
