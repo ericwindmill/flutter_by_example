@@ -127,7 +127,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
             final s = PostSubCategory(subCategoryTitle, [frontmatter]);
 
             /// create new category with new sub
-            final c = PostCategory(categoryTitle, "", [s], PostOrder.fromString(categoryTitle));
+            final c = PostCategory(categoryTitle, "", [s], PostOrder.fromString(categoryTitle) ?? 99);
 
             /// add it to the posts
             posts[categoryTitle] = c;

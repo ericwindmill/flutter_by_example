@@ -2,34 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91d22cc2-146d-4f6e-9de6-e96edb0349c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/advanced/more_shit.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/hello_world.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/print.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/values_and_variables.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/what.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/booleans.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/lists.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/numbers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/strings.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/type_system.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angel-server/web/post_order.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/lib/src/pretty_logging.dart" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/lib/src/pretty_logging.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angel-server/lib/src/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/lib/src/routes/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/lib/src/utils/build_toc_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/lib/src/utils/build_toc_utils.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/web/content/about_dart.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/dart/about_dart.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/web/content/dart/test.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/web/content/post_two.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/flutter/post_two.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/app_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/app_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/components/sub_category_post_list_component.html" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/components/sub_category_post_list_component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/directives/markdown_directive.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/directives/markdown_directive.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.html" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/pages/index_page_component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/pages/post_page_component.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/pages/post_page_component.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/lib/src/routes/route_paths.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/lib/src/routes/route_paths.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/web/dracula.css" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/web/dracula.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/web/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/web/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/web/web/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/clients/web/web/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angel-server/web/content/advanced/more_shit.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/advanced/more_shit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angel-server/web/content/dart/hello_world.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/dart/hello_world.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angel-server/web/content/dart/print.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/dart/print.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angel-server/web/content/dart/values_and_variables.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/dart/values_and_variables.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/lib/src/blocs/table_of_contents_bloc/table_of_contents_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/common/lib/src/blocs/table_of_contents_bloc/table_of_contents_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/lib/src/repositories/posts_respository_filesystem.dart" beforeDir="false" afterPath="$PROJECT_DIR$/common/lib/src/repositories/posts_respository_filesystem.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/lib/src/models/post_categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/common/lib/src/models/post_categories.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +99,9 @@
       <workItem from="1561747661476" duration="6000" />
       <workItem from="1573144400661" duration="1576000" />
       <workItem from="1573227046020" duration="5190000" />
-      <workItem from="1573489372764" duration="2353000" />
+      <workItem from="1573489372764" duration="2410000" />
+      <workItem from="1573927707910" duration="7810000" />
+      <workItem from="1574181756121" duration="827000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,15 @@ tags:
 - hello world
 ---
 
-# Hello World
+Like all good programming tutorials, let's start by printing "Hello, World" to the console. In
+ the next few lessons, we'll look at the individual components of this code sample.
+
+```dart
+void main() {
+  print('Hello, World!');
+}
+```
+
+
 
 

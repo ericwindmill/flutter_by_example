@@ -1,7 +1,7 @@
 ---
 title: "Advanced Shit"
 author: "Eric"
-category: "Etc"
+category: "etc"
 subSection: "Cool"
 order: 1
 tags:

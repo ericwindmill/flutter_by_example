@@ -18,6 +18,7 @@ class TableOfContentsBloc extends Bloc<TableOfContentsEvent, TableOfContentsStat
     if (event is LoadTableOfContents) {
       final toc = await repository.loadAllPostsByCategory();
       toc.forEach((postCategory) {
+        print(postCategory);
         postCategory.subCategories.forEach((postSubCategory) {
           postSubCategory.posts.sort((a, b) => b.order);
         });

@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'post_categories.g.dart';
 
+// would love to see this in a yaml config. But not today.
 class PostOrder {
   static const int Dart = 1;
   static const int Flutter = 2;
@@ -22,6 +23,8 @@ class PostOrder {
     return postOrder[s];
   }
 }
+
+
 
 @JsonSerializable()
 class PostCategory {
