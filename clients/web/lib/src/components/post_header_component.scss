@@ -23,14 +23,14 @@
 .post-title {
     @include mat-font-display-3;
     margin: 0;
-    padding: 0;
+    padding: 0 0 30px 0;
 }
 
 .post-author {
-    margin: 0 20px 0 0;
-    @include mat-font-headline;
+    margin: 0;
+    @include mat-font-subhead-2;
 }
 
 .post-created-at {
-    @include mat-font-headline;
+    @include mat-font-subhead-2;
 }

@@ -2,8 +2,8 @@
 title: "Print to the console"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Dart Language Tour"
-order: 2
+subSection: "Getting Started with Dart"
+order: 3
 tags:
 - dart
 - hello world

@@ -3,7 +3,7 @@ title: "Numbers"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Data Types"
-order: 5
+order: 2
 tags:
 - dart
 - data types

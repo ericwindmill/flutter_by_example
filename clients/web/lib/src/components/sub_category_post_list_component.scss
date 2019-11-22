@@ -1,0 +1,25 @@
+.post-list {
+  padding: 0;
+  margin: 0;
+  counter-reset: b;
+  margin-bottom: 24px;
+  list-style-type: none;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  -webkit-columns: 3;
+  columns: 3;
+}
+
+.post-list > * {
+  counter-increment: b;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+  margin: 0;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.post-list > *:before {
+  content: counter(a) "." counter(b);
+}

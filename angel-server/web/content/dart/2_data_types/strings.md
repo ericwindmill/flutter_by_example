@@ -3,7 +3,7 @@ title: "Strings"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Data Types"
-order: 6
+order: 3
 tags:
 - dart
 - data types

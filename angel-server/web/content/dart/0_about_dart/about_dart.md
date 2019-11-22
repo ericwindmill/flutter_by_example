@@ -2,7 +2,7 @@
 title: "About Dart"
 author: "Eric"
 category: "Dart"
-subSection: "About Dart"
+subSection: "Getting Started with Dart"
 order: 1
 tags:
     - dart

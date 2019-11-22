@@ -3,7 +3,7 @@ title: "Booleans"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Data Types"
-order: 7
+order: 4
 tags:
 - dart
 - data types

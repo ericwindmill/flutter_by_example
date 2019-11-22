@@ -2,11 +2,11 @@
 title: "Values and Variables"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Dart Language Tour"
-order: 3
+subSection: "Basic Dart Language Features"
+order: 1
 tags:
 - dart
-- hello world
+- variables
 ---
 
 The basic building block of information in your Dart program will be variables. Anytime you're
@@ -17,7 +17,7 @@ Variables store references to these _values_.
   
 ## Defining Variables
 
-The simplest way to define a variable in Dart is using `var` keyword. 
+One of many ways, and the simplest way, to define a variable in Dart is using the `var` key word. 
 
 ```dart
 var message = 'Hello, World';
@@ -37,9 +37,9 @@ print(message);
 ## Inferring the type
 
 Dart is a _typed language_. The type of the variable `message` is String. Dart can infer this
- type, so you did't have to explicitly define it as a String. Importantly, this variable is not
-  forever a String. You cannot re-assign the variable as an integer. If you did want to create a
-   variable that's more dynamic, you'd use the `dynamic` keyword.
+ type, so you did't have to explicitly define it as a String. Importantly, this variable must be
+  a String forever. You cannot re-assign the variable as an integer. If you did want to create a
+   variable that's more dynamic, you'd use the `dynamic` keyword. We'll see examples of that in a later lesson.
    
 ```dart
 dynamic message = 'Hello World';

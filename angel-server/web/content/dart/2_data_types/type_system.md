@@ -3,7 +3,7 @@ title: "Intro to Dart's Type System"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Data Types"
-order: 4
+order: 1
 tags:
 - dart
 - type system

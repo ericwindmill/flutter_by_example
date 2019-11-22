@@ -26,7 +26,7 @@ p,
 a,
 li,
 ul {
-  color: #333333;
+  color: #242424;
 }
 
 h1,
@@ -69,6 +69,7 @@ select {
 
 h1 {
   font-size: 3.8rem;
+  padding-bottom: 20px;
 }
 
 h2 {
