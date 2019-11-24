@@ -28,7 +28,12 @@ Site is running at localhost:8080
 - content
     - set up image hosting
     - copy all examples over from current FBE, and make sure they're correct
-    - write more!
+    - grand vision:
+        - section about Dart language features (like current) (documentation-like)
+        - section about Flutter language features (documentation-like)
+        - section of deep dives into single topics with small examples (like Wes Bos's JavaScript 30)
+        - section of robust example Dart tutorials w/ accompanying lessons (tutorial like)
+        - section of robust example Flutter apps w/ accompanying lessons (like current flutterbyexample) (tutorial like)
     
 - client
     - ~~support subfolders in routes~~
