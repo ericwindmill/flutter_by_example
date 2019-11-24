@@ -2,17 +2,23 @@ Dart:
   match: |
     Dart
     dart
-  subsections: |
-    About Dart
-    Intro to Dart
-    Data Types
+  subsections:
+    AboutDart: |
+      Post 1
+      Post 2
+    IntrotoDart: |
+      etc
+    DataTypes: |
+      etc
 Flutter:
   match: |
     Flutter
     flutter
-  subsections: |
-    Layout
-    Animations
+  subsections:
+    Layout: |
+      Post 1 About Layout
+    Animations: |
+      Post Title Example
 Et Cetera:
   match: |
     et cetera
