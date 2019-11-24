@@ -3,7 +3,7 @@ title: "Hello World"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Getting Started with Dart"
-order: 2
+order: 6
 tags:
 - dart
 - hello world

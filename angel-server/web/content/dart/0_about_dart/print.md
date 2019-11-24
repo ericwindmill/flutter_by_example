@@ -3,13 +3,13 @@ title: "Print to the console"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Getting Started with Dart"
-order: 3
+order: 8
 tags:
-- dart
-- hello world
+    - dart
+    - print
 ---
 
-In the previous lesson, you saw a program that print's "Hello, World" to the console.
+In a previous lesson, you saw a program that print's "Hello, World" to the console.
 
 ```dart
 void main() {
