@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91d22cc2-146d-4f6e-9de6-e96edb0349c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/dartpad.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/documentation_and_pub.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/setup_and_sdk.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/text_editors.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/the_main_function.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/hello_world.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/hello_world.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/print.md" beforeDir="false" afterPath="$PROJECT_DIR$/angel-server/web/content/dart/0_about_dart/print.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +92,7 @@
       <workItem from="1574369349601" duration="7068000" />
       <workItem from="1574533452564" duration="215000" />
       <workItem from="1574535902232" duration="2881000" />
+      <workItem from="1574624988902" duration="276000" />
     </task>
     <servers />
   </component>
