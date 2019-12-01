@@ -2,7 +2,7 @@
 title: "Logical Operators"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 6
 tags:
     - dart

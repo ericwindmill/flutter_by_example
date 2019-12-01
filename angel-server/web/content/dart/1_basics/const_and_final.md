@@ -2,7 +2,7 @@
 title: "const and final variables"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 3
 tags:
 - dart

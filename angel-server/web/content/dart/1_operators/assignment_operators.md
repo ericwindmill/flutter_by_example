@@ -2,7 +2,7 @@
 title: "Assignment Operators"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 5
 tags:
     - dart

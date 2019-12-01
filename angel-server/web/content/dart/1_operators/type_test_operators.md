@@ -2,7 +2,7 @@
 title: "Type Test Operators"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 8
 tags:
     - dart

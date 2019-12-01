@@ -2,7 +2,7 @@
 title: "Values and Variables"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 1
 tags:
 - dart

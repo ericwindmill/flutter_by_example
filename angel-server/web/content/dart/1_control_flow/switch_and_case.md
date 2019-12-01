@@ -2,7 +2,7 @@
 title: "Switch statements and case"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 11
 tags:
     - dart
@@ -11,7 +11,7 @@ tags:
 ---
 
 <span class='lesson-intro-statement'>
-The following is an excerpt from the book <a href="">Flutter in Action</a>.
+The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
 </span>
 
 `switch` statements are great when there are many possible conditions for a single value. These statements compare `int`s, `String`s, and compile-time constants using `==`. In other words, you must compare a value to a value of the same type that cannot change at runtime. If that sounds like jargon, here's a simple example:

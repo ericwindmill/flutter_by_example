@@ -2,7 +2,7 @@
 title: "Null Aware Operators"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 7
 tags:
     - dart
@@ -10,7 +10,7 @@ tags:
 ---
 
 <span class='lesson-intro-statement'>
-The following is an excerpt from the book <a href="">Flutter in Action</a>.
+The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
 </span>
 
 Null-aware operators are one of my favorite features in Dart. In any language, having variables and values fly around that are `null` can be problematic. It can crash your program. Programmers often have to write `if (response == null) return` at the top of a function to make asynchronous calls. That's not the worst thing ever, but it's not concise.
@@ -79,9 +79,9 @@ This last null-safe operator accomplishes a goal pretty similar to the previous 
 
 This operator basically says, "Hey, if this object is `null`, then assign it to this value. If it's not, just return the object as is":
 
-----
+```dart
 int x = 5
 x ??= 3;
-----
+```
 
 In the second line, `x` will not be assigned 3, because it already has a value. But like the other null-aware operators, this one seeks to make your code more concise.

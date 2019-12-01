@@ -2,7 +2,7 @@
 title: "Control Flow: if, else, else if"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 10
 tags:
     - dart
@@ -12,7 +12,7 @@ tags:
 ---
 
 <span class='lesson-intro-statement'>
-The following is an excerpt from the book <a href="">Flutter in Action</a>.
+The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
 </span>
 
 Dart supports `if`, `else if`, and `else`, as you'd expect. Here's a standard `if` statement:

@@ -2,7 +2,7 @@
 title: "Arithmetic and Comparison Operators"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 4
 tags:
     - dart

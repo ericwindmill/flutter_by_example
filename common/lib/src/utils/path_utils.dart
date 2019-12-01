@@ -33,7 +33,7 @@ class SubCategoriesOrder {
   static final Map<String, int> postOrder = {
     // DART
     "Getting Started with Dart": SubCategoriesOrder.Dart_AboutDart,
-    "Basic Dart Language Features": SubCategoriesOrder.Dart_IntroToDart,
+    "Dart Fundamentals": SubCategoriesOrder.Dart_IntroToDart,
     "Data Types": SubCategoriesOrder.Dart_DataTypes,
     "Functions": SubCategoriesOrder.Dart_Functions,
     "Object Oriented Dart": SubCategoriesOrder.Dart_OOP,

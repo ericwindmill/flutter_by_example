@@ -2,7 +2,7 @@
 title: "Ternary Conditional operator"
 author: "Eric"
 category: "Dart"
-subSection: "Basic Dart Language Features"
+subSection: "Dart Fundamentals"
 order: 12
 tags:
     - dart
