@@ -26,7 +26,6 @@ Site is running at localhost:8080
 ## Todo:
 
 - content
-    - set up image hosting
     - copy all examples over from current FBE, and make sure they're correct
     - grand vision:
         - section about Dart language features (like current) (documentation-like)

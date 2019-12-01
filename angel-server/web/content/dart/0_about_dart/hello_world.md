@@ -18,6 +18,14 @@ void main() {
 }
 ```
 
+```text
+Output:
+Hello, World!
+```
+
+I recommend running this example in [Dartpad](dartpad.dev).
+
+
 
 
 

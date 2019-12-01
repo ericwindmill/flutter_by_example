@@ -14,6 +14,7 @@ tags:
 
 * [Meet Dart](#about-dart)
 * [Why Does Flutter Use Dart](#why-dart)
+* [History and Background](#history)
 
 </div>
 
@@ -83,4 +84,5 @@ language specifically for writing modern UIs. The Dart team and Flutter team
 citizens in Dart. These features are used heavily in reactive programming, which is the paradigm of today. 
 
 Lastly, Dart excels at being a language that's easy to learn. As a co-worker
- of mine said about hiring, "We don't have to find Dart people, only smart people."
+ of mine said about hiring, "We don't have to find Dart people, only smart people." 
+ 
