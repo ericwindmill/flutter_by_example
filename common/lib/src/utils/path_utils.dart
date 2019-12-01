@@ -23,9 +23,9 @@ class SubCategoriesOrder {
   // Dart Section constants
   static const int Dart_AboutDart = 1;
   static const int Dart_IntroToDart = 2;
-  static const int Dart_Operators = 3;
-  static const int Dart_DataTypes = 4;
-  static const int Dart_Functions = 5;
+  static const int Dart_DataTypes = 3;
+  static const int Dart_Functions = 4;
+  static const int Dart_OOP = 5;
 
   // Flutter section constants
   static const int Flutter_Layout = 1;
@@ -34,9 +34,9 @@ class SubCategoriesOrder {
     // DART
     "Getting Started with Dart": SubCategoriesOrder.Dart_AboutDart,
     "Basic Dart Language Features": SubCategoriesOrder.Dart_IntroToDart,
-    "Operators": SubCategoriesOrder.Dart_Operators,
     "Data Types": SubCategoriesOrder.Dart_DataTypes,
-    "Functions" : SubCategoriesOrder.Dart_Functions,
+    "Functions": SubCategoriesOrder.Dart_Functions,
+    "Object Oriented Dart": SubCategoriesOrder.Dart_OOP,
 
     // FLUTTER
     "Layout": SubCategoriesOrder.Flutter_Layout,

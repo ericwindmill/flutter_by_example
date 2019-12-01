@@ -2,8 +2,8 @@
 title: "Bitwise and Shift Operators"
 author: "Eric"
 category: "Dart"
-subSection: "Operators"
-order: 6
+subSection: "Basic Dart Language Features"
+order: 9
 tags:
     - dart
     - operators
