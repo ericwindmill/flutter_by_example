@@ -2,7 +2,7 @@
 title: "Switch statements and case"
 author: "Eric"
 category: "Dart"
-subSection: "Operators"
+subSection: "Basic Dart Language Features"
 order: 11
 tags:
     - dart

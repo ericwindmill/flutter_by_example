@@ -2,7 +2,7 @@
 title: "Loops: for and while"
 author: "Eric"
 category: "Dart"
-subSection: "Operators"
+subSection: "Basic Dart Language Features"
 order: 13
 tags:
     - dart
