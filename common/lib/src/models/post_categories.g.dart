@@ -8,14 +8,14 @@ part of 'post_categories.dart';
 
 PostCategory _$PostCategoryFromJson(Map<String, dynamic> json) {
   return PostCategory(
-      json['title'] as String,
-      json['description'] as String,
-      (json['subCategories'] as List)
+      title: json['title'] as String,
+      description: json['description'] as String,
+      subCategories: (json['subCategories'] as List)
           ?.map((e) => e == null
               ? null
               : PostSubCategory.fromJson(e as Map<String, dynamic>))
           ?.toList(),
-      json['order'] as int);
+      order: json['order'] as int);
 }
 
 Map<String, dynamic> _$PostCategoryToJson(PostCategory instance) =>
@@ -28,8 +28,8 @@ Map<String, dynamic> _$PostCategoryToJson(PostCategory instance) =>
 
 PostSubCategory _$PostSubCategoryFromJson(Map<String, dynamic> json) {
   return PostSubCategory(
-      json['title'] as String,
-      (json['posts'] as List)
+      title: json['title'] as String,
+      posts: (json['posts'] as List)
           ?.map((e) => e == null
               ? null
               : PostFrontmatter.fromJson(e as Map<String, dynamic>))

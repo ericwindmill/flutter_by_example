@@ -33,7 +33,6 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
       fileSystem,
       source: fileSystem.directory('web'),
       callback: (File f, RequestContext req, ResponseContext resp) async {
-        print("vDir.callback: $f");
         String content = await f.readAsString();
         PostConfiguration post = buildPost(content, req.path);
         return post;
@@ -70,6 +69,8 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
 
       /// Get Files as a flat list. i.e: [File file1, File file2, etc...]
       List<FileSystemEntity> files = await TableOfContentsBuilder.build(vDir);
+
+      // try to extract the file from from the [FileSystemEntity]
       files.forEach((FileSystemEntity f) {
         /// eventually we will return this file.
         File file;
@@ -116,7 +117,10 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
             } else {
               /// category: exists, subcategory: doesn't exist
               /// create new sub category with frontmatter
-              final newSub = PostSubCategory(subCategoryTitle, [frontmatter]);
+              final newSub = PostSubCategory(
+                title: subCategoryTitle,
+                posts: [frontmatter],
+              );
 
               /// add subcategory to category
               posts[categoryTitle].subCategories.add(newSub);
@@ -124,22 +128,26 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
           } else {
             /// subcategory cannot logically exist
             /// create new subcategory with frontmatter
-            final s = PostSubCategory(subCategoryTitle, [frontmatter]);
+            final s = PostSubCategory(
+              title: subCategoryTitle,
+              posts: [frontmatter],
+            );
 
             /// create new category with new sub
-            final c = PostCategory(categoryTitle, "", [s], PostOrder.fromString(categoryTitle) ?? 99);
+            final c = PostCategory(
+              title: categoryTitle,
+              description: "",
+              subCategories: [s],
+              order: CategoryOrder.fromString(categoryTitle) ?? 99,
+            );
 
             /// add it to the posts
             posts[categoryTitle] = c;
           }
         } catch (e, s) {
-          prettyLog(LogRecord(
-            Level.WARNING,
-            "Error reading files for toc",
-            "App.get.toc",
-            e,
-            s,
-          ));
+          prettyLog(
+            LogRecord(Level.WARNING, "Error reading files for toc", "App.get.toc", e, s),
+          );
         }
       });
       List<PostCategory> asList = posts.values.toList();
@@ -150,6 +158,9 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
     /// Anytime a request comes through to a route that isn't defined,
     /// It'll be passed through the following "fallback" methods in the order
     /// they're defined.
+    ///
+    /// In practical terms, that means that all lesson routes will pass through
+    /// this callback, which will find the Markdown file and serve it.
     ///
     app.fallback(
       (RequestContext req, ResponseContext res) => serveLocalFile(req, res, vDir),
@@ -172,6 +183,7 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
   };
 }
 
+/// Find the correct markdown lesson file and serve it
 FutureOr<dynamic> serveLocalFile(
     RequestContext req, ResponseContext res, VirtualDirectory vDir) async {
   try {

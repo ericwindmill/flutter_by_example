@@ -8,24 +8,24 @@ class PostFrontmatter {
   String author;
   String path; // i.e. "content/title_of_post"
   String category;
-  DateTime createdAt;
   String subSection;
+  DateTime createdAt;
   int order;
   List<String> tags;
 
-  PostFrontmatter(
-      {this.title,
-      this.author,
-      this.path,
-      this.category,
-      this.subSection,
-      this.order,
-      this.tags}) {
+  PostFrontmatter({
+    this.title,
+    this.author,
+    this.path,
+    this.category,
+    this.subSection,
+    this.order,
+    this.tags,
+  }) {
     createdAt = DateTime.now();
   }
 
-  factory PostFrontmatter.fromJson(Map<String, dynamic> json) =>
-      _$PostFrontmatterFromJson(json);
+  factory PostFrontmatter.fromJson(Map<String, dynamic> json) => _$PostFrontmatterFromJson(json);
   Map<String, dynamic> toJson() => _$PostFrontmatterToJson(this);
 
   @override

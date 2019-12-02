@@ -6,7 +6,6 @@ import 'package:yaml/yaml.dart';
 ///  each field is included and correct
 ///  the "category" and "subcategory" are valid options
 ///
-/// todo: end
 
 PostFrontmatter extractFrontmatterOnly(String fileContents, String path) {
   const separator = '---';

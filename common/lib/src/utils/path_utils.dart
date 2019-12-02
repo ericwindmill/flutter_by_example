@@ -1,48 +1,60 @@
 // would love to see this in a yaml config. But not today.
-class PostOrder {
-  static const int Dart = 1;
-  static const int Flutter = 2;
-  static const int AdvancedTopics = 3;
-  static const int ExampleApp = 4;
-  static const int ETC = 5;
+import 'package:common/common.dart';
+import 'package:common/src/models/post_frontmatter.dart';
+import 'package:common/src/utils/table_of_contents.dart';
 
-  static final Map<String, int> postOrder = {
-    "Dart": PostOrder.Dart,
-    "Flutter": PostOrder.Flutter,
-    "AdvancedTopics": PostOrder.AdvancedTopics,
-    "ExampleApp": PostOrder.ExampleApp,
-    "etc": PostOrder.ETC,
-  };
+// TODO: optimize this if it's slow AF.
+// This is very brute force
+// the loops should not be hitting each node multiple times
+sortPosts(List<PostCategory> allPosts) {
+  /// these are used as temporary storage to sort portions
+  /// of the final sort. They are often cleared
+  List<PostCategory> sorted = [];
+  List<PostSubCategory> sortedForCategory = [];
+  List<PostFrontmatter> sortedForSubcategory = [];
+  // Post category
+  List<String> sortedCategoryTitles = TABLE_OF_CONTENTS.keys.toList();
 
-  static int fromString(String s) {
-    return postOrder[s];
-  }
-}
+  sortedCategoryTitles.forEach((String categoryTitle) {
+    PostCategory categoryObject = allPosts.firstWhere((c) {
+      var categoryTitleFromObject = c.title.toLowerCase().trim();
+      var categoryTitleFromToC = categoryTitle.toLowerCase().trim();
+      return categoryTitleFromObject == categoryTitleFromToC;
+    });
 
-class SubCategoriesOrder {
-  // Dart Section constants
-  static const int Dart_AboutDart = 1;
-  static const int Dart_IntroToDart = 2;
-  static const int Dart_DataTypes = 3;
-  static const int Dart_Functions = 4;
-  static const int Dart_OOP = 5;
+    // subcategory
+    List<String> sortedSubcategoryTitles = TABLE_OF_CONTENTS[categoryTitle].keys.toList();
+    sortedSubcategoryTitles.forEach((String subcategoryTitle) {
+      PostSubCategory postSubCategoryObject = categoryObject.subCategories.firstWhere((s) {
+        var subcategoryTitleFromObject = s.title.toLowerCase().trim();
+        var subcategoryTitleFromToC = subcategoryTitle.toLowerCase().trim();
+        return subcategoryTitleFromToC == subcategoryTitleFromObject;
+      });
 
-  // Flutter section constants
-  static const int Flutter_Layout = 1;
+      // posts
+      List<String> sortedPostNames = TABLE_OF_CONTENTS[categoryTitle][subcategoryTitle].toList();
+      sortedPostNames.forEach((String postTitle) {
+        PostFrontmatter post = postSubCategoryObject.posts.firstWhere((p) {
+          var postTitleFromObject = p.title.toLowerCase().trim();
+          var postTitleFromToC = postTitle.toLowerCase().trim();
+          return postTitleFromObject == postTitleFromToC;
+        });
+        sortedForSubcategory.add(post);
+      });
+      // now that posts are sorted for this particular subcategory,
+      // update the original object and clear the temp storage
+      postSubCategoryObject.posts = sortedForSubcategory.sublist(0);
+      sortedForSubcategory.clear();
 
-  static final Map<String, int> postOrder = {
-    // DART
-    "Getting Started with Dart": SubCategoriesOrder.Dart_AboutDart,
-    "Dart Fundamentals": SubCategoriesOrder.Dart_IntroToDart,
-    "Data Types": SubCategoriesOrder.Dart_DataTypes,
-    "Functions": SubCategoriesOrder.Dart_Functions,
-    "Object Oriented Dart": SubCategoriesOrder.Dart_OOP,
+      sortedForCategory.add(postSubCategoryObject);
+    });
 
-    // FLUTTER
-    "Layout": SubCategoriesOrder.Flutter_Layout,
-  };
+    // now that [subcategories] are sorted for this particular subcategory,
+    // update the original object and clear the temp storage
+    categoryObject.subCategories = sortedForCategory.sublist(0);
+    sorted.add(categoryObject);
+    sortedForCategory.clear();
+  });
 
-  static int fromString(String s) {
-    return postOrder[s];
-  }
+  return sorted;
 }

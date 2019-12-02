@@ -1,5 +1,5 @@
 ---
-title: "Values and Variables"
+title: "Values and variables"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Dart Fundamentals"
