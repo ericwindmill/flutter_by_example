@@ -2,10 +2,12 @@
 title: "Data Model and HTTP"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
-    - flutter
+    - models
     - ui
+    - http
+    - main.dart
 ---
 
 ### 1. Get to a Clean Slate

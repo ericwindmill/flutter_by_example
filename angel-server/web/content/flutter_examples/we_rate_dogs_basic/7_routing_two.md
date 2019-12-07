@@ -2,7 +2,7 @@
 title: "Routing 2: Add a form page"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - flutter
     - routing

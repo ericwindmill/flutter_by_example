@@ -2,7 +2,7 @@
 title: "Build a Custom Widget"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - flutter
     - build context

@@ -2,7 +2,7 @@
 title: "Sliders and Buttons"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - Slider
     - RaisedButton

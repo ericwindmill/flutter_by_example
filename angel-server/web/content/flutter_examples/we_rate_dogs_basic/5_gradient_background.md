@@ -2,7 +2,7 @@
 title: "Gradient Backgrounds"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - flutter
     - theme

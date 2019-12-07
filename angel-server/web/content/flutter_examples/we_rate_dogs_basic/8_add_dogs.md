@@ -2,7 +2,7 @@
 title: "User Input"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - TextEditingController
     - TextField

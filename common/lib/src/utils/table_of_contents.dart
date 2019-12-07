@@ -53,7 +53,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
   "Flutter": {
     "Getting started with Flutter": [
       "About Flutter",
-      "Setup your machine",
+      "IDEs and resources",
     ],
     "Widgets": [
       "Intro to Widgets",
@@ -66,4 +66,20 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Thinking in widgets",
     ],
   },
+  "Flutter Examples": {
+    "Basic App": [
+      "Intro and Setup",
+      "Data Model and HTTP",
+      "Build a Custom Widget",
+      "ListView and builder pattern",
+      "Gradient Backgrounds",
+      "Routing: Add a detail page",
+      "Routing 2: Add a form page",
+      "User Input",
+      "Sliders and Buttons",
+      "Snackbars and Dialogs",
+      "Built-in Animation: AnimatedCrossFade",
+      "Built-in Animation: Hero transition",
+    ],
+  }
 };

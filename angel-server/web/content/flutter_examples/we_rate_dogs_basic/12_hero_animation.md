@@ -2,7 +2,7 @@
 title: "Built-in Animation: Hero transition"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - AnimatedCrossFade
     - Hero

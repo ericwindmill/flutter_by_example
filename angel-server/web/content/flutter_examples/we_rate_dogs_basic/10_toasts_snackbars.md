@@ -2,7 +2,7 @@
 title: "Snackbars and Dialogs"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - Snackbar
     - AlertDialog

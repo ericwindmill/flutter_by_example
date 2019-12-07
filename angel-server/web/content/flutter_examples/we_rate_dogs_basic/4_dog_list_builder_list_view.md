@@ -2,7 +2,7 @@
 title: "ListView and builder pattern"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - flutter
     - build context

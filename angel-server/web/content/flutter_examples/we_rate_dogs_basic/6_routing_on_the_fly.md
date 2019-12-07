@@ -1,8 +1,8 @@
 ---
-title: "Routing on the fly"
+title: "Routing: Add a detail page"
 author: "Eric"
 category: "Flutter Examples"
-subSection: "Basic UI App"
+subSection: "Basic App"
 tags:
     - flutter
     - MaterialPageRoute
