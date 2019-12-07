@@ -49,5 +49,21 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "sets",
       "maps",
     ],
-  }
+  },
+  "Flutter": {
+    "Getting started with Flutter": [
+      "About Flutter",
+      "Setup your machine",
+    ],
+    "Widgets": [
+      "Intro to Widgets",
+      "Widget types: Stateful and Stateless",
+      "StatefulWidget lifecycle",
+      "The Widget tree",
+      "BuildContext",
+      "Inherited Widgets",
+      "Built in Widgets: Material and Cupertino",
+      "Thinking in widgets",
+    ],
+  },
 };

@@ -18,8 +18,10 @@ class TableOfContentsBloc extends Bloc<TableOfContentsEvent, TableOfContentsStat
     TableOfContentsEvent event,
   ) async* {
     if (event is LoadTableOfContents) {
-      List<PostCategory> allPosts = await repository.loadAllPostsByCategory();
+      List<PostCategory> allPosts = await repository.loadTableOfContents();
+      print("loaded");
       List<PostCategory> sorted = sortPosts(allPosts);
+      print("sorted");
       yield new TableOfContentsLoadedState(sorted);
     }
   }

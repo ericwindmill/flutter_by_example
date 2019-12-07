@@ -29,7 +29,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   }
 
   @override
-  Future<List<PostCategory>> loadAllPostsByCategory() async {
+  Future<List<PostCategory>> loadTableOfContents() async {
     List<PostCategory> allPosts = [];
     try {
       var reqUrl = "http://localhost:3000/toc";
@@ -37,7 +37,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
       var body = response.body;
       List postsByCategory = json.decode(body);
       allPosts = postsByCategory.map((dynamic posts) => new PostCategory.fromJson(posts)).toList();
-      allPosts.sort((a, b) => a.order.compareTo(b.order));
+      print(allPosts);
       return allPosts;
     } catch (e) {
       print("Respoitory.LoadAllPostsByCategory.error: $e");

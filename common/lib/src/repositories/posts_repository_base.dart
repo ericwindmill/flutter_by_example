@@ -4,5 +4,5 @@ import 'package:common/src/models/post_configuration.dart';
 abstract class PostRepository {
   Future<PostConfiguration> loadMarkdownPostByPageId(String pageId);
   Future<List<PostConfiguration>> loadAllPosts();
-  Future<List<PostCategory>> loadAllPostsByCategory();
+  Future<List<PostCategory>> loadTableOfContents();
 }

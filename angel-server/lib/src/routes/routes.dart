@@ -138,7 +138,6 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
               title: categoryTitle,
               description: "",
               subCategories: [s],
-              order: CategoryOrder.fromString(categoryTitle) ?? 99,
             );
 
             /// add it to the posts
@@ -151,7 +150,6 @@ AngelConfigurer configureServer(FileSystem fileSystem) {
         }
       });
       List<PostCategory> asList = posts.values.toList();
-      asList.sort((a, b) => a.order);
       return asList;
     });
 

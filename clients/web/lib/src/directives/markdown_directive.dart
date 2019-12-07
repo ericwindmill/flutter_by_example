@@ -33,7 +33,8 @@ class MarkdownDirective {
 
   _setInnerHtml(Element _el) async {
     await Timer(Duration(milliseconds: 1), () => null);
-    final html = _el.setInnerHtml(md.markdownToHtml(markdownString, extensionSet: md.ExtensionSet.gitHubWeb),
+    final html = _el.setInnerHtml(
+        md.markdownToHtml(markdownString, extensionSet: md.ExtensionSet.gitHubWeb),
         treeSanitizer: NullTreeSanitizer());
     _highlightCodeBlocks();
   }

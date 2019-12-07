@@ -7,54 +7,60 @@ import 'package:common/src/utils/table_of_contents.dart';
 // This is very brute force
 // the loops should not be hitting each node multiple times
 sortPosts(List<PostCategory> allPosts) {
-  /// these are used as temporary storage to sort portions
-  /// of the final sort. They are often cleared
-  List<PostCategory> sorted = [];
-  List<PostSubCategory> sortedForCategory = [];
-  List<PostFrontmatter> sortedForSubcategory = [];
-  // Post category
-  List<String> sortedCategoryTitles = TABLE_OF_CONTENTS.keys.toList();
-
-  sortedCategoryTitles.forEach((String categoryTitle) {
-    PostCategory categoryObject = allPosts.firstWhere((c) {
-      var categoryTitleFromObject = c.title.toLowerCase().trim();
-      var categoryTitleFromToC = categoryTitle.toLowerCase().trim();
-      return categoryTitleFromObject == categoryTitleFromToC;
-    });
-
-    // subcategory
-    List<String> sortedSubcategoryTitles = TABLE_OF_CONTENTS[categoryTitle].keys.toList();
-    sortedSubcategoryTitles.forEach((String subcategoryTitle) {
-      PostSubCategory postSubCategoryObject = categoryObject.subCategories.firstWhere((s) {
-        var subcategoryTitleFromObject = s.title.toLowerCase().trim();
-        var subcategoryTitleFromToC = subcategoryTitle.toLowerCase().trim();
-        return subcategoryTitleFromToC == subcategoryTitleFromObject;
+  try {
+    /// these are used as temporary storage to sort portions
+    /// of the final sort. They are often cleared
+    List<PostCategory> sorted = [];
+    List<PostSubCategory> sortedForCategory = [];
+    List<PostFrontmatter> sortedForSubcategory = [];
+    // Post category
+    List<String> sortedCategoryTitles = TABLE_OF_CONTENTS.keys.toList();
+    sortedCategoryTitles.forEach((String categoryTitle) {
+      print("sort.categoryTitle loop :: $categoryTitle");
+      PostCategory categoryObject = allPosts.firstWhere((c) {
+        var categoryTitleFromObject = c.title.toLowerCase().trim();
+        var categoryTitleFromToC = categoryTitle.toLowerCase().trim();
+        return categoryTitleFromObject == categoryTitleFromToC;
       });
-
-      // posts
-      List<String> sortedPostNames = TABLE_OF_CONTENTS[categoryTitle][subcategoryTitle].toList();
-      sortedPostNames.forEach((String postTitle) {
-        PostFrontmatter post = postSubCategoryObject.posts.firstWhere((p) {
-          var postTitleFromObject = p.title.toLowerCase().trim();
-          var postTitleFromToC = postTitle.toLowerCase().trim();
-          return postTitleFromObject == postTitleFromToC;
+      // subcategory
+      List<String> sortedSubcategoryTitles = TABLE_OF_CONTENTS[categoryTitle].keys.toList();
+      sortedSubcategoryTitles.forEach((String subcategoryTitle) {
+        print("sort.subcategoryTitle loop :: $subcategoryTitle");
+        PostSubCategory postSubCategoryObject = categoryObject.subCategories.firstWhere((s) {
+          var subcategoryTitleFromObject = s.title.toLowerCase().trim();
+          var subcategoryTitleFromToC = subcategoryTitle.toLowerCase().trim();
+          return subcategoryTitleFromToC == subcategoryTitleFromObject;
         });
-        sortedForSubcategory.add(post);
+
+        // posts
+        List<String> sortedPostNames = TABLE_OF_CONTENTS[categoryTitle][subcategoryTitle].toList();
+        sortedPostNames.forEach((String postTitle) {
+          print("sort.postName loop :: $postTitle");
+          PostFrontmatter post = postSubCategoryObject.posts.firstWhere((p) {
+            var postTitleFromObject = p.title.toLowerCase().trim();
+            var postTitleFromToC = postTitle.toLowerCase().trim();
+            return postTitleFromObject == postTitleFromToC;
+          });
+          sortedForSubcategory.add(post);
+        });
+        // now that posts are sorted for this particular subcategory,
+        // update the original object and clear the temp storage
+        postSubCategoryObject.posts = sortedForSubcategory.sublist(0);
+        sortedForSubcategory.clear();
+
+        sortedForCategory.add(postSubCategoryObject);
       });
-      // now that posts are sorted for this particular subcategory,
+      print("4:");
+      // now that [subcategories] are sorted for this particular subcategory,
       // update the original object and clear the temp storage
-      postSubCategoryObject.posts = sortedForSubcategory.sublist(0);
-      sortedForSubcategory.clear();
-
-      sortedForCategory.add(postSubCategoryObject);
+      categoryObject.subCategories = sortedForCategory.sublist(0);
+      sorted.add(categoryObject);
+      sortedForCategory.clear();
     });
-
-    // now that [subcategories] are sorted for this particular subcategory,
-    // update the original object and clear the temp storage
-    categoryObject.subCategories = sortedForCategory.sublist(0);
-    sorted.add(categoryObject);
-    sortedForCategory.clear();
-  });
-
-  return sorted;
+    print("5");
+    return sorted;
+  } catch (e, s) {
+    print(e);
+    print(s);
+  }
 }
