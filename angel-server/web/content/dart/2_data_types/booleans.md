@@ -21,11 +21,13 @@ bool isWinter = true;
 // You can combine booleans with &&, ||, and other symbols
 // if isPortland is true AND isWinter is true
 bool isRaining = isPortland && isWinter;
+
+if (isRaining) {
+  print("Grab an umbrella!");
+} else {
+  print("The sun is shining!");
+}
+
+// prints
+"Grab an umbrella!"
 ```
-
-<span class="help">
-<p class="figure-title">Dart operators</p>
-<p>Find more about operators here.</p>
-</span>
-
-There are other built in types that deal with _collections_. You can find those on the next page. 

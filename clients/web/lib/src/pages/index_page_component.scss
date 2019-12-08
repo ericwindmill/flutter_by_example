@@ -4,7 +4,6 @@
   margin: 150px 0 100px;
   padding: 0 0 100px;
   display: flex;
-  border-bottom: .5px #d5d7da solid;
 }
 
 .hero-image {
@@ -19,6 +18,7 @@
   flex: 1;
   margin: 10px;
   transform: translate(-55px, 0px);
+  width: 300px;
 }
 
 .toc-categories {

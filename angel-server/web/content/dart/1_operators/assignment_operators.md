@@ -19,7 +19,7 @@ Dart also supports _compound operators_, which are the equivalent of performing 
 
 |  Operator | Meaning  |
 |---|---|
-| –= | subtraction assignment  |
+| -= | subtraction assignment  |
 | /= | divisions assigment |	
 | %= | modulo assignment |	
 | += | addition assignment |
@@ -29,7 +29,7 @@ Dart also supports _compound operators_, which are the equivalent of performing 
 | ^= | bitwise XOR assignment |
 | <<= | bitwise shift left assignment |	
 | &= | bitwise and assignment |	
-| |= | bitwise or assignment |
+| &#124;= | bitwise or assignment |
 
 example:
 ```dart

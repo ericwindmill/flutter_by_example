@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Material+Icons);
 
 body {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 5vw 5vw;
 }
@@ -37,6 +37,7 @@ h5,
 h6,
 p {
   margin: 40px 0;
+  white-space: pre-wrap;
 }
 
 
@@ -54,10 +55,12 @@ th {
 
 a {
   color: #02569b;
+  text-decoration: none;
 }
 
 a:hover {
   cursor: pointer;
+  color: #13b9fd;
 }
 
 label,
@@ -127,17 +130,45 @@ h5 {
   margin: 15px 0;
 }
 
-
-.aside {
-  padding: 15px 20px;
-  margin: 50px 0;
+.post-toc {
+  padding: 0 20px;
+  margin: 50px 0 50px;
   position: relative;
   border-radius: 10px;
   font-size: 1.6rem;
   line-height: 1.2;
   text-align: justify;
   box-shadow: none;
-  border: 2px solid #13b9fd;
+  border: 1px solid #02569b;
+}
+
+.post-toc > p {
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+.aside {
+  padding: 15px 20px;
+  margin: 50px 0 50px 75px;
+  position: relative;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+  box-shadow: none;
+  border: 1px solid #ffc108;
+}
+
+.aside::before {
+  content: 'Note:'; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-size: 2rem;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: -75px;
 }
 
 

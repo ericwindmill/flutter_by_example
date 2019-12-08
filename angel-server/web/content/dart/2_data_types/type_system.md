@@ -45,9 +45,9 @@ Try changing the type of the left hand side, or casting the right hand side to '
 This kind of build time error is what makes Dart _type safe_. Types ensure at compile time that your
  functions all get the right kind of data. 
 
-<span class="tip"> 
+<div class="aside"> 
 If you're using one of the IDEs suggested in the appendix and have installed the Dart plugin, you won't even get that far. The linter will tell you you're using the wrong type straight away. This is, in a nutshell, the value of type systems.
-</span>
+</div>
 
 ### Types in functions
 

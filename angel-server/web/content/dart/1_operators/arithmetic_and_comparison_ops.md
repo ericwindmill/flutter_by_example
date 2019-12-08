@@ -16,7 +16,7 @@ Dart supports all the operators you'd expect from a modern programming language.
 |  Operator | Meaning  |
 |---|---|
 | + | 	Add |
-| – | 	Subtract |
+| - | 	Subtract |
 | -expr | 	Unary minus, also known as negation (reverse the sign of the expression) |
 | * | 	Multiply |
 | / | 	Divide |

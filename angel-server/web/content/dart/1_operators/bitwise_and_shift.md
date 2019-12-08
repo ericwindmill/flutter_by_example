@@ -9,7 +9,7 @@ tags:
     - operators
 ---
 
-You can manipulate the individual bits of numbers in Dart. Usually, you’d use these bitwise and shift operators with integers.
+You can manipulate the individual bits of numbers in Dart. Usually, you'd use these bitwise and shift operators with integers.
 
 | Operator |	Meaning |
 |---|---|
@@ -20,7 +20,7 @@ You can manipulate the individual bits of numbers in Dart. Usually, you’d use 
 | <<	| Shift left | 
 | \>>	| Shift right|
 
-Here’s an example of using bitwise and shift operators:
+Here's an example of using bitwise and shift operators:
 
 ```dart
 final value = 0x22;

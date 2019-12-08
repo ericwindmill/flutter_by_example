@@ -8,19 +8,18 @@ tags:
     - dart
 ---
 
-<div class='aside'>
+<div class='post-toc'>
 
-## Sections
+On this page
 
 * [Meet Dart](#about-dart)
-* [Why Does Flutter Use Dart](#why-dart)
-* [History and Background](#history)
+* [Why Does Flutter Use Dart](#why-does-flutter-use-dart)
 
 </div>
 
 ### About Dart
 
-> Dart is an application programming language that’s easy to learn, easy to
+> Dart is an application programming language that's easy to learn, easy to
 > scale, and deployable everywhere. Google depends on Dart to make very large apps.
 > -dartlang.org
 
@@ -33,9 +32,9 @@ In order to write Flutter apps, it's important that you also learn Dart. We
 
 Dart is a programming language. And programming languages can be, as it turns
 out, hard to learn. The fundamentals of Dart are similar to all higher-level
-languages. You’ll find familiarity in Dart syntax if you’re coming from
-JavaScript, Java, or any other C-like language. You’ll feel comfortable with
-Dart’s object-oriented design if you’re coming from Ruby or Python.
+languages. You'll find familiarity in Dart syntax if you're coming from
+JavaScript, Java, or any other C-like language. You'll feel comfortable with
+Dart's object-oriented design if you're coming from Ruby or Python.
 
 Dart excels at being a "safe" language to learn. Google didn't set out to
  create anything innovative with Dart. Google wanted to make a language that
@@ -70,7 +69,7 @@ language specifically for writing modern UIs. The Dart team and Flutter team
 ) compiling:
 -- The AOT compiler changes Dart into efficient native code. This makes Flutter
  fast (a win for the user and the developer), but it also means that (nearly) the entire framework is written in Dart. For you, the developer, that means you can customize almost everything.
--- Dart’s optional JIT compiling allows hot-reloading to exist. Fast
+-- Dart's optional JIT compiling allows hot-reloading to exist. Fast
  development and iteration is a key to the joy of using Flutter.
 - Dart is object-oriented. This makes it easy to write visual user
  experiences with Dart, with no need for a markup language.
