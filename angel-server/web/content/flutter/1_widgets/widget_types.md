@@ -50,8 +50,6 @@ The State object is special in that it has several methods that interact with Fl
 
 In this example, you can see setState called in the `_MyHomePageState.increaseCount` method. That will increase the `counter`  variable, and that value will be displayed  when `build` is called again (which is done automatically).
 
-> You can see the rest of the state object methods [here](./stateful_widget_lifecycle.md).
-
 ```dart
 class Counter extends StatefulWidget {
   Counter({Key key, this.title}) : super(key: key);

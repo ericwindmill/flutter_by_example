@@ -39,7 +39,9 @@ class AlertButton extends StatelessWidget {
 }
 ```
 
-> The class `StatelessWidget` is the most basic widget class, and the one you'll use the most often. We'll cover the different types of widgets later.
+<div class="aside">
+The class `StatelessWidget` is the most basic widget class, and the one you'll use the most often. We'll cover the different types of widgets later.
+</div>
 
 When creating widgets, there is one requirement enforced by the widget superclass. It must have a `build` method. This method must return other widgets. It's the method that you use to compose widgets together to make a UI.
 

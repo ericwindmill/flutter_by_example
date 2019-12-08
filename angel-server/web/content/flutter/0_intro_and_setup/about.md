@@ -8,8 +8,10 @@ tags:
     - intro
 ---
 
-> This article was originally published [on CSS Tricks](https://css-tricks.com/flutter-googles-take-on-cross-platform/). 
-> Updated on 12/2/2019
+<div class="aside">
+This article was originally published <a href="https://css-tricks.com/flutter-googles-take-on-cross-platform/">on CSS Tricks</a>. 
+Updated here on 12/2/2019
+</div>
 
 <a href="https://flutter.dev/">Flutter</a> is a mobile <abbr title="Software Development Kit">SDK</abbr> that, at its core, is about empowering everyone to build beautiful mobile apps. Whether you come from the world of web development or native mobile development, Flutter makes it easier to create mobile apps in a familiar, simplified way, without ever giving up control to the framework.
 
@@ -17,7 +19,7 @@ As of this writing, Google AdWords, Alibaba, and BMW (to name a few) are using F
 
 Right now, there's a lot of buzz about Flutter. The question I see most often is, <em>"Flutter or React Native...which one should I use?"</em> Like all things in programming, its all about the tradeoffs you're willing to make.
 
-I'm going to try to convince you that Flutter is the best option for mobile app development. I believe it's better than any other cross platform framework, and it's possibly better than native development — but more on that in a bit.
+I'm going to try to convince you that Flutter is the best option for mobile app development. I believe it's better than any other cross platform framework, and it's possibly better than native development - but more on that in a bit.
 
 Before that though, let me walk (quickly) through what Flutter is, and what it is not, starting with the Dart programming language.
 
@@ -25,9 +27,11 @@ Before that though, let me walk (quickly) through what Flutter is, and what it i
 
 Dart is a programming language created by Google and was used to write Flutter. Dart was created, more or less, because Google wanted a language that was "better" than JavaScript to write server side and front-end code. From what I understand, the main issue they had with JavaScript is how slowly it updates with new features since it relies on a huge committee for approvals and several browser vendors to implement it.
 
-After a series of decisions about whether to take on JavaScript directly or not, Google decided to make a language that semantically fit inside of JavaScript. In other words, every single thing you write in Dart can compile to JavaScript. This is why they didn't just use Java — it's semantically huge.
+After a series of decisions about whether to take on JavaScript directly or not, Google decided to make a language that semantically fit inside of JavaScript. In other words, every single thing you write in Dart can compile to JavaScript. This is why they didn't just use Java - it's semantically huge.
 
-> <a href="https://gist.github.com/paulmillr/1208618"> Here's a leaked email chain from Google from 2010. </a> It's the "coming to Jesus" moment that they decided they needed to do something about JavaScript.
+<div class="aside">
+<a href="https://gist.github.com/paulmillr/1208618"> Here's a leaked email chain from Google from 2010. </a> It's the "coming to Jesus" moment that they decided they needed to do something about JavaScript.
+</div>
 
 The fundamentals of Dart are similar to all high-level languages. That said, programming languages are, as it turns out, hard to learn.
 
@@ -68,7 +72,7 @@ Your first choice is to write native apps for iOS and Android. This gives you ma
 
 <h4>React Native, WebViews, and other cross-platform JavaScript options</h4>
 
-Your second option: cross-platform, JavaScript-based tools such as WebViews and React Native. These aren't bad options. The problems you experience with native development disappear. Every front-end web developer on your team can chip in and help — all they need are some modern JavaScript skills. This is precisely why large companies such as AirBnb, Facebook, and Twitter have used React Native on core products. (AirBnb recently <a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a">announced</a> that it would stop using React Native, because of some of the issues I'll describe below.)
+Your second option: cross-platform, JavaScript-based tools such as WebViews and React Native. These aren't bad options. The problems you experience with native development disappear. Every front-end web developer on your team can chip in and help - all they need are some modern JavaScript skills. This is precisely why large companies such as AirBnb, Facebook, and Twitter have used React Native on core products. (AirBnb recently <a href="https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a">announced</a> that it would stop using React Native, because of some of the issues I'll describe below.)
 
 The first "mobile apps" to be built cross platform are simply WebViews that run on WebKit (a browser rendering engine). These are literally just embedded web pages. The problem with this is basically that manipulating the DOM is very expensive and doesn't perform well enough to make a great mobile experience.
 
