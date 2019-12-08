@@ -9,7 +9,7 @@ class PostFrontmatter {
   String path; // i.e. "content/title_of_post"
   String category;
   String subSection;
-  DateTime createdAt;
+  String createdAt;
   int order;
   List<String> tags;
 
@@ -21,9 +21,13 @@ class PostFrontmatter {
     this.subSection,
     this.order,
     this.tags,
+    this.createdAt,
   }) {
-    createdAt = DateTime.now();
+    // original publish date for "we rate dogs" examples
+    createdAt ??= DateTime(2018, 3, 18).toString();
   }
+
+  DateTime get createAtDateTime => DateTime.parse(createdAt);
 
   factory PostFrontmatter.fromJson(Map<String, dynamic> json) => _$PostFrontmatterFromJson(json);
   Map<String, dynamic> toJson() => _$PostFrontmatterToJson(this);

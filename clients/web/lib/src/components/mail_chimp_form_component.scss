@@ -1,0 +1,24 @@
+.separator {
+  height: .5px;
+  background-color: #19171c;
+  width: 100%;
+  margin: 100px 0;
+}
+
+#mc_embed_signup_scroll {
+  width: 100%;
+  text-align: left;
+
+  * {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .email {
+    width: 80%;
+  }
+}
+
+#mc_embed_signup .button {
+  background-color: #02569b;
+}

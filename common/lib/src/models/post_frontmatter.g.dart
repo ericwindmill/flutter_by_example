@@ -14,10 +14,8 @@ PostFrontmatter _$PostFrontmatterFromJson(Map<String, dynamic> json) {
       category: json['category'] as String,
       subSection: json['subSection'] as String,
       order: json['order'] as int,
-      tags: (json['tags'] as List)?.map((e) => e as String)?.toList())
-    ..createdAt = json['createdAt'] == null
-        ? null
-        : DateTime.parse(json['createdAt'] as String);
+      tags: (json['tags'] as List)?.map((e) => e as String)?.toList(),
+      createdAt: json['createdAt'] as String);
 }
 
 Map<String, dynamic> _$PostFrontmatterToJson(PostFrontmatter instance) =>
@@ -26,8 +24,8 @@ Map<String, dynamic> _$PostFrontmatterToJson(PostFrontmatter instance) =>
       'author': instance.author,
       'path': instance.path,
       'category': instance.category,
-      'createdAt': instance.createdAt?.toIso8601String(),
       'subSection': instance.subSection,
+      'createdAt': instance.createdAt,
       'order': instance.order,
       'tags': instance.tags
     };

@@ -21,16 +21,19 @@
 }
 
 .post-title {
-    @include mat-font-display-3;
+    @include mat-font-display-2;
+    color: black !important;
     margin: 0;
-    padding: 0 0 30px 0;
+    padding: 0 0 10px 0;
 }
 
 .post-author {
     margin: 0;
-    @include mat-font-subhead-2;
+    @include mat-font-headline;
 }
 
 .post-created-at {
-    @include mat-font-subhead-2;
+    margin: 0;
+    padding: 0;
+    @include mat-font-headline;
 }

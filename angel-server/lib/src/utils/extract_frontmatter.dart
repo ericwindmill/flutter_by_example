@@ -36,6 +36,7 @@ PostFrontmatter extractFrontmatterOnly(String fileContents, String path) {
     category: (yaml["category"] ?? "No title") as String,
     subSection: (yaml["subSection"] ?? "No subsection") as String,
     order: (yaml["order"] ?? -1) as int,
+    createdAt: (yaml["createdAt"]) as String,
     path: path,
   );
 
@@ -73,10 +74,10 @@ PostConfiguration buildPost(String fileContents, String path) {
     category: (yaml["category"] ?? "No title") as String,
     subSection: (yaml["subSection"] ?? "No subsection") as String,
     order: (yaml["order"] ?? -1) as int,
+    createdAt: (yaml["createdAt"]) as String,
     path: path,
   );
 
   lines.removeRange(first, last + 1);
-  return PostConfiguration(
-      content: mdContent, frontmatter: frontmatter, id: path);
+  return PostConfiguration(content: mdContent, frontmatter: frontmatter, id: path);
 }
