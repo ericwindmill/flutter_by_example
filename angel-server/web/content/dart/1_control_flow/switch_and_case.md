@@ -10,7 +10,7 @@ tags:
     - switch
 ---
 
-<span class='lesson-intro-statement'>
+<span class='aside'>
 The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
 </span>
 

@@ -32,7 +32,7 @@ Set<int> specialNumbers = Set();
 Set<int> literalSpecialNumbers = {1, 4, 6};
 ```
 
-<span class='tip'>
+<span class='aside'>
     Sets and maps have the the same syntax for their literal implementation. When you define a set literal, you must annotate the type of the variable. Otherwise, it will default to a `Map`.  
 </span>
 

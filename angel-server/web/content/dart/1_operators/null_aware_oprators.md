@@ -9,9 +9,9 @@ tags:
     - operators
 ---
 
-<span class='lesson-intro-statement'>
+<div class='aside'>
 The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
-</span>
+</div>
 
 Null-aware operators are one of my favorite features in Dart. In any language, having variables and values fly around that are `null` can be problematic. It can crash your program. Programmers often have to write `if (response == null) return` at the top of a function to make asynchronous calls. That's not the worst thing ever, but it's not concise.
 
@@ -52,7 +52,9 @@ void getUserAge(String username) async {
 
 If `user` is indeed `null`, then your program will assign `userAge` to `null`, but it won't throw an error, and everything will be fine. If you removed the `?.` operator, it would be an error to call `age` on a `null User` object. Plus, your code is more concise and still readable.
 
-> It's worth pointing out that if any code below the line `this.userAge = user?.age;` relied on `useAge` not being `null`, the result would be an error.
+<div class="aside">
+It's worth pointing out that if any code below the line `this.userAge = user?.age;` relied on `useAge` not being `null`, the result would be an error.
+</div>
 
 ### The ?? operator
 

@@ -11,8 +11,9 @@ tags:
     - else
 ---
 
-
-> The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
+<div class="aside">
+The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
+</div>
 
 Dart supports `if`, `else if`, and `else`, as you'd expect. Here's a standard `if` statement:
 
@@ -49,6 +50,8 @@ if (inPortland && isSummer) {
 }
 ```
 
-> Note that the `else if` statements execute in the order that they're written. The first one that evaluates to "true" is the only code block that is executed.
+<div class="aside">
+Note that the `else if` statements execute in the order that they're written. The first one that evaluates to "true" is the only code block that is executed.
+</div>
 
 Finally, Dart is sane, and a condition must evaluate to a boolean. There is only one way to say "true" (`true`) and one way to say "false" (`false`). In some languages, there is a concept of "truthiness," and all values coerce to true or false. In such languages, you can write `if (3) {`, and it works. That is not the case in Dart.

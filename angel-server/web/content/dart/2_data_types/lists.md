@@ -107,6 +107,8 @@ print(listOfDays);
 
 Collection `for` is used to add multiple values to a list programmatically.
 
+<div class="example-label"></div>
+
 ```dart
 var listOfDays = [
   DateTime(2018, 5, 6), 

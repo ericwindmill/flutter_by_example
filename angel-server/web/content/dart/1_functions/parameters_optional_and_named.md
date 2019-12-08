@@ -90,6 +90,4 @@ int sum2 = addSomeNums(5, 6, 10);
 assert(sum2 == 21); // 5 + 6 + 10
 ```
 
-> Default parameter values only work with optional parameters. 
-
-> Parameters that have a default value with _never_ be null.
+Default parameter values only work with optional parameters. 

@@ -9,9 +9,9 @@ tags:
 - hello world
 ---
 
-<div class='aside'>
+<div class='post-toc'>
 
-## Sections
+On this page:
 
 * [const](#const)
 * [final](#final)
