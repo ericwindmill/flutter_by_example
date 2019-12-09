@@ -62,7 +62,6 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "The Widget tree",
       "BuildContext",
       "Inherited Widgets",
-      "Built in Widgets: Material and Cupertino",
       "Thinking in widgets",
     ],
   },

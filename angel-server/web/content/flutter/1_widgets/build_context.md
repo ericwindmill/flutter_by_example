@@ -172,9 +172,9 @@ Using the example above:
   }
 ```
 
-<div class='tip'>
+<div class='aside'>
 
-**tip**: You could also solve this by simply making your build methods
+You could also solve this by simply making your build methods
 smaller, and returning a Scaffold in a 'higher' widget. When in doubt, stick
 with smaller return methods.
 
