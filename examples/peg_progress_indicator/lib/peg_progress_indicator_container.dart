@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:peg_progress_indicator/peg_animation.dart';
 
-class PegLoadingScreen extends StatefulWidget {
+class PegProgressIndicator extends StatefulWidget {
   @override
-  _PegLoadingScreenState createState() => new _PegLoadingScreenState();
+  _PegProgressIndicatorState createState() => _PegProgressIndicatorState();
 }
 
-class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProviderStateMixin {
+class _PegProgressIndicatorState extends State<PegProgressIndicator>
+    with TickerProviderStateMixin {
   AnimationController _controller;
   Tween<double> tween;
 
   @override
   initState() {
     super.initState();
-    _controller = new AnimationController(
+    _controller = AnimationController(
       duration: const Duration(milliseconds: 3000),
       vsync: this,
     );
-    tween = new Tween<double>(begin: 0.0, end: 1.00);
+    tween = Tween<double>(begin: 0.0, end: 1.00);
     _controller.repeat().orCancel;
   }
 
@@ -28,9 +29,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
   }
 
   Animation<double> get stepOne => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.0,
             0.125,
             curve: Curves.linear,
@@ -38,9 +39,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepTwo => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.125,
             0.26,
             curve: Curves.linear,
@@ -48,9 +49,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepThree => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.25,
             0.375,
             curve: Curves.linear,
@@ -58,9 +59,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepFour => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.375,
             0.5,
             curve: Curves.linear,
@@ -68,9 +69,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepFive => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.5,
             0.625,
             curve: Curves.linear,
@@ -78,9 +79,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepSix => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.625,
             0.75,
             curve: Curves.linear,
@@ -88,9 +89,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepSeven => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.75,
             0.875,
             curve: Curves.linear,
@@ -98,9 +99,9 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
   Animation<double> get stepEight => tween.animate(
-        new CurvedAnimation(
+        CurvedAnimation(
           parent: _controller,
-          curve: new Interval(
+          curve: Interval(
             0.875,
             1.0,
             curve: Curves.linear,
@@ -108,12 +109,13 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ),
       );
 
-  Widget get forwardStaggeredAnimation {
-    return new Center(
-      child: new Row(
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          new PegAnimation(
+          PegAnimation(
             alignment: FractionalOffset.centerLeft,
             controller: _controller,
             animations: [
@@ -124,7 +126,7 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
             marginLeft: 0.0,
             isClockwise: true,
           ),
-          new PegAnimation(
+          PegAnimation(
             controller: _controller,
             animations: [
               stepThree,
@@ -134,7 +136,7 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
             marginLeft: 0.0,
             isClockwise: false,
           ),
-          new PegAnimation(
+          PegAnimation(
             controller: _controller,
             animations: [
               stepFour,
@@ -144,7 +146,7 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
             marginLeft: 32.0,
             isClockwise: true,
           ),
-          new PegAnimation(
+          PegAnimation(
             controller: _controller,
             animations: [
               stepFive,
@@ -157,10 +159,5 @@ class _PegLoadingScreenState extends State<PegLoadingScreen> with TickerProvider
         ],
       ),
     );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new Container(child: forwardStaggeredAnimation);
   }
 }

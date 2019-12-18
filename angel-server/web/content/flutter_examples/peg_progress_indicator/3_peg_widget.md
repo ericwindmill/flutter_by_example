@@ -1,3 +1,20 @@
+---
+title: "Custom Widget: Peg"
+author: "Eric"
+category: "Flutter Examples"
+subSection: "Custom Animation: Progress Indicator"
+tags:
+    - BoxShadow
+    - BoxDecoration
+    - Container
+---
+
+
+To start, build the `Peg` widget, which is mostly just a dumb widget that we'll create four of in our app. Each one will be animated separately. 
+
+This widget is built by manipulating a `Container` widget. It's a container widget that's designed with a specific size, color, border radius, and box shadow. 
+
+```dart
 import 'package:flutter/material.dart';
 
 class Peg extends StatelessWidget {
@@ -33,3 +50,6 @@ class Peg extends StatelessWidget {
     );
   }
 }
+```
+
+The properties `Peg.marginLeft` and `Peg.marginRight` are used to position the pegs next to each other correctly. They will be discussed in more detail later in this tutorial.
