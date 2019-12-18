@@ -1,5 +1,5 @@
 ---
-title: "Wrap pegs in AnimatedWidget"
+title: "Wrap the Pegs in AnimatedWidgets"
 author: "Eric"
 category: "Flutter Examples"
 subSection: "Custom Animation: Progress Indicator"

@@ -4,7 +4,7 @@ import 'package:common/src/models/post_frontmatter.dart';
 import 'package:common/src/utils/table_of_contents.dart';
 
 // TODO: optimize this if it's slow AF.
-// This is very brute force
+// This is very brute force and ugly.
 // the loops should not be hitting each node multiple times
 sortPosts(List<PostCategory> allPosts) {
   try {
@@ -14,6 +14,7 @@ sortPosts(List<PostCategory> allPosts) {
     List<PostSubCategory> sortedForCategory = [];
     List<PostFrontmatter> sortedForSubcategory = [];
     // Post category
+    int categoryPartNumber = 1;
     List<String> sortedCategoryTitles = TABLE_OF_CONTENTS.keys.toList();
     sortedCategoryTitles.forEach((String categoryTitle) {
       print("sort.categoryTitle loop :: $categoryTitle");
@@ -21,7 +22,9 @@ sortPosts(List<PostCategory> allPosts) {
         var categoryTitleFromObject = c.title.toLowerCase().trim();
         var categoryTitleFromToC = categoryTitle.toLowerCase().trim();
         return categoryTitleFromObject == categoryTitleFromToC;
-      });
+      })
+        ..order = categoryPartNumber;
+      categoryPartNumber++;
       // subcategory
       List<String> sortedSubcategoryTitles = TABLE_OF_CONTENTS[categoryTitle].keys.toList();
       sortedSubcategoryTitles.forEach((String subcategoryTitle) {
@@ -50,14 +53,12 @@ sortPosts(List<PostCategory> allPosts) {
 
         sortedForCategory.add(postSubCategoryObject);
       });
-      print("4:");
       // now that [subcategories] are sorted for this particular subcategory,
       // update the original object and clear the temp storage
       categoryObject.subCategories = sortedForCategory.sublist(0);
       sorted.add(categoryObject);
       sortedForCategory.clear();
     });
-    print("5");
     return sorted;
   } catch (e, s) {
     print(e);

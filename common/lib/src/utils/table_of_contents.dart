@@ -82,9 +82,9 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
     ],
     "Custom Animation: Progress Indicator": [
       "Intro and Overview",
-      "Build the example app boiler plate",
+      "Build the example app boiler-plate",
       "Custom Widget: Peg",
-      "Tweens and AnimationController classes",
+      "Tween and AnimationController classes",
       "Tween by example",
       "Using Tweens and Intervals",
       "Wrap the Pegs in AnimatedWidgets",

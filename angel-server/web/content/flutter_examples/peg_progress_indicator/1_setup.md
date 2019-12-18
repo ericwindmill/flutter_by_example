@@ -17,7 +17,7 @@ In this example, you're going to build a simple animation that looks like this:
 
 While this looks like one fluid animation, this is actually 8 animation definitions. Each of the four pegs is animated twice. 
 
-> #### What'll you learn ?
+> #### What'll you learn?
 >
 > * AnimatedWidget
 > * Tweens

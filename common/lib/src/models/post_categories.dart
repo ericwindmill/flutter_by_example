@@ -7,7 +7,7 @@ part 'post_categories.g.dart';
 class PostCategory {
   final String title;
   final String description;
-  final int order;
+  int order;
   List<PostSubCategory> subCategories;
 
   PostCategory({
