@@ -9,10 +9,10 @@ class DogList extends StatelessWidget {
   DogList(this.doggos);
 
   ListView _buildList(context) {
-    return new ListView.builder(
+    return  ListView.builder(
       itemCount: doggos.length,
       itemBuilder: (context, int) {
-        return new DogCard(doggos[int]);
+        return  DogCard(doggos[int]);
       },
     );
   }

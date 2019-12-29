@@ -1,5 +1,7 @@
+import 'package:blocs_without_libs_example/app/bloc_provider.dart';
 import 'package:blocs_without_libs_example/app/models/dog.dart';
 import 'package:blocs_without_libs_example/screens/dog_detail_screen/dog_detail_screen.dart';
+import 'package:blocs_without_libs_example/widgets/cross_fade_dog_image.dart';
 import 'package:flutter/material.dart';
 
 class DogCard extends StatelessWidget {
@@ -7,53 +9,9 @@ class DogCard extends StatelessWidget {
 
   DogCard(this.dog);
 
-  Widget get dogImage {
-    var dogAvatar = new Hero(
-      tag: dog,
-      child: new Container(
-        width: 100.0,
-        height: 100.0,
-        decoration: new BoxDecoration(
-          shape: BoxShape.circle,
-          image: new DecorationImage(
-            fit: BoxFit.cover,
-            image: new NetworkImage(dog.imageUrl), // todo
-          ),
-        ),
-      ),
-    );
-
-    var placeholder = new Container(
-      width: 100.0,
-      height: 100.0,
-      decoration: new BoxDecoration(
-        shape: BoxShape.circle,
-        gradient: new LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Colors.black54, Colors.black, Colors.blueGrey[600]],
-        ),
-      ),
-      alignment: Alignment.center,
-      child: new Text(
-        'DOGGO',
-        textAlign: TextAlign.center,
-      ),
-    );
-
-    var crossFade = new AnimatedCrossFade(
-      firstChild: placeholder,
-      secondChild: dogAvatar,
-      crossFadeState: dog.imageUrl == null ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-      duration: new Duration(milliseconds: 1000),
-    );
-
-    return crossFade;
-  }
-
   @override
   Widget build(BuildContext context) {
-    return new InkWell(
+    return InkWell(
       onTap: () => showDogDetailPage(context),
       child: Padding(
         padding: const EdgeInsets.symmetric(
@@ -66,35 +24,35 @@ class DogCard extends StatelessWidget {
             children: <Widget>[
               Positioned(
                 right: 0.0,
-                child: new Container(
+                child: Container(
                   width: 290.0,
                   height: 115.0,
-                  child: new Card(
+                  child: Card(
                     color: Colors.black87,
-                    child: new Padding(
+                    child: Padding(
                       padding: const EdgeInsets.only(
                         top: 8.0,
                         bottom: 8.0,
                         left: 64.0,
                       ),
-                      child: new Column(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
-                          new Text(
+                          Text(
                             dog.name,
                             style: Theme.of(context).textTheme.headline,
                           ),
-                          new Text(
+                          Text(
                             dog.location,
                             style: Theme.of(context).textTheme.subhead,
                           ),
-                          new Row(
+                          Row(
                             children: <Widget>[
-                              new Icon(
+                              Icon(
                                 Icons.star,
                               ),
-                              new Text(': ${dog.rating} / 10')
+                              Text(': ${dog.rating} / 10')
                             ],
                           )
                         ],
@@ -103,9 +61,12 @@ class DogCard extends StatelessWidget {
                   ),
                 ),
               ),
-              new Positioned(
+              Positioned(
                 top: 7.5,
-                child: dogImage,
+                child: CrossFadeDogImage(
+                  dog: dog,
+                  imageUrl: dog.imageUrl,
+                ),
               ),
             ],
           ),
@@ -115,10 +76,17 @@ class DogCard extends StatelessWidget {
   }
 
   showDogDetailPage(BuildContext context) {
-    Navigator.of(context).push(new MaterialPageRoute(
-      builder: (context) {
-        return DogDetailPage(dog);
-      },
-    ));
+    print('selected dog: ${dog.name}');
+    final bloc = BlocProvider.of(context).dogBloc;
+    bloc.selectDog(dog);
+    print(bloc.hashCode);
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) {
+          return DogDetailPage();
+        },
+      ),
+    );
   }
 }

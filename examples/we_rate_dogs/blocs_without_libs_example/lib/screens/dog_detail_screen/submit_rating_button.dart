@@ -1,14 +1,8 @@
+import 'package:blocs_without_libs_example/app/bloc_provider.dart';
+import 'package:blocs_without_libs_example/app/models/dog.dart';
 import 'package:flutter/material.dart';
 
 class SubmitRatingButton extends StatelessWidget {
-//  void updateRating() {
-//    if (_sliderValue < 10) {
-//      widget.onSliderError();
-//    } else {
-//      setState(widget.onSliderError);
-//    }
-//  }
-
   Future<Null> _ratingErrorDialog(BuildContext context) async {
     return showDialog(
       context: context,
@@ -27,10 +21,23 @@ class SubmitRatingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      onPressed: () => print('update rating'),
-      child: new Text('Submit'),
-      color: Colors.indigoAccent,
+    final bloc = BlocProvider.of(context).ratingBloc;
+    final dogBloc = BlocProvider.of(context).dogBloc;
+    return StreamBuilder<Dog>(
+      stream: dogBloc.selectedDog,
+      builder: (context, snapshot) {
+        return RaisedButton(
+          onPressed: () {
+            if (true) {
+              _ratingErrorDialog(context);
+            } else {
+              bloc.updateDog(snapshot.data);
+            }
+          },
+          child: new Text('Submit'),
+          color: Colors.indigoAccent,
+        );
+      }
     );
   }
 }

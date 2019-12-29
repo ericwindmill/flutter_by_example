@@ -1,44 +1,56 @@
+import 'package:blocs_without_libs_example/app/bloc_provider.dart';
 import 'package:blocs_without_libs_example/app/models/dog.dart';
 import 'package:blocs_without_libs_example/screens/dog_detail_screen/dog_rates_slider.dart';
 import 'package:blocs_without_libs_example/screens/dog_detail_screen/submit_rating_button.dart';
 import 'package:flutter/material.dart';
 
-class DogDetailPage extends StatelessWidget {
-  final Dog dog;
+const double dogAvatarSize = 150.0;
 
-  DogDetailPage(this.dog);
+class DogDetailPage extends StatelessWidget {
+  const DogDetailPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      backgroundColor: Colors.black87,
-      appBar: new AppBar(
-        backgroundColor: Colors.black87,
-        title: new Text('Meet ${dog.name}'),
-      ),
-      body: new ListView(
-        children: <Widget>[
-          _DogInfo(dog: dog),
-          DogRatesSlider(),
-          SubmitRatingButton(),
-        ],
-      ),
-    );
+    print('building');
+    final dogBloc = BlocProvider.of(context).dogBloc;
+    dogBloc.selectedDog.listen((d) => print('selevted dog data! $d'));
+    print(dogBloc.hashCode);
+    return StreamBuilder<Dog>(
+        stream: dogBloc.selectedDog,
+        builder: (context, snapshot) {
+          print(snapshot.data);
+          if (!snapshot.hasData) return Text('whoa');
+          return Scaffold(
+            backgroundColor: Colors.black87,
+            appBar: AppBar(
+              backgroundColor: Colors.black87,
+              title: Text('Meet ${snapshot.data.name}'),
+            ),
+            body: ListView(
+              children: <Widget>[
+                _DogInfo(dog: snapshot.data),
+                DogRatesSlider(
+                  rating: snapshot.data.rating,
+                ),
+                SubmitRatingButton(),
+              ],
+            ),
+          );
+        });
   }
 }
 
 class _DogInfo extends StatelessWidget {
   final Dog dog;
-  final double dogAvatarSize = 150.0;
 
   const _DogInfo({Key key, this.dog}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: new EdgeInsets.symmetric(vertical: 32.0),
-      decoration: new BoxDecoration(
-        gradient: new LinearGradient(
+      padding: EdgeInsets.symmetric(vertical: 32.0),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
           stops: [0.1, 0.5, 0.7, 0.9],
@@ -50,15 +62,15 @@ class _DogInfo extends StatelessWidget {
           ],
         ),
       ),
-      child: new Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Hero(
             tag: dog,
-            child: new Container(
+            child: Container(
               height: dogAvatarSize,
               width: dogAvatarSize,
-              decoration: new BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [
                   const BoxShadow(
@@ -77,33 +89,33 @@ class _DogInfo extends StatelessWidget {
                       spreadRadius: 2.0,
                       color: const Color(0x1F000000)),
                 ],
-                image: new DecorationImage(
+                image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: new NetworkImage(dog.imageUrl ?? ''),
+                  image: NetworkImage(dog.imageUrl ?? ''),
                 ),
               ),
             ),
           ),
-          new Text(
+          Text(
             dog.name + '  🎾',
-            style: new TextStyle(fontSize: 32.0),
+            style: TextStyle(fontSize: 32.0),
           ),
-          new Text(
+          Text(
             dog.location,
-            style: new TextStyle(fontSize: 20.0),
+            style: TextStyle(fontSize: 20.0),
           ),
-          new Padding(
+          Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
-            child: new Text(dog.description),
+            child: Text(dog.description),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Icon(
+              Icon(
                 Icons.star,
                 size: 40.0,
               ),
-              new Text(' ${dog.rating} / 10', style: Theme.of(context).textTheme.display2),
+              Text(' ${dog.rating} / 10', style: Theme.of(context).textTheme.display2),
             ],
           ),
         ],

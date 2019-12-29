@@ -9,6 +9,9 @@ class DogList extends StatelessWidget {
     final bloc = BlocProvider.of(context).dogBloc;
     return StreamBuilder<List<Dog>>(
       stream: bloc.allDogs,
+      // initial data can be used to prevent the app
+      // from crashing if the widget renders before the stream has data
+      initialData: [],
       builder: (context, snapshot) {
         return ListView.builder(
           itemCount: snapshot.data.length,

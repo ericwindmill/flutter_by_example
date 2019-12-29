@@ -4,14 +4,30 @@ import 'dart:io';
 import 'package:blocs_without_libs_example/app/models/dog.dart';
 
 class DogRepository {
+  /// Set up a singleton
+  static final DogRepository singleton = DogRepository._();
 
-  DogRepository() {
-    _eagerLoad();
+  factory DogRepository() {
+    return singleton;
   }
 
-  static List<Dog> get() => _allDogs;
+  DogRepository._();
 
+  // set up repository
+  initialize() async {
+    await _eagerLoad();
+  }
 
+  // interaction methods
+  List<Dog> get() => _allDogs;
+
+  void update(Dog updatedDog) {
+    var dogToUpdate = _allDogs.firstWhere((Dog d) => d.id == updatedDog.id);
+    _allDogs.remove(dogToUpdate);
+    _allDogs.add(updatedDog);
+  }
+
+  // private "faker" properties
   static var _allDogs = <Dog>[
     Dog(name: 'Ruby', location: 'Portland, OR, USA', description: 'Ruby is a very good girl.'),
     Dog(name: 'Rex', location: 'Seattle, WA, USA', description: 'A Very Good Boy'),
@@ -21,14 +37,11 @@ class DogRepository {
     Dog(name: 'Buddy', location: 'North Pole, Earth', description: 'A Very Good Girl'),
   ];
 
-
   _eagerLoad() async {
     for (var dog in _allDogs) {
       dog.imageUrl = await _getImageUrl();
     }
   }
-
-
 
   Future<String> _getImageUrl() async {
     // Get an Image

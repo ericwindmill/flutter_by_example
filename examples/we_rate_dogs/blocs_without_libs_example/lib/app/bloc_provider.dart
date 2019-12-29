@@ -1,14 +1,17 @@
-import 'package:blocs_without_libs_example/app/blocs/dog_bloc.dart';
+import 'package:blocs_without_libs_example/app/blocs/all_dogs_bloc.dart';
+import 'package:blocs_without_libs_example/app/blocs/dog_form_bloc.dart';
 import 'package:flutter/material.dart';
 
 class BlocProvider extends InheritedWidget {
   final Widget child;
-  final DogBloc dogBloc;
+  final AllDogsBloc dogBloc;
+  final DogRatingBloc ratingBloc;
 
   BlocProvider({
     Key key,
     this.child,
     this.dogBloc,
+    this.ratingBloc,
   }) : super(key: key);
 
   static BlocProvider of(BuildContext context) {
@@ -16,5 +19,6 @@ class BlocProvider extends InheritedWidget {
   }
 
   @override
-  bool updateShouldNotify(InheritedWidget oldWidget) => true;
+  bool updateShouldNotify(BlocProvider oldWidget) =>
+      dogBloc != oldWidget.dogBloc || ratingBloc != oldWidget.ratingBloc;
 }
