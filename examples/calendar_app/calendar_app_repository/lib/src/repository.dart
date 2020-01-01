@@ -13,7 +13,7 @@ class TodoRepository {
   bool _loaded = false;
 
   TodoRepository(this.client, {List<Todo> seed})
-      : _subject = BehaviorSubject<List<Todo>>.seeded(seed);
+      : _subject = BehaviorSubject<List<Todo>>.seeded(seed ?? []);
 
   Stream<List<Todo>> get todos {
     if (!_loaded) _loadTodos();
@@ -25,7 +25,7 @@ class TodoRepository {
     _loaded = true;
 
     client.fetchTodos().then((todos) {
-      _subject.add([..._subject.value, ...todos]);
+      _subject.add([..._subject?.value, ...todos]);
     });
   }
 
@@ -42,11 +42,11 @@ class TodoRepository {
   }
 
   Future<void> updateTodo(Todo todo) async {
-    final newTodos = [
-      ..._subject.value.where((t) => t.description != todo.description),
-      todo,
-    ];
-    _subject.add(newTodos);
-    await client.postTodos(newTodos);
+    final todos = _subject.value;
+    final todoToUpdate = todos.firstWhere((t) => t.description == todo.description);
+    final index = todos.indexOf(todoToUpdate);
+    todos.replaceRange(index, index + 1, [todo]);
+    _subject.add(todos);
+    await client.postTodos(todos);
   }
 }
