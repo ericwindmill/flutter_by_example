@@ -5,9 +5,9 @@ category: "Dart"
 subSection: "Getting Started with Dart"
 order: 2
 tags:
-- dart
-- setup
-- Dart sdk
+    - dart
+    - setup
+    - Dart sdk
 ---
 
 

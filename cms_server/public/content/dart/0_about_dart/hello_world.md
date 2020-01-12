@@ -5,8 +5,8 @@ category: "Dart"
 subSection: "Getting Started with Dart"
 order: 6
 tags:
-- dart
-- hello world
+    - dart
+    - hello world
 ---
 
 Like all good programming tutorials, let's start by printing "Hello, World" to the console. In

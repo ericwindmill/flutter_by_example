@@ -5,8 +5,8 @@ category: "Dart"
 subSection: "Getting Started with Dart"
 order: 4
 tags:
-- dart
-- hello world
+    - dart
+    - hello world
 ---
 
 For Flutter and Dart use, I can only recommend these two text editors:

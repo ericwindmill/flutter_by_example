@@ -5,8 +5,8 @@ category: "Dart"
 subSection: "Getting Started with Dart"
 order: 7
 tags:
-- dart
-- main function
+    - dart
+    - main function
 ---
 
 In order to write _any_ Dart program, be it a script or a Flutter app, you must define a function called `main`.

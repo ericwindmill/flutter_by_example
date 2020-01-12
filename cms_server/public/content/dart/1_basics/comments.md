@@ -5,8 +5,8 @@ category: "Dart"
 subSection: "Dart Fundamentals"
 order: 2
 tags:
-- dart
-- comments
+    - dart
+    - comments
 ---
 
 Dart supports three kinds of comments:

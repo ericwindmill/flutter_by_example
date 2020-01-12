@@ -5,8 +5,8 @@ category: "Dart"
 subSection: "Dart Fundamentals"
 order: 1
 tags:
-- dart
-- variables
+    - dart
+    - variables
 ---
 
 The basic building block of information in your Dart program will be variables. Anytime you're

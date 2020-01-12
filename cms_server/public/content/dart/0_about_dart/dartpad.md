@@ -5,8 +5,8 @@ category: "Dart"
 subSection: "Getting Started with Dart"
 order: 3
 tags:
-- dart
-- hello world
+    - dart
+    - hello world
 ---
 
 [Dartpad](dartpad.dev) is a browser-based text editor that can execute Dart code, created by the Dart team. It's a "playground" or "scratchpad" of sorts, useful for testing  small pieces of code. If you're just starting out with Dart, you can use Dartpad to get your feet wet without having to install the Dart SDK and IDE plugins. 
