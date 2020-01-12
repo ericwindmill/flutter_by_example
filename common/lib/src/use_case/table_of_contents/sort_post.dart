@@ -16,7 +16,7 @@ sortPosts(List<PostCategory> allPosts) {
     List<String> sortedCategoryTitles = TABLE_OF_CONTENTS.keys.toList();
     sortedCategoryTitles.forEach((String categoryTitle) {
       // uncomment to debug front-matter errors
-//      print("sort.categoryTitle loop :: $categoryTitle");
+      print("sort.categoryTitle loop :: $categoryTitle");
       PostCategory categoryObject = allPosts.firstWhere((c) {
         var categoryTitleFromObject = c.title.toLowerCase().trim();
         var categoryTitleFromToC = categoryTitle.toLowerCase().trim();
@@ -28,7 +28,7 @@ sortPosts(List<PostCategory> allPosts) {
       List<String> sortedSubcategoryTitles = TABLE_OF_CONTENTS[categoryTitle].keys.toList();
       sortedSubcategoryTitles.forEach((String subcategoryTitle) {
         // uncomment to debug front-matter errors
-//        print("sort.subcategoryTitle loop :: $subcategoryTitle");
+        print("sort.subcategoryTitle loop :: $subcategoryTitle");
         PostSubCategory postSubCategoryObject = categoryObject.subCategories.firstWhere((s) {
           var subcategoryTitleFromObject = s.title.toLowerCase().trim();
           var subcategoryTitleFromToC = subcategoryTitle.toLowerCase().trim();
@@ -38,7 +38,7 @@ sortPosts(List<PostCategory> allPosts) {
         // posts
         List<String> sortedPostNames = TABLE_OF_CONTENTS[categoryTitle][subcategoryTitle].toList();
         sortedPostNames.forEach((String postTitle) {
-//          print("sort.postName loop :: $postTitle");
+          print("sort.postName loop :: $postTitle");
           PostFrontmatter post = postSubCategoryObject.posts.firstWhere((p) {
             var postTitleFromObject = p.title.toLowerCase().trim();
             var postTitleFromToC = postTitle.toLowerCase().trim();
