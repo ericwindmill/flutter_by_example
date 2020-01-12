@@ -9,7 +9,11 @@ Future<List<FileSystemEntity>> parseFilesystem(Directory root) async {
     await for (FileSystemEntity f in files) {
       if (f is Directory) {
         queue.add(f);
-      } else {
+      } else if (f is File && f.fileType != 'md') {
+
+        continue;
+      }
+      else {
         returnFiles.add(f);
       }
     }
@@ -24,4 +28,10 @@ Future<List<FileSystemEntity>> parseFilesystem(Directory root) async {
   }
 
   return returnFiles;
+}
+
+extension FileType on File {
+    String get fileType {
+      return path.split('.').last;
+    }
 }

@@ -5,6 +5,9 @@ import 'package:http/http.dart';
 import 'package:common/src/models/post_configuration.dart';
 import 'package:common/src/repositories/posts_repository_base.dart';
 
+const String baseUrl = 'http://localhost:8888';
+//const String baseUrl = 'https://flutter-by-example-api.herokuapp.com';
+
 class FilesystemBrowserPostsRepository extends PostRepository {
   Client client;
 
@@ -20,7 +23,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   @override
   Future<PostConfiguration> loadMarkdownPostByPageId(String pageId) async {
     try {
-      final reqUrl = "https://flutter-by-example-api.herokuapp.com/posts/$pageId.md";
+      final reqUrl = "$baseUrl/posts/$pageId.md";
       final response = await client.get(reqUrl);
       final body = response.body;
       var post = await PostConfiguration.fromJson(json.decode(body));
@@ -36,7 +39,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   Future<List<PostCategory>> loadTableOfContents() async {
     List<PostCategory> allPosts = [];
     try {
-      var reqUrl = "https://flutter-by-example-api.herokuapp.com/";
+      var reqUrl = "$baseUrl/";
       var response = await client.get(reqUrl);
       var body = response.body;
       List postsByCategory = json.decode(body);

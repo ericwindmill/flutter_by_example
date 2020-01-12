@@ -9,21 +9,10 @@ tags:
     - print
 ---
 
-In a previous lesson, you saw a program that print's "Hello, World" to the console.
-
-```dart
-void main() {
-  print('Hello, World!');
-}
-```
-
-The important part of this sample is the only line within the `main` function. 
-
-```dart
-print('Hello, World!');
-```
-
 `print` is used to log to the console. It's often helpful when you're debugging a Dart program. 
+
+<iframe src="https://dartpad.dev/embed-inline.html?id=3de437d05464f885c174a443125f593d&split=80&theme=dark"></iframe>
+
 
 
 
