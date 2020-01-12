@@ -18,6 +18,7 @@ sortPosts(List<PostCategory> allPosts) {
       // uncomment to debug front-matter errors
       print("sort.categoryTitle loop :: $categoryTitle");
       PostCategory categoryObject = allPosts.firstWhere((c) {
+        if (c.title == null) return false;
         var categoryTitleFromObject = c.title.toLowerCase().trim();
         var categoryTitleFromToC = categoryTitle.toLowerCase().trim();
         return categoryTitleFromObject == categoryTitleFromToC;
