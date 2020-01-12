@@ -1,1 +1,1 @@
-web: /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve --port $PORT
+web: /app/dart-sdk/bin/pub global activate aqueduct && /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve --port $PORT
