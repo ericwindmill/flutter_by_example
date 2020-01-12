@@ -19,6 +19,8 @@ dependencies:
       url: git://github.com/ericwindmill/flutter_by_example.git
       path: common/
   markdown: ^2.0.0
+  shelf: any
+  shelf_static: any
 
 dev_dependencies:
   angular_test: ^2.2.0
