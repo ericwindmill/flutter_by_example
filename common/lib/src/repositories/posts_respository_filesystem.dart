@@ -20,7 +20,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   @override
   Future<PostConfiguration> loadMarkdownPostByPageId(String pageId) async {
     try {
-      final reqUrl = "http://localhost:8888/posts/$pageId.md";
+      final reqUrl = "https://flutter-by-example-api.herokuapp.com/posts/$pageId.md";
       final response = await client.get(reqUrl);
       final body = response.body;
       var post = await PostConfiguration.fromJson(json.decode(body));
@@ -36,7 +36,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   Future<List<PostCategory>> loadTableOfContents() async {
     List<PostCategory> allPosts = [];
     try {
-      var reqUrl = "http://localhost:8888/";
+      var reqUrl = "https://flutter-by-example-api.herokuapp.com/";
       var response = await client.get(reqUrl);
       var body = response.body;
       List postsByCategory = json.decode(body);
