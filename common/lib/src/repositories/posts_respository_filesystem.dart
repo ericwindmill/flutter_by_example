@@ -36,7 +36,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   Future<List<PostCategory>> loadTableOfContents() async {
     List<PostCategory> allPosts = [];
     try {
-      var reqUrl = "localhost:8888/";
+      var reqUrl = "http://localhost:8888/";
       var response = await client.get(reqUrl);
       var body = response.body;
       List postsByCategory = json.decode(body);
