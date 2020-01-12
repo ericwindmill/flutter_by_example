@@ -1,0 +1,120 @@
+/*Eric Styles*/
+
+.language-dart, .language-javascript {
+  border-radius: 10px;
+  padding: 2.5rem;
+}
+
+/*Inline Code: */
+code {
+  background-color: #e6e7e8;
+  padding: 4px;
+  border-radius: 5px;
+  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
+  'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+  'Courier New', Courier, monospace, monospace;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  margin: 40px 0;
+}
+
+
+/*Start region: code blocks*/
+pre,
+pre code, .language-dart *, .language-javascript * {
+  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
+  'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+  'Courier New', Courier, monospace, monospace;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  margin: 40px 0;
+  background-color: transparent;
+}
+
+/* Base16 Atelier Cave Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/cave) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Cave Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #a2a2aa;
+}
+
+/* Atelier-Cave Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #be4678;
+}
+
+/* Atelier-Cave Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+}
+
+/* Atelier-Cave Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #106B10;
+}
+
+/* Atelier-Cave Blue */
+.hljs-title,
+.hljs-section {
+  /*color: #576ddb;*/
+}
+
+/* Atelier-Cave Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #1740E6;
+
+}
+
+.hljs-deletion,
+.hljs-addition {
+  /*color: #19171c;*/
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  /*background-color: #ec5795;*/
+}
+
+.hljs-addition {
+  /*background-color: #41e1e1;*/
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #E6E7E8;
+  color: #323232;
+  padding: 1.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

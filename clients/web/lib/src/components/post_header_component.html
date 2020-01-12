@@ -1,0 +1,13 @@
+<div class="nav" (click)="navigateToHome()">
+    <div class="image">
+        <img width="30px"
+             src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg"
+             alt="logo">
+    </div>
+    <h3>Flutter by Example</h3>
+</div>
+<div class="post-header_container">
+<h1 *ngIf="contentLoaded" class="post-title">{{state.pageConfiguration.frontmatter.title ?? "no title"}}</h1>
+<span *ngIf="contentLoaded" class="post-author">by {{state.pageConfiguration.frontmatter.author}}</span>
+<span *ngIf="contentLoaded" class="post-created-at">on {{ state.pageConfiguration.frontmatter.createAtDateTime | date:"MM/dd/yy" }}</span>
+</div>

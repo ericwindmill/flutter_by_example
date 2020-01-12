@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 5vw 5vw;
+}
+
+* {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul {
+  color: #242424;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 40px 0;
+  white-space: pre-wrap;
+}
+
+
+
+p,
+a,
+li,
+dt,
+dd,
+tr,
+th {
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+a {
+  color: #02569b;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #13b9fd;
+}
+
+label,
+button,
+input,
+select {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3.8rem;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+
+blockquote {
+  padding: 15px 20px 15px 45px;
+  margin: 50px 0 ;
+  position: relative;
+  border-radius: 5px;
+
+  /*Font*/
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+
+  /*Borders - (Optional)*/
+  border: 2px solid #13b9fd;
+}
+
+blockquote::before {
+  content: '\201C'; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 12rem;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: -25px;
+  top: 5px;
+}
+
+blockquote > h3,
+h4,
+h5 {
+  margin: 15px 0;
+}
+
+.post-toc {
+  padding: 0 20px;
+  margin: 50px 0 50px;
+  position: relative;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+  box-shadow: none;
+  border: 1px solid #02569b;
+}
+
+.post-toc > p {
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+.aside {
+  padding: 15px 20px;
+  margin: 50px 0;
+  position: relative;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+  box-shadow: none;
+  border: 1px solid #ffc108;
+}
+
+.aside::before {
+  content: 'Note:'; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-size: 2rem;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: -75px;
+}
+
+.example-label {
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.example-label::before {
+  content: 'Example:'; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-size: 2rem;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: -110px;
+  top: 60px;
+}
+
+
+img {
+  max-width: 750px;
+  border-radius: 10px;
+}
+
+iframe {
+  border: none;
+  height: 400px;
+  width: 100%;
+}

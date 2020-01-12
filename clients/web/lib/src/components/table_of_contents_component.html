@@ -1,0 +1,11 @@
+<section>
+    <ul *ngIf="contentLoaded">
+        <li class="toc-section" *ngFor="let c of state.tableOfContents; let i = index">
+            <div class="head-section">
+                <span>Part {{c.order}}</span>
+                <h2 class="title">{{c.title}}</h2>
+            </div>
+            <category-post-list [subCategories]="c.subCategories"></category-post-list>
+        </li>
+    </ul>
+</section>

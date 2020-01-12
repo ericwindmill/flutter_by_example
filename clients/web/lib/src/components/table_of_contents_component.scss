@@ -1,0 +1,34 @@
+@import 'package:angular_components/css/material/material';
+
+section {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.toc-section {
+  margin-bottom: 50px;
+  counter-reset: a;
+}
+
+
+.title {
+  @include mat-font-display-1()
+}
+
+.head-section {
+  display: flex;
+  align-items: center;
+
+  span {
+    background: #ffc108; // flutter blue
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+}
