@@ -9,10 +9,22 @@ tags:
     - print
 ---
 
-`print` is used to log to the console. It's often helpful when you're debugging a Dart program. 
+In a previous lesson, you saw a program that print's "Hello, World" to the console. 
 
-<iframe src="https://dartpad.dev/embed-inline.html?id=3de437d05464f885c174a443125f593d&split=80&theme=dark"></iframe>
+```dart
+void main() {
+  print('Hello, World!');
+}
+```
 
+`print` is used to log to the console. It's often helpful when you're debugging a Dart program.
+
+```run-dartpad:theme-light:run-false:split-60
+void main() {
+    // change string to print whatever you'd like!
+    print("Hello, World!);
+}
+``` 
 
 
 

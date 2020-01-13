@@ -16,7 +16,7 @@ It's features include a linter, analyzer, and embedded web view, enabling you to
 
 On Flutter By Example, we'll make heavy use of DartPad, and it's embedded right in the page, so you never have to leave the page. It looks like this when embedded in the page:
 
-```run-dartpad:theme-dark:run-false:split-60
+```run-dartpad:theme-light:run-false:split-60
 main() => print('Hello, World!');
 ```
 

@@ -49,6 +49,10 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "sets",
       "maps",
     ],
+    "Object-Oriented Programming": [
+      "Intro to OOP",
+      "Classes",
+    ]
   },
   "Flutter": {
     "Getting started with Flutter": [
