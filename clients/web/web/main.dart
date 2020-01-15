@@ -1,6 +1,7 @@
 import 'package:angular/angular.dart';
 import 'package:common/common.dart';
 import 'package:web/app_component.template.dart' as ng;
+// ignore: library_prefixes
 import 'main.template.dart' as mainGenerated;
 import 'package:bloc/bloc.dart';
 import 'package:angular_router/angular_router.dart';
