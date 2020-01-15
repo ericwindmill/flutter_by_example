@@ -15,10 +15,10 @@ dependencies:
   sass_builder: ^2.0.0
   html_unescape: ^1.0.0
   common:
-    path: ../../common # for development
-#    git:
-#      url: git://github.com/ericwindmill/flutter_by_example.git
-#      path: common
+#    path: ../../common # for development
+    git:
+      url: git://github.com/ericwindmill/flutter_by_example.git
+      path: common
   markdown: ^2.0.0
   shelf: any
   shelf_static: any
