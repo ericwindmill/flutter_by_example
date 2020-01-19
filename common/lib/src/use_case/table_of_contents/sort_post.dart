@@ -16,7 +16,7 @@ sortPosts(List<PostCategory> allPosts) {
     List<String> sortedCategoryTitles = TABLE_OF_CONTENTS.keys.toList();
     sortedCategoryTitles.forEach((String categoryTitle) {
       // uncomment to debug front-matter errors
-      // print("sort.categoryTitle loop :: $categoryTitle");
+//      print("sort.categoryTitle loop :: $categoryTitle");
       PostCategory categoryObject = allPosts.firstWhere((c) {
         if (c.title == null) return false;
         var categoryTitleFromObject = c.title.toLowerCase().trim();
