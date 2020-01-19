@@ -53,6 +53,17 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Intro to OOP",
       "Classes",
       "Constructors",
+      "Properties and methods",
+      "Methods: static, private, etc",
+      "Getters and setters",
+      "Inheritance and extended classes",
+      "Intializer lists and final properties",
+      "Factory methods",
+      "Singletons",
+      "Extending classes (inheritance)",
+      "Abstract classes (and interfaces)",
+      "Mixins",
+      "Extension methods"
     ]
   },
   "Flutter": {
