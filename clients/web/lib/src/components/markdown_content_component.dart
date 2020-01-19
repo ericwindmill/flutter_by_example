@@ -1,5 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
+import 'package:angular_components/angular_components.dart';
 import 'package:common/common.dart';
 import 'package:web/src/directives/markdown_directive.dart';
 
@@ -13,6 +14,7 @@ import 'mail_chimp_form_component.dart';
     MarkdownDirective,
     NgIf,
     MailChimpFormComponent,
+    MaterialSpinnerComponent,
   ],
   providers: [],
   pipes: [BlocPipe],

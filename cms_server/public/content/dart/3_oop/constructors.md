@@ -7,10 +7,10 @@ tags:
     - dart
     - object oriented programming
     - class
-    - member
+    - constructor
 ---
 
-Constructors are used to create objects with pre-determined values for the properties. Constructors come in three flavors: the standard constructors, named constructors, and factory constructors. 
+Constructors are used to create objects with pre-determined values for the properties. Constructors come in three flavors: the standard constructors, named constructors, and factory constructors. (Factory constructors are discussed on a different page.)
 
 
 ```run-dartpad:theme-light:run-false:split-60
@@ -22,8 +22,8 @@ class Cat {
     Cat(this.name, this.color);
 
     // named constructors are used to define additional constructors
-    // they return a new instance of the class, usually with some 
-    // values given defined values.
+    // they return a new instance of the class, (but not with a 'return' statement) 
+    // usually with some values given defined values.
     Cat.orange(this.name) {
         color = 'Orange';
     }
@@ -32,12 +32,6 @@ class Cat {
     Cat.black(this.name) {
         color = 'Black';
     }
-
-    // factory constructors
-    factory Cat.fromJson(Map json) {
-        return Cat(json['name'], json['color']);
-    } 
-
   
     @override
     String toString() => "Cat: ${this.name}, ${this.color}";

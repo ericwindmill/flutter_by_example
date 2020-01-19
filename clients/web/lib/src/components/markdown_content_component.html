@@ -1,4 +1,4 @@
 <div *ngIf="contentLoaded" [markdown]="state.pageConfiguration.content"></div>
-<div *ngIf="!contentLoaded"> Loading...</div>
+<div *ngIf="!contentLoaded" class="loading"><material-spinner></material-spinner></div>
 
 <mail-chimp-form></mail-chimp-form>

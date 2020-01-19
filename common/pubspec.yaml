@@ -1,8 +1,8 @@
 name: common
-description: A starting point for Dart libraries or applications.
-version: 1.0.0+1
-# homepage: https://www.example.com
-# author: Your Name <eric@ericwindmill.com>
+version: 1.0.0+2
+description: Common classes for client side and server side
+homepage: https://www.flutterbyexample.com
+author: Eric Windmill <eric@ericwindmill.com>
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
