@@ -1,7 +1,8 @@
 @import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_icon/mixins';
 
 .hero-section {
-  margin: 150px 0 100px;
+  margin: 150px 0 0;
   padding: 0 0 100px;
   display: flex;
 }
@@ -39,3 +40,29 @@
   }
 }
 
+.arrow-container {
+  margin: 50px 0;
+}
+
+.arrow {
+  @include material-icon-size(36px);
+  display: flex;
+  justify-content: center;
+}
+
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-30px);
+  }
+}

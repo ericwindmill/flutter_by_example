@@ -10,10 +10,7 @@ import 'package:web/src/components/table_of_contents_component.dart';
 @Component(
   selector: 'index-page',
   templateUrl: 'index_page_component.html',
-  styleUrls: [
-    'package:angular_components/app_layout/layout.scss.css',
-    'index_page_component.css'
-  ],
+  styleUrls: ['package:angular_components/app_layout/layout.scss.css', 'index_page_component.css'],
   directives: [
     TableOfContentsComponent,
     MaterialButtonComponent,
