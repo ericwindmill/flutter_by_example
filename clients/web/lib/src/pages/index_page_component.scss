@@ -7,9 +7,12 @@
 }
 
 .hero-image {
+  align-self: flex-start;
   flex: 0 1;
   max-width: 600px;
   transform: translate(-110px, 0px);
+  object-fit: scale-down;
+  height: 500px;
 }
 
 .content .headline {
