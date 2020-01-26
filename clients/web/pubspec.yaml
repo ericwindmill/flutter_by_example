@@ -20,11 +20,6 @@ dependencies:
   shelf: any
   shelf_static: any
 
-
-dependency_overrides:
-  common:
-    path: ../../common # for development
-
 dev_dependencies:
   angular_test: ^2.2.0
   build_runner: ^1.6.2
