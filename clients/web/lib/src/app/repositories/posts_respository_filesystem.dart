@@ -24,7 +24,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   @override
   Future<PostConfiguration> loadMarkdownPostByPageId(String pageId) async {
     try {
-      final reqUrl = '$baseUrl/posts/$pageId.md';
+      final reqUrl = '$BASE_URL/posts/$pageId.md';
       final response = await client.get(reqUrl);
       final body = response.body;
       var post = await PostConfiguration.fromJson(json.decode(body));
@@ -40,7 +40,7 @@ class FilesystemBrowserPostsRepository extends PostRepository {
   Future<List<PostCategory>> loadTableOfContents() async {
     var allPosts = [];
     try {
-      var reqUrl = '$baseUrl/';
+      var reqUrl = '$BASE_URL/';
       var response = await client.get(reqUrl);
       var body = response.body;
       List postsByCategory = json.decode(body);
