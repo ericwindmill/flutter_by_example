@@ -1,0 +1,16 @@
+<div class="pagination">
+    <a *ngIf='previous != null'
+       routerLink="/posts/{{previous.path}}"
+       class="pagination-link"
+    >
+        <material-icon icon="navigate_before"></material-icon>
+        {{previous.title}}
+    </a>
+    <a *ngIf='next != null'
+       routerLink="/posts/{{next.path}}"
+       class="pagination-link"
+    >
+        {{next.title}}
+        <material-icon icon="navigate_next"></material-icon>
+    </a>
+</div>

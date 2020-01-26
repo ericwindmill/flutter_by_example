@@ -1,5 +1,4 @@
-import 'package:cms_server/model/post_configuration.dart';
-import 'package:cms_server/model/post_frontmatter.dart';
+import 'package:common/common.dart';
 import 'package:yaml/yaml.dart';
 
 /// todo: validate frontmatter!

@@ -3,7 +3,10 @@ import 'package:angular_components/angular_components.dart';
 
 import 'package:angular_bloc/angular_bloc.dart';
 import 'package:angular_router/angular_router.dart';
-import 'package:common/common.dart';
+import 'package:web/src/app/blocs/table_of_contents_bloc/bloc.dart';
+import 'package:web/src/app/blocs/table_of_contents_bloc/table_of_contents_event.dart';
+import 'package:web/src/app/repositories/posts_respository_filesystem.dart';
+import 'package:web/src/app/repositories/table_of_contents_mem_cache.dart';
 import 'package:web/src/components/site_header_component.dart';
 import 'package:web/src/components/table_of_contents_component.dart';
 
@@ -17,7 +20,7 @@ import 'package:web/src/components/table_of_contents_component.dart';
     MaterialIconComponent,
     SiteHeaderComponent,
   ],
-  providers: [FilesystemBrowserPostsRepository],
+  providers: [FilesystemBrowserPostsRepository, MemCache],
   pipes: [BlocPipe],
 )
 class IndexPageComponent implements OnActivate, OnDestroy {

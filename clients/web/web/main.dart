@@ -1,6 +1,7 @@
 import 'package:angular/angular.dart';
-import 'package:common/common.dart';
 import 'package:web/app_component.template.dart' as ng;
+import 'package:web/src/app/repositories/posts_respository_filesystem.dart';
+import 'package:web/src/app/repositories/table_of_contents_mem_cache.dart';
 // ignore: library_prefixes
 import 'main.template.dart' as mainGenerated;
 import 'package:bloc/bloc.dart';
@@ -26,16 +27,22 @@ class SimpleBlocDelegate extends BlocDelegate {
   }
 }
 
-FilesystemBrowserPostsRepository _repo;
-FilesystemBrowserPostsRepository repoFactory() => _repo;
+FilesystemBrowserPostsRepository repoFactory() {
+  return FilesystemBrowserPostsRepository(memCacheFactory());
+}
+
+MemCache memCache;
+MemCache memCacheFactory() => memCache;
 
 @GenerateInjector([
   routerProvidersHash,
   FactoryProvider(FilesystemBrowserPostsRepository, repoFactory),
+  ValueProvider(MemCache, memCacheFactory),
 ])
 final InjectorFactory appInjector = mainGenerated.appInjector$Injector;
 
 void main() {
   BlocSupervisor.delegate = SimpleBlocDelegate();
+
   runApp(ng.AppComponentNgFactory, createInjector: appInjector);
 }

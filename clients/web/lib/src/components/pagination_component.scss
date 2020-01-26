@@ -1,0 +1,16 @@
+.pagination {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+}
+.separator {
+  height: .5px;
+  background-color: #19171c;
+  width: 100%;
+  margin: 100px 0;
+}

@@ -2,7 +2,8 @@ import 'package:angular/angular.dart';
 import 'package:angular_components/angular_components.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 import 'package:angular_router/angular_router.dart';
-import 'package:common/common.dart';
+import 'package:web/src/app/blocs/post_configuration_bloc/bloc.dart';
+import 'package:web/src/app/repositories/posts_respository_filesystem.dart';
 import 'package:web/src/components/post_header_component.dart';
 import 'package:web/src/directives/markdown_directive.dart';
 import 'package:web/src/components/markdown_content_component.dart';
@@ -43,7 +44,7 @@ class PostPageComponent implements OnActivate, OnDestroy {
     pageBloc.dispose();
   }
 
-  navigateHome() {
-    _router.navigate("/");
+  void navigateHome() {
+    _router.navigate('/');
   }
 }

@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:aqueduct/aqueduct.dart';
-import 'package:cms_server/model/models.dart';
 import 'package:cms_server/utils/parse/parse_filesystem.dart';
 import 'package:cms_server/utils/parse/parse_frontmatter.dart';
 import 'package:cms_server/utils/paths/utils.dart';
+import 'package:common/common.dart';
 
 class TableOfContentsController extends Controller {
   @override

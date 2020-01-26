@@ -1,6 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
-import 'package:common/common.dart';
+import 'package:web/src/app/blocs/table_of_contents_bloc/table_of_contents_state.dart';
 import 'package:web/src/components/category_post_list_component.dart';
 
 @Component(
@@ -19,3 +19,4 @@ class TableOfContentsComponent {
 
   TableOfContentsComponent();
 }
+

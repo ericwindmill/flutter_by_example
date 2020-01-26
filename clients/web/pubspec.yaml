@@ -1,8 +1,6 @@
 name: web
 description: A web app that uses AngularDart Components
-version: 1.0.1
-# homepage: https://www.example.com
-# author: Your Name <eric@ericwindmill.com>
+version: 1.0.2
 
 environment:
   sdk: '>=2.2.0 <3.0.0'
@@ -14,14 +12,20 @@ dependencies:
   angular_bloc: ^0.9.0
   sass_builder: ^2.0.0
   html_unescape: ^1.0.0
-  common:
+#  common:
 #    path: ../../common # for development
+  common:
     git:
       url: git://github.com/ericwindmill/flutter_by_example.git
       path: common
   markdown: ^2.0.0
   shelf: any
   shelf_static: any
+
+
+dependency_overrides:
+  common:
+    path: ../../common # for development
 
 dev_dependencies:
   angular_test: ^2.2.0

@@ -12,6 +12,8 @@ class PostFrontmatter {
   String createdAt;
   int order;
   List<String> tags;
+  PostFrontmatter nextPost;
+  PostFrontmatter previousPost;
 
   PostFrontmatter({
     this.title,

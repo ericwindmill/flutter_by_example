@@ -9,11 +9,14 @@ class ContentController extends Controller {
   @override
   FutureOr<RequestOrResponse> handle(Request request) async {
     try {
-      prettyLog(LogRecord(Level.WARNING, 'WTF', 'DOUBLE'));
       final rootDir = Directory.fromUri(Uri(path: rootContentDirectory));
       final fileName = request.path.segments.last;
       final FileSystemEntity foundFile = await findFileInFilesystemByFileName(rootDir, fileName);
-      if (foundFile == null) prettyLog(LogRecord(Level.WARNING, 'WTF', 'file not found'));
+
+      if (foundFile == null) {
+        prettyLog(LogRecord(Level.WARNING, 'Content Controller', 'file not found'));
+      }
+
       final file = File(foundFile.path);
       final content = file.readAsStringSync();
       final postConfig = buildPost(content, file.path);

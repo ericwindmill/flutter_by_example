@@ -3,7 +3,7 @@ import 'package:angular/angular.dart';
 import 'package:angular_bloc/angular_bloc.dart';
 
 import 'package:angular_router/angular_router.dart';
-import 'package:common/common.dart';
+import 'package:web/src/app/blocs/post_configuration_bloc/page_configuration_state.dart';
 
 @Component(
   selector: 'post-header',
@@ -13,8 +13,8 @@ import 'package:common/common.dart';
   providers: [],
   pipes: [BlocPipe, commonPipes],
 )
-class PostHeaderComponent implements OnInit {
-  Router _router;
+class PostHeaderComponent {
+  final Router _router;
 
   PostHeaderComponent(this._router);
 
@@ -23,10 +23,7 @@ class PostHeaderComponent implements OnInit {
   @Input()
   PageConfigurationBlocState state;
 
-  @override
-  void ngOnInit() {}
-
   void navigateToHome() {
-    _router.navigate("/");
+    _router.navigate('/');
   }
 }

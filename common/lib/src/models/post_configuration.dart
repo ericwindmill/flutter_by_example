@@ -6,7 +6,7 @@ part 'post_configuration.g.dart';
 @JsonSerializable()
 class PostConfiguration {
   final String id;
-  final PostFrontmatter frontmatter;
+  PostFrontmatter frontmatter;
   final String content;
 
   PostConfiguration({

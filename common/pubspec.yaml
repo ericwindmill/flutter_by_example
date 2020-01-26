@@ -1,5 +1,5 @@
 name: common
-version: 1.0.0+2
+version: 1.0.0+4
 description: Common classes for client side and server side
 homepage: https://www.flutterbyexample.com
 author: Eric Windmill <eric@ericwindmill.com>
@@ -23,4 +23,4 @@ dev_dependencies:
   pedantic: ^1.0.0
   test: ^1.0.0
   build_runner: any
-  build_web_compilers: ^0.4.0
+  build_web_compilers: ^2.8.0

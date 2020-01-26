@@ -1,6 +1,6 @@
 name: cms_server
-description: An empty Aqueduct application.
-version: 0.0.1
+description: Serves markdown files
+version: 0.0.2
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -9,6 +9,10 @@ dependencies:
   aqueduct: ^3.0.0
   json_serializable: ^3.0.0
   json_annotation: ^2.4.0
+  common:
+    git:
+      url: git://github.com/ericwindmill/flutter_by_example.git
+      path: common
 
 dev_dependencies:
   test: ^1.0.0
