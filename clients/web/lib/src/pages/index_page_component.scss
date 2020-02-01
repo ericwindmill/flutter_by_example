@@ -1,28 +1,40 @@
 @import 'package:angular_components/css/material/material';
 @import 'package:angular_components/material_icon/mixins';
 
-.hero-section {
-  margin: 150px 0 0;
-  padding: 0 0 100px;
-  display: flex;
+
+.full-width-background {
+  background: #d5d7da;
 }
 
-.hero-image {
-  align-self: flex-start;
-  flex: 0 1;
-  max-width: 600px;
-  transform: translate(-110px, 0px);
-  object-fit: scale-down;
-  height: 500px;
+.about-section {
+  padding: 5vw 0;
+  .title {
+    text-align: center;
+    margin: 0 0 50px;
+    h2, h4 {
+      margin: 0 0 12px 0;
+      padding: 0;
+    }
+  }
 }
 
-.content .headline {
-  font-size: 2.3rem;
-  font-weight: bold;
-  flex: 1;
-  margin: 10px;
-  transform: translate(-55px, 0px);
-  width: 300px;
+.signup {
+  padding: 5vw 0;
+  p {
+    margin: 0; padding: 0;
+    text-align: center;
+  }
+}
+
+.toc-intro {
+  margin: 100px 0 0 0;
+  text-align: center;
+  h4 {
+    margin:0; padding: 0;
+  }
+  p {
+    margin: 0; padding: 0;
+  }
 }
 
 .toc-categories {
@@ -41,7 +53,7 @@
 }
 
 .arrow-container {
-  margin: 50px 0;
+  margin: 50px 0 0;
 }
 
 .arrow {

@@ -1,8 +1,8 @@
 ---
-title: "Brick Offline First With Rest"
+title: "About Brick and setup"
 author: "Tim Shedor"
-category: "Flutter UI Example Apps"
-subSection: "Brick"
+category: "Flutter State and Logic Example Apps"
+subSection: "Brick: Offline First with Rest"
 tags:
     - flutter
     - Brick

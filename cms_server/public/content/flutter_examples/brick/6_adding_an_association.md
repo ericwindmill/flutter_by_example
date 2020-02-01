@@ -1,8 +1,8 @@
 ---
 title: "Adding an Association"
 author: "Tim Shedor"
-category: "Flutter UI Example Apps"
-subSection: "Brick Offline First with Rest"
+category: "Flutter State and Logic Example Apps"
+subSection: "Brick: Offline First with Rest"
 tags:
     - flutter
     - Brick

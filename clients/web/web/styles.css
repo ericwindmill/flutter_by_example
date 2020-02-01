@@ -2,9 +2,17 @@
 @import url(https://fonts.googleapis.com/css?family=Material+Icons);
 
 body {
-  max-width: 800px;
+  margin: 0;
+}
+
+.set-max-width {
   margin: 0 auto;
-  padding: 0 5vw 5vw;
+  padding: 0 5vw;
+  max-width: 800px;
+}
+
+.full-width-background {
+  background: #d5d7da;
 }
 
 * {

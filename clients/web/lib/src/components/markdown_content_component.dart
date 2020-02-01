@@ -4,9 +4,8 @@ import 'package:angular_components/angular_components.dart';
 import 'package:common/common.dart';
 import 'package:web/src/app/blocs/post_configuration_bloc/page_configuration_state.dart';
 import 'package:web/src/components/pagination_component.dart';
+import 'package:web/src/components/post_footer_component.dart';
 import 'package:web/src/directives/markdown_directive.dart';
-
-import 'mail_chimp_form_component.dart';
 
 @Component(
   selector: 'markdown-content',
@@ -15,7 +14,7 @@ import 'mail_chimp_form_component.dart';
   directives: [
     MarkdownDirective,
     NgIf,
-    MailChimpFormComponent,
+    PostFooterComponent,
     PaginationComponent,
     MaterialSpinnerComponent,
   ],

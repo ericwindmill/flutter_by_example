@@ -1,3 +1,5 @@
+import 'package:cms_server/controller/peoples_choice_awards_controller.dart';
+
 import 'cms_server.dart';
 import 'controller/content_controller.dart';
 import 'controller/table_of_contents_controller.dart';
@@ -31,6 +33,8 @@ class CmsServerChannel extends ApplicationChannel {
     router.route('/posts/*').link(() => ContentController());
 
     router.route('/').link(() => TableOfContentsController());
+
+    router.route('vote').link(() => ReaderChoiceAwardsController());
 
     router.route("/example").linkFunction((request) async {
       return Response.ok({"key": "value"});

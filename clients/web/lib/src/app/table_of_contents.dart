@@ -107,8 +107,8 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Complete source code",
     ]
   },
-  "Flutter State Management Example Apps": {
-    "BLoCs without Libraries": [
+  "Flutter State and Logic Example Apps": {
+    "Blocs without Libraries": [
       "What are blocs?",
       "Calendar App Introduction",
       "Create bloc one",
@@ -117,6 +117,14 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Create bloc two: Add/Edit Tasks",
       "Consume the second bloc's streams",
       "Complete Source Code",
+    ],
+    "Brick: Offline First with Rest": [
+      "About Brick and setup",
+      "Adding a Repository",
+      "Adding a Model",
+      "Generating Code",
+      "Rendering Models",
+      "Adding an Association",
     ],
   },
 };

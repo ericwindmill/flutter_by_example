@@ -1,7 +1,7 @@
 ---
 title: "Create a bloc provider"
 author: "Eric"
-category: "Flutter State Management Example Apps"
+category: "Flutter State and Logic Example Apps"
 subSection: "Blocs without Libraries"
 tags:
     - flutter

@@ -1,13 +1,28 @@
 <site-header></site-header>
-<div class="hero-section">
-        <img class='hero-image' src="./hero_image.png" alt="">
-    <div class="content">
-        <p class="headline">How it's done. From the basics of Dart and Flutter to advanced topics with simple, but detailed examples.</p>
+<hero></hero>
+
+<div class="full-width-background">
+    <div class="about-section set-max-width">
+        <div class="title">
+            <h2>Dart and Flutter for the people.</h2>
+            <h4>Real world examples and tutorials. And it'll always be free.</h4>
+        </div>
+        <social-links></social-links>
+        <div class="toc-intro">
+            <h4>Table of Contents</h4>
+            <p>Main course contains 2 parts which cover JavaScript as a programming language and working with a browser. There are also additional series of thematic articles.</p>
+        </div>
+        <div class="arrow-container">
+            <material-icon class='bounce arrow' icon="arrow_downward"></material-icon>
+        </div>
     </div>
 </div>
 
-<div class="arrow-container">
-    <material-icon class='bounce arrow' icon="arrow_downward"></material-icon>
-</div>
-
 <table-of-contents [state]="tocBloc | bloc"></table-of-contents>
+
+<div class="full-width-background">
+<div class="signup set-max-width">
+    <p>Sign up for infrequent updates about Dart and Flutter:</p>
+    <mail-chimp-form></mail-chimp-form>
+</div>
+</div>
