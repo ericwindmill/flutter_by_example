@@ -18,6 +18,22 @@
   }
 }
 
+.index-footer {
+   p {
+      margin: 0;
+   }
+
+  .footer-links {
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    .twitter {
+      padding-right: 10px;
+    }
+  }
+}
+
 .signup {
   padding: 5vw 0;
   p {
