@@ -7,7 +7,10 @@ import 'package:web/src/app/blocs/table_of_contents_bloc/bloc.dart';
 import 'package:web/src/app/blocs/table_of_contents_bloc/table_of_contents_event.dart';
 import 'package:web/src/app/repositories/posts_respository_filesystem.dart';
 import 'package:web/src/app/repositories/table_of_contents_mem_cache.dart';
+import 'package:web/src/components/hero_component.dart';
+import 'package:web/src/components/mail_chimp_form_component.dart';
 import 'package:web/src/components/site_header_component.dart';
+import 'package:web/src/components/social_links_component.dart';
 import 'package:web/src/components/table_of_contents_component.dart';
 
 @Component(
@@ -19,6 +22,9 @@ import 'package:web/src/components/table_of_contents_component.dart';
     MaterialButtonComponent,
     MaterialIconComponent,
     SiteHeaderComponent,
+    HeroComponent,
+    SocialLinksComponent,
+    MailChimpFormComponent,
   ],
   providers: [FilesystemBrowserPostsRepository, MemCache],
   pipes: [BlocPipe],

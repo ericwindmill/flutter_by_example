@@ -108,7 +108,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
     ]
   },
   "Flutter State Management Example Apps": {
-    "BLoCs without Libraries": [
+    "Blocs without Libraries": [
       "What are blocs?",
       "Calendar App Introduction",
       "Create bloc one",
