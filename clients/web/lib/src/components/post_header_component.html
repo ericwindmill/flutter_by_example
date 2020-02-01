@@ -1,4 +1,4 @@
-
+<div class="set-max-width">
 <div class="nav" (click)="navigateToHome()">
     <div class="image">
         <img width="30px"
@@ -11,4 +11,5 @@
 <h1 *ngIf="contentLoaded" class="post-title">{{state.pageConfiguration.frontmatter.title ?? "no title"}}</h1>
 <span *ngIf="contentLoaded" class="post-author">by {{state.pageConfiguration.frontmatter.author}}</span>
 <span *ngIf="contentLoaded" class="post-created-at">on {{ state.pageConfiguration.frontmatter.createAtDateTime | date:"MM/dd/yy" }}</span>
+</div>
 </div>

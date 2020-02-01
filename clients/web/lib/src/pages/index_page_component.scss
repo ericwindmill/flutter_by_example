@@ -7,9 +7,10 @@
 }
 
 .about-section {
+  padding: 5vw 0;
   .title {
     text-align: center;
-    padding: 50px 0 0;
+    margin: 0 0 50px;
     h2, h4 {
       margin: 0 0 12px 0;
       padding: 0;
@@ -17,7 +18,20 @@
   }
 }
 
+.signup {
+  padding: 5vw 0;
+  p {
+    margin: 0; padding: 0;
+    text-align: center;
+  }
+}
+
 .toc-intro {
+  margin: 100px 0 0 0;
+  text-align: center;
+  h4 {
+    margin:0; padding: 0;
+  }
   p {
     margin: 0; padding: 0;
   }
@@ -39,7 +53,7 @@
 }
 
 .arrow-container {
-  margin: 50px 0;
+  margin: 50px 0 0;
 }
 
 .arrow {

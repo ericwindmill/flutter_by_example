@@ -7,8 +7,12 @@ body {
 
 .set-max-width {
   margin: 0 auto;
-  padding: 0 5vw 5vw;
+  padding: 0 5vw;
   max-width: 800px;
+}
+
+.full-width-background {
+  background: #d5d7da;
 }
 
 * {

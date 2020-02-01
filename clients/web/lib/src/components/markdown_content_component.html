@@ -1,4 +1,4 @@
-
+<div class="set-max-width">
 <div *ngIf="contentLoaded" [markdown]="state.pageConfiguration.content"></div>
 <div *ngIf="!contentLoaded" class="loading"><material-spinner></material-spinner></div>
 
@@ -8,5 +8,5 @@
             [previous]="previous"
             [next]="next"
 ></pagination>
-
+</div>
 <post-footer></post-footer>
