@@ -114,14 +114,14 @@ Finally, you can use a `continue` statement and a label if you want to fall thro
 String animal = 'tiger';
 switch(animal) {
   case 'tiger':
-    print('it's a tiger');
+    print("it's a tiger");
     continue alsoCat;
   case 'lion':
-    print('it's a lion');
+    print("it's a lion");
     continue alsoCat;
   alsoCat:
   case 'cat':
-    print('it's a cat');
+    print("it's a cat");
     break;
   // ...
 }
