@@ -8,7 +8,7 @@ class Task {
   Task({
     this.description,
     this.assignee,
-    this.isComplete,
+    this.isComplete = false,
   });
 
   final String description;

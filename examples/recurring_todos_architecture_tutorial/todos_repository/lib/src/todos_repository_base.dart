@@ -1,6 +1,6 @@
 import 'package:models/models.dart';
 
-abstract class TodosRepository {
-  Stream<List<RecurringTodo>> get todos;
-  upsertTodo(RecurringTodo todo);
+abstract class TasksRepository {
+  Stream<List<Task>> get tasks;
+  addTask(Task todo);
 }
