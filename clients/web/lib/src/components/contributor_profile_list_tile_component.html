@@ -1,0 +1,42 @@
+<link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<div class="contrib-profile">
+    <div class="circle-avatar-container circle-avatar">
+        <div class="circle-avatar-fallback circle-avatar">
+            <p>{{avatar}}</p>
+        </div>
+        <img [src]="imagePath" alt="" class="circle-avatar circle-avatar-image">
+    </div>
+
+    <div class="contrib-profile-information">
+        <div class="head">
+            <h3>{{name}}</h3>
+            <material-icon icon="location_on"></material-icon><p>{{location}}</p>
+        </div>
+        <ul>
+            <li *ngIf="website != null">
+                <material-icon icon="language"></material-icon>
+                <a href="">
+
+                    {{website}}
+                </a>
+            </li>
+            <li *ngIf="twitter != null">
+                <material-icon icon="thumb_up_alt"></material-icon>
+                <a href="">
+
+                    {{twitter}}
+                </a>
+            </li>
+            <li *ngIf="github != null">
+                <material-icon icon="code"></material-icon>
+                <a href="">
+
+                    {{github}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

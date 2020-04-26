@@ -8,6 +8,10 @@ tags:
     - Brick
 ---
 
+<div class="aside">
+You can find the same content in video form <a href="https://www.youtube.com/channel/UCNVrhIPfoA6otGTvlzYb7DA/">on the Flutter by Example youtube channel.</a>
+</div>
+
 [Brick](https://github.com/greenbits/brick) is a data persistence library in Flutter. It filters data from multiple sources through a single entrypoint - for example, when requesting a list of users, Brick will poll users in-memory, users in SQLite, and, if all else fails, users in Firestore. All of this happens through a consistent query interface and a bunch of generated code, leaving your app to focus on simply _using_ the data.
 
 This tutorial will walk through creating models, interacting with an API endpoint, and finally, rendering data.

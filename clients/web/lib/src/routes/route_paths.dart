@@ -6,9 +6,7 @@ class RoutePaths {
   static final home = RoutePath(path: "/index", useAsDefault: true);
   static final posts = RoutePath(path: "posts");
   static final post = RoutePath(path: "posts/:$idParam");
+  static final contributors = RoutePath(path: '/contributors');
 }
 
-String getPostId(Map<String, String> parameters) {
-  final id = parameters[idParam];
-  return id == null ? null : id;
-}
+String getPostId(Map<String, String> parameters) => parameters[idParam];

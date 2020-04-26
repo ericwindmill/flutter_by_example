@@ -1,0 +1,20 @@
+.book-section {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 12px;
+
+  .book-section-content {
+    padding: 12px;
+    font-size: 24px;
+  }
+
+  .fia-cover {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.book-section:hover {
+  border: 1px solid #13b9fd;
+}
