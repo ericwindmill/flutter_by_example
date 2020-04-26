@@ -33,14 +33,19 @@ import 'package:web/src/components/table_of_contents_component.dart';
 )
 class IndexPageComponent implements OnActivate, OnDestroy {
   TableOfContentsBloc tocBloc;
+  Router _router;
   final FilesystemBrowserPostsRepository _postsRepository;
 
-  IndexPageComponent(this._postsRepository);
+  IndexPageComponent(this._postsRepository, this._router);
 
   @override
   void onActivate(_, RouterState current) async {
     tocBloc = TableOfContentsBloc(repository: _postsRepository);
     await tocBloc.dispatch(LoadTableOfContents());
+  }
+
+  void navigateToContributors() {
+    _router.navigate("/contributors");
   }
 
   @override

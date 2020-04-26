@@ -1,14 +1,28 @@
 .nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-bottom: .5px #d5d7da solid;
 
-  .image {
-    margin-right: 20px;
+  .home {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .image {
+      margin-right: 20px;
+    }
+
+    h3 {
+      margin: 30px 0;
+    }
   }
 
-  h3 {
-    margin: 30px 0;
+  .links {
+    display: flex;
+    .contributors-link {
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
   }
 
   margin-bottom: 40px;

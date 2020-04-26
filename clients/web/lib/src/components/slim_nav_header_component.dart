@@ -17,4 +17,8 @@ class SlimNavHeaderComponent {
   void navigateToHome() {
     _router.navigate('/');
   }
+
+  void navigateToContributors() {
+    _router.navigate('/contributors');
+  }
 }

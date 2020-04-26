@@ -102,3 +102,13 @@ book-sales {
     transform: translateY(-30px);
   }
 }
+
+.contributors-container {
+  cursor:pointer;
+  padding: 1rem;
+  background: #02569b;
+  text-align: center;
+  p {
+    color: white;
+  }
+}
