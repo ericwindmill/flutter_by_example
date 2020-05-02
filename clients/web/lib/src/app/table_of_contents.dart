@@ -63,7 +63,11 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Abstract classes (and interfaces)",
       "Mixins",
       "Extension methods"
-    ]
+    ],
+    "Iterables and Collections": [
+      "What are collections (and iterables)?",
+      "Looping: for-in and forEach",
+    ],
   },
   "Flutter": {
     "Getting started with Flutter": [

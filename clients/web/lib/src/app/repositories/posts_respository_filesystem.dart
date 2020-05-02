@@ -6,8 +6,8 @@ import 'package:common/src/models/post_configuration.dart';
 import 'package:web/src/app/repositories/posts_repository_base.dart';
 import 'package:web/src/app/repositories/table_of_contents_mem_cache.dart';
 
-//const String BASE_URL = 'http://localhost:8888';
-const String BASE_URL = 'https://flutter-by-example-api.herokuapp.com';
+const String BASE_URL = 'http://localhost:8888';
+//const String BASE_URL = 'https://flutter-by-example-api.herokuapp.com';
 
 class FilesystemBrowserPostsRepository extends PostRepository {
   final Client client;
