@@ -77,6 +77,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Type casting collections: cast, toSet, toList",
       "Iterators: understanding and creating your own",
       "Methods on maps",
+      "Examples in Flutter Widgets",
     ],
   },
   "Flutter": {
