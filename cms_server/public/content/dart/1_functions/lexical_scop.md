@@ -9,9 +9,9 @@ tags:
     - operators
 ---
 
-<span class='aside'>
+<div class='aside'>
 The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
-</span>
+</div>
 
 Dart is _lexically scoped_. Every code block has access to variables "above" it. The scope is defined by the structure of the code, and you can see what variables are in the current scope by following the curly braces outward to the top level:
 

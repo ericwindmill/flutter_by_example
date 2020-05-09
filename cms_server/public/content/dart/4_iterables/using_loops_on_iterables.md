@@ -2,16 +2,16 @@
 title: "Looping: for-in and forEach"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Iterables and Collections"
+subSection: "Iterables, Iterators, and Collections"
 tags:
     - dart
     - loops
     - iterables
 ---
 
-<span class='aside'>
+<div class='aside'>
 For most of the remainder of the section, I'll be using `List`, as its the most common iterable, but most of the knowledge could be applied to all iterables, including `Set`. 
-</span>
+</div>
 
 Lists (and iterables and sets) are the primary objects that you'll _loop_ over. You can see basic examples of `for`, `while` and `do-while` loops in the Loops lesson in the Control Flow section. Here, let's take a deeper look at two other looping mechanisms: `for-in` loops and the `forEach` method on iterables.
 
@@ -75,9 +75,13 @@ void _addAndPrint(int number) {
 
 While for-each is more complex to write, it's often favored because of how terse the code looks. For our purposed, it's important because many of the future methods we'll explore on lists and iterables follows this same pattern. 
 
-<span class='aside'>
+<div class='aside'>
 These methods that operate on collections are often called _functional_ methods in JavaScript, Dart, and beyond. If you hear someone talking about _functional_ programming in JS, they're likely talking about these specific methods, and not about pure functional programming. These methods are like a piece of functional programming languages that's been borrowed by languages that aren't necessarily functional.
 In any case, they're used _a lot_ in UI development, so it's good to know them. 
-</span>
+</div>
 
-<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=39032eadecb31028079f55a35d32f45f&split=60&theme=dark"></iframe>
+<!-- Gist
+    - double each number and print it to the console
+    <iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=39032eadecb31028079f55a35d32f45f&split=60&theme=dark"></iframe>
+-->
+

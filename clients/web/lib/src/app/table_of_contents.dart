@@ -64,9 +64,19 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Mixins",
       "Extension methods"
     ],
-    "Iterables and Collections": [
+    "Iterables, Iterators, and Collections": [
       "What are collections (and iterables)?",
       "Looping: for-in and forEach",
+      "Reading elements pt 1: first, last",
+      "Adding elements: add and insert (all)",
+      "Checking for elements: contains, indexOf, any, every",
+      "Removing elements: remove, clear, removeWhere",
+      "Changing elements: map and expand",
+      "Filtering elements: where, takeWhile, and more",
+      "Deriving values from elements: fold, reduce, join",
+      "Type casting collections: cast, toSet, toList",
+      "Iterators: understanding and creating your own",
+      "Methods on maps",
     ],
   },
   "Flutter": {

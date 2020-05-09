@@ -10,9 +10,9 @@ tags:
     - info
 ---
 
-<span class='aside'>
+<div class='aside'>
 The following is an excerpt from the book <a href="https://www.manning.com/books/flutter-in-action">Flutter in Action</a>.
-</span>
+</div>
 
 Modern applications basically all do the same thing: they give us (smart humans) a way to process and collaborate over large data sets. Some apps are about communication, like social media and email. Some are about organization, such as calendars and note taking. Some are simply digital interfaces into a part of the real world that's hard for programmers to navigate, like dating apps. But they all do the same thing. They give users a nice way to interact with data.
 
