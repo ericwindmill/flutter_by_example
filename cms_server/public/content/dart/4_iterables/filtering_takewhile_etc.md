@@ -1,5 +1,5 @@
 ---
-title: "Filtering elements: where, takeWhile, and more"
+title: "Filtering elements: where, takeWhile, and skipWhile"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Iterables, Iterators, and Collections"
@@ -8,7 +8,6 @@ tags:
     - where
     - takeWhile
     - skipWhile
-    - range
     - list
     - iterables
 ---

@@ -71,7 +71,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Adding elements: add and insert (all)",
       "Checking for elements: contains, indexOf, any, every",
       "Removing elements: remove, clear, removeWhere",
-      "Filtering elements: where, takeWhile, and range",
+      "Filtering elements: where, takeWhile, and skipWhile",
       "Changing elements: map and expand",
       "Deriving values from elements: fold, reduce, join",
       "Type casting collections: cast, toSet, toList",
