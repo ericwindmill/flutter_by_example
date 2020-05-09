@@ -74,7 +74,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Filtering elements: where, takeWhile, and skipWhile",
       "Changing elements: map and expand",
       "Deriving values from elements: fold, reduce, join",
-      "Type casting collections: cast, toSet, toList",
+      "Type casting collections: cast, as, retype, toSet, toList",
       "Iterators: understanding and creating your own",
       "Methods on maps",
       "Examples in Flutter Widgets",
