@@ -1,5 +1,5 @@
 ---
-title: "Type casting collections: cast, as, retype, toSet, toList"
+title: "Type casting collections: cast, as, toSet, toList, and more"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Iterables and Collections"
@@ -133,7 +133,7 @@ void printDubs(List<double> dubs) {
 ```
 
    
-
+Of course, this feels a bit dangerous, and is hardly ever recommended that you use `cast`.
 
 
 
