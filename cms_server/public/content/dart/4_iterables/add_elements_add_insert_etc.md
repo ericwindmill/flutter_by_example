@@ -44,10 +44,10 @@ To determine if (or why) certain methods live on certain collections and not oth
 
 These methods of course have an infinite number of use-cases. But one that's easy to show is using a list to represent a queue. A queue is an abstract data type that has one main rule: first-in-first-out. In human words, that means that the only element that can be removed from a queue is the element that was inserted first. Queue's can be nicely visualized like this:
 
-<!-- Queue drawing -->
+<img src="https://res.cloudinary.com/duqbhmg9i/image/upload/v1589125921/flutter_by_example/queue_drawing_dcd5oq.png" alt="queue drawing">
 
 Because of this, a queue needs to be able to insert elements at one end, and remove from the other end. This sort of fine control over the order of a list makes `insert` quite useful. 
 
-<!-- 
-    Gist, make a queue
--->
+#### Try it yourself, make a queue
+
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=befbabc698e2ddff75a063efebe68e23&split=60&theme=dark"></iframe>
