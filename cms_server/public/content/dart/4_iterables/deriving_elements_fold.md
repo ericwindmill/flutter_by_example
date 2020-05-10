@@ -75,8 +75,6 @@ void main() {
 `fold` is another method that I find myself using quite often in the day to day.
 
 
-### give it a whirl
+### Give it a whirl: derive a new value from a list
 
-<!-- 
-        gist
--->
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=1bfc7ca4f97d2bce611f1bd612b8a456&split=60&theme=dark"></iframe>
