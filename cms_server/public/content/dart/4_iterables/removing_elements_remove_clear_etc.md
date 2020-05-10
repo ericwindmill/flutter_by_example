@@ -192,11 +192,10 @@ In the beginning of this lesson, I mentioned methods like `removeAt`, `removeRan
 
 A stack is an abstract data type that has one main rule: first-in-last-out. In human words, that means that the only element that can be removed from a queue is the element that was inserted most recently. Stacks's can be nicely visualized like this:
 
-<!-- stack drawing -->
+<img src="https://res.cloudinary.com/duqbhmg9i/image/upload/c_scale,h_525/v1589128636/flutter_by_example/stack_jtohuo.png" alt="stack drawing"/>
 
 You can implement a stack by using a list, and removing elements with methods like `remove`, `removeAt`, or (might I suggest) `removeLast`. 
 
-<!-- 
-    Gist, make a stack
--->
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=a3e3c3b014b1286e5ee51ad37581cd1f&split=60&theme=dark"></iframe>
+
 
