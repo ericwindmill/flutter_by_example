@@ -1,11 +1,13 @@
 ---
-title: "Iterable-like methods on maps"
+title: "Iterable-like methods on maps (and putIfAbsent)"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Iterables and Collections"
+subSection: "Iterables, Iterators, and Collections"
 tags:
     - dart
     - map
+    - putIfAbsent
+    - removeWhere
     - collections
 ---
 

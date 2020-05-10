@@ -2,7 +2,7 @@
 title: "Type casting collections: cast, as, toSet, toList, and more"
 author: "Eric Windmill"
 category: "Dart"
-subSection: "Iterables and Collections"
+subSection: "Iterables, Iterators, and Collections"
 tags:
     - dart
     - indexOf
