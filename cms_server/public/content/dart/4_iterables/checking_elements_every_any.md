@@ -157,8 +157,8 @@ As you can see, these methods are similar. The above functionality was implement
 
 A real-life use case that you may find for these methods is when checking roles or permissions on a user. For example, can this user make a sale? Well, lets see if they have any of the roles that allow users to make sales. Alternatively, maybe they need _every_ role. 
 
-The following DartPad exercise asks you to implement that feature: 
+The following DartPad exercise asks you to implement that feature.
 
-<!-- gist
-    find out if the user has _any_ permissions and if the user has every permissions
---> 
+### Try it yourself. Using any and every
+
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=be19f84e60b97b8dc38633070b7863f1&split=60&theme=dark"></iframe>

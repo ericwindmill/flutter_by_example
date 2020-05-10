@@ -76,7 +76,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Deriving values from elements: fold, reduce, join",
       "Type casting collections: cast, as, retype, toSet, toList",
       "Iterators: understanding and creating your own",
-      "Iterable-like methods on maps",
+      "Iterable-like methods on maps (and putIfAbsent)",
     ],
   },
   "Flutter": {

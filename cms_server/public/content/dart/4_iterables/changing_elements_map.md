@@ -117,6 +117,4 @@ class Item {
 
 In order to show a user which _items_ they've bought, and not _orders_ they've made, you'd likely want to extract each line item from each of their orders. There are many ways to do this, including using `expand`. For this exercise, try to derive that list of line items from the user.
 
-<!-- 
-    gist
- -->
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=e9bfbab75fc99e90bb36b81d94a775cc&split=60&theme=dark"></iframe>

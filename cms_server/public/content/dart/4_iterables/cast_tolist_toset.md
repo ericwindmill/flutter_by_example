@@ -1,5 +1,5 @@
 ---
-title: "Type casting collections: cast, as, toSet, toList, and more"
+title: "Type casting collections: cast, as, retype, toSet, toList"
 author: "Eric Windmill"
 category: "Dart"
 subSection: "Iterables, Iterators, and Collections"
