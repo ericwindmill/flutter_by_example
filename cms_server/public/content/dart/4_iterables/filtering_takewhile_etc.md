@@ -53,11 +53,11 @@ void main() {
     As you may have guessed, `takeWhile` and `skipWhile` are extremely useful for _sorted_ lists, but for much else.
 </div> 
 
-### Try filtering a list
+### Try filtering a list yourself
 
-<!--
-    gist
--->
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=9f5065991b2194a12fc03fbf7c0fc0e3&split=60&theme=dark"></iframe>
+
+
 
 
  
