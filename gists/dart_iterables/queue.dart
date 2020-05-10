@@ -10,8 +10,6 @@ class Queue<T> {
 }
 
 /// test
-
-
 void main() {
   final queue = Queue<int>();
   queue.enqueue(1);
