@@ -155,7 +155,7 @@ h5 {
   margin: 0;
 }
 
-.aside {
+.aside, .disclaimer {
   padding: 15px 20px;
   margin: 50px 0;
   position: relative;
@@ -178,6 +178,31 @@ h5 {
   position: absolute;
   left: -75px;
 }
+
+.disclaimer {
+  padding: 15px 20px;
+  margin: 50px 0;
+  position: relative;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+  box-shadow: none;
+  border: 1px solid #02569b;
+}
+
+.disclaimer::before {
+  content: 'Disclaimer:'; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-size: 2rem;
+  font-weight: bold;
+
+  /*Positioning*/
+  position: absolute;
+  left: -115px;
+}
+
 
 .example-label {
   height: 1px;
