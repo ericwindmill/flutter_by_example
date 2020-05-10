@@ -80,8 +80,8 @@ These methods that operate on collections are often called _functional_ methods 
 In any case, they're used _a lot_ in UI development, so it's good to know them. 
 </div>
 
-<!-- Gist
-    - double each number and print it to the console
-    <iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=39032eadecb31028079f55a35d32f45f&split=60&theme=dark"></iframe>
--->
+### Try looping
+
+<iframe style="height:400px;" src="https://dartpad.dev/embed-inline.html?id=510e84f2bf31e395073aff739046d02f&split=60&theme=dark"></iframe>
+
 
