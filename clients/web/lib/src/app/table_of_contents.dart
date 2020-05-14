@@ -132,6 +132,14 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Consume the second bloc's streams",
       "Complete Source Code",
     ],
+    "Provider": [
+      "What is Provider?",
+      "The most basic example using Provider",
+      "Rebuilding widgets with Consumer",
+      "ChangeNotifierProvider"
+      // more provider shit
+      "Using context extensions for more control"
+    ],
     "Brick: Offline First with Rest": [
       "About Brick and setup",
       "Adding a Repository",
