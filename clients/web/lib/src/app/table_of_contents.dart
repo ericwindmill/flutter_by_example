@@ -135,8 +135,12 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
     "Provider": [
       "What is Provider?",
       "The most basic example using Provider",
-      "Rebuilding widgets with Consumer",
       "ChangeNotifierProvider"
+      "Rebuilding widgets with Consumer",
+      "ValueListenableProvider (for Animations)",
+      "Future Provider",
+      "Stream Provider",
+      "ProxyProvider",
       // more provider shit
       "Using context extensions for more control"
     ],
