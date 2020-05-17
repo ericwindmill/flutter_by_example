@@ -135,14 +135,15 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
     "Provider": [
       "What is Provider?",
       "The most basic example using Provider",
-      "ChangeNotifierProvider"
+      "ChangeNotifierProvider",
       "Rebuilding widgets with Consumer",
-      "ValueListenableProvider (for Animations)",
+      "Finer build control with Selector",
       "Future Provider",
       "Stream Provider",
       "ProxyProvider",
       // more provider shit
-      "Using context extensions for more control"
+      "Using context extensions for more control",
+      "ValueListenableProvider (for Animations)",
     ],
     "Brick: Offline First with Rest": [
       "About Brick and setup",
