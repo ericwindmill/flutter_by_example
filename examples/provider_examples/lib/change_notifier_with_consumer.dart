@@ -17,7 +17,7 @@ class Person with ChangeNotifier {
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
+    ProxyProvider(
       create: (_) => Person(name: "Yohan", age: 25),
       child: MyApp(),
     ),
