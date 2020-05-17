@@ -144,7 +144,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Using context extensions for more control",
       "ProxyProvider",
       "ValueListenableProvider (for Animations)",
-      "Putting it all together"
+      "Putting it all together with a bigger example",
       // add a bunch of links throughout to the docs and shit
       // add some images because people like images
     ],
