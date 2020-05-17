@@ -34,7 +34,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Ternary Conditional operator",
       "Loops: for and while",
       "Anatomy of Dart Functions",
-      "'Arrow' functions",
+      "Arrow functions",
       "Function arguments: default, optional, named",
       "Lexical Scope",
       "Cascade notation",
@@ -144,6 +144,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       // more provider shit
       "Using context extensions for more control",
       "ValueListenableProvider (for Animations)",
+      // add a bunch of links throughout to the docs and shit
     ],
     "Brick: Offline First with Rest": [
       "About Brick and setup",
