@@ -44,14 +44,17 @@ class MyHomePage extends StatelessWidget {
           appBar: AppBar(
             title: Text("${person.name} -- ${person.age} yrs old"),
           ),
-          body: Center(
-            child: Text('Howdy'),
-          ),
+          body: child,
           floatingActionButton: FloatingActionButton(
             onPressed: () => person.increaseAge(),
           ),
         );
       },
+      child: Center(
+        child: Text(
+          "Howdy. Imagine there is a listview with hundreds of list tiles here. What an expensive widget!",
+        ),
+      ),
     );
   }
 }
