@@ -145,7 +145,7 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "ProxyProvider",
 //      "ValueListenableProvider (for animations)",
       "Using .value constructors",
-      "Putting it all together with a bigger example",
+      "The final example (A shopping cart app)",
       // add a bunch of links throughout to the docs and shit
       // add some images because people like images
     ],
