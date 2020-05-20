@@ -14,7 +14,7 @@ In order to showcase the real, core value proposition of provider, I will show y
 
 First, I want to show the example, and then I will walk through the code showing and explain what's going on.
 
-<!-- iframe -->
+<iframe style="height:800px" src="https://dartpad.dev/embed-flutter.html?theme=dark&run=true&split=60&id=67ab0272443d5248388a3fcc0afb647f"></iframe>
 
 That's it. It's just an app that displays some text on the screen. Now, let's walk through the code.
 
@@ -80,11 +80,14 @@ class MyHomePage extends StatelessWidget {
 }
 ```
 
-For the most basic example, that's all you need. Provider simply exposes an instance of an object, which all of your widgets can gain access too using 'Provider.of<T>(context)'. 
+For the most basic example, that's all you need. Provider simply exposes an instance of an object to all it's descendent widgets via 'Provider.of<T>(context)'. 
 
-If you're familiar with `InheritedWidget` objects, then this should look familiar. And that's because Provider is, in a nutshell, a widget that behaves exactly like the `InheritedWidget`, but with far less boiler plate.
+<div class="aside">
+In Dart, it's convention to use `T` as a generic type. When you see `Provider.of<T>(context)`, "T" is indicating that a type argument is required. For example, `Provider.of<User>(context)` would be used to indicate you're referring to a `User` object. This is no different than defining collections. For example, a list of strings is defined by writing `List<String> myList = []`.
+</div>
+
+If you're familiar with [InheritedWidget](https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html) objects, then this should look familiar. And that's because Provider is, in a nutshell, a widget that behaves exactly like the `InheritedWidget`, but with far less boiler plate. (If you aren't familiar, you may want to follow that link and learn a little bit.)
 
 If you take anything from this lesson, I hope that it's this: Provider just... err... _provides_ classes to your widget tree that aren't widgets.
 
-This example shows the most basic example, in which you can only read data. You can't update data. And even if you could, it wouldn't cause the widget tree to re-render, because there's nothing telling Flutter that the data has changed. Luckily, Provider includes a whole swath of classes that can help you with this.
-
+This example shows the most basic example, in which you can only read data. You can't update data. And even if you could, it wouldn't cause the widget tree to re-render, because there's nothing telling Flutter that the data has changed. Luckily, Provider includes a whole swath of classes that can help you with this which we'll explore in the following lessons.

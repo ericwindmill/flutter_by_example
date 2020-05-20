@@ -30,7 +30,7 @@ That's fine, but what happens when you need to refactor your code?
 
 <!-- more about moving widgets, and image about how messy it is-->
 
-And what about testing? Your logic is sprikeled throughout your app, and tied to your widgets. This makes writing tests a pain, verbose, and hard to refactor.
+And what about testing? Your logic is sprinkled throughout your app, and tied to your widgets. This makes writing tests a pain, verbose, and hard to refactor.
 
 But there's a better way. (To be fair, this can be done with just plain ol InheritedWidgets as well, but provider has a nicer API and less boiler plate.) 
 
@@ -53,13 +53,16 @@ But lastly, I need to point out a few important points to remember while using p
 * Again, Provider is not opinionated about state management. It is not going to force consistency like Redux would.
 
 
-The remainder of this section will walk through the usage of Provider by walking through how you'd use each of the different classes in Provider:
+The remainder of this tutorial will walk through the usage of Provider by walking through how you'd use most of the different classes in Provider:
 
-- [Basic Usage (Provider class)]
-- [Consumer and Selector]
-- [ChangeNotifierProvider]
-- [ValueListenableProvider]
-- [FutureProvider]
-- [StreamProvider]
-- [ProxyProvider]
-- Implementation deep dive
+- [Basic Usage (Provider class)](provider_class.md)
+- [MultiProvider](multi_provider.md)
+- [Value Provider Constructors](value_constructors.md)
+- [Consumer](consumer.md)
+- [Selector](selector.md)
+- [Context extension methods](context_of.md)
+- [ChangeNotifierProvider](change_notifier_provider.md)
+- [FutureProvider](future_provider.md)
+- [StreamProvider](stream_provider.md)
+- [ProxyProvider](proxy_provider.md)
+- [A more complex app example](final_example.md)

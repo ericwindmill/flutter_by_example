@@ -1,5 +1,5 @@
 ---
-title: "Using `Context` extension methods (instead of Selector)"
+title: "Using context extensions for more control"
 author: "Eric Windmill"
 category: "Flutter State and Logic Example Apps"
 subSection: "Provider"

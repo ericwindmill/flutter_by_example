@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter/foundation.dart';
-import 'package:provider/provider.dart';
+import 'package:provider_examples/provider_for_dartpad.dart';
 
 class Person {
   Person({this.name, this.age});
