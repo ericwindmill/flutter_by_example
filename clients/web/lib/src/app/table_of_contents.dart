@@ -143,7 +143,8 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Stream Provider",
       "Using context extensions for more control",
       "ProxyProvider",
-      "ValueListenableProvider (for Animations)",
+//      "ValueListenableProvider (for animations)",
+      "Using .value constructors",
       "Putting it all together with a bigger example",
       // add a bunch of links throughout to the docs and shit
       // add some images because people like images
