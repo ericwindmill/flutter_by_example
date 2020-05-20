@@ -10,9 +10,9 @@ tags:
     - ChangeNotifierProvider
 ---
 
-Most of the examples you'll see on the internets is using the `ChangeNotifierProvider`, and it's also the class you'll likely use most often. This class is basically a provider-wrapper over a class that implements `ChangeNotifier`.
+Most of the examples you'll see on the internets is using the [ChangeNotifierProvider](https://pub.dev/documentation/provider/latest/provider/ChangeNotifierProvider-class.html), and it's also the class you'll likely use most often. This class is basically a provider-wrapper over a class that implements `ChangeNotifier`.
 
-According to the [Flutter docs](), a `ChangeNotifier` is 'a class that can be extended or mixed in that provides a change notification API using VoidCallback for notifications.' In practical terms, other objects can _listen_ to a `ChangeNotifier` object. And, when the change notifier gets updated values, it can call a method called 'notifyListeners()', and then any of it's listeners will respond with an action. Listening to a change notifier is done by registering a callback, which is called when `notifyListeners` is invoked.
+According to the [Flutter docs](https://api.flutter.dev/flutter/foundation/ChangeNotifier-class.html), a `ChangeNotifier` is 'a class that can be extended or mixed in that provides a change notification API using VoidCallback for notifications.' In practical terms, other objects can _listen_ to a `ChangeNotifier` object. And, when the change notifier gets updated values, it can call a method called 'notifyListeners()', and then any of it's listeners will respond with an action. Listening to a change notifier is done by registering a callback, which is called when `notifyListeners` is invoked.
 
 That description felt a bit esoteric, so let's just look at a quick `ChangeNotifier` example _without Provider_.
 
@@ -129,4 +129,4 @@ Two important notes about that code:
 
 Finally, just so you believe me, let's look at this running in a Flutter app:
 
-<!-- flutter gist -->
+<iframe style="height:800px" src="https://dartpad.dev/embed-flutter.html?theme=dark&run=true&split=60&id=54820e0eab2670dc24bd7354a0766bc8"></iframe>
