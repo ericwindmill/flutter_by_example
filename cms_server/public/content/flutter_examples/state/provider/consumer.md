@@ -106,6 +106,7 @@ I have to tweak the code a little bit to make this example mean anything, so I'm
  
 
 <iframe style="height:800px" src="https://dartpad.dev/embed-flutter.html?theme=dark&run=true&split=60&id=b11fc6602f5156543fddfd7041dd5aa2"></iframe>
+
 So, what's going on here? The `child` widget passed to `Consumer` is built on it own, outside of the `builder` callback. It is then _passed into_ the builder as it's third argument. While this API may look a little wonky, it's pretty impressive. It allows the child widget to go on livin', without being rebuilt, while all the widgets defined in the builder callback do get rebuilt. Wow.
 
 Again, the API might seem confusing, because it looks like the consumer now has two properties that build the widget tree below this Consumer. But, once you get used to looking at this, it's not a big deal. And totally worth the benefits.
