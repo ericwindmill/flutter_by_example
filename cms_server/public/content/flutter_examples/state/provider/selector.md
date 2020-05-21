@@ -17,7 +17,7 @@ For example, suppose you're working with a `User` class that has 25 properties o
 
 Because `Selector` is so similar to `Consumer`, we should just jump into a code example.  
 
-<!-- i frame -->
+<iframe style="height:800px" src="https://dartpad.dev/embed-flutter.html?theme=dark&run=true&split=60&id=2c3dd865bf286490fff5412c052dfd46"></iframe>
 
 In my opinion, consumer is probably just fine for most use cases, unless you have an app that's so large that each build is a big deal. That said, this is all moot, because towards the end of this tutorial we will see even better ways to "consume" your models.
 
