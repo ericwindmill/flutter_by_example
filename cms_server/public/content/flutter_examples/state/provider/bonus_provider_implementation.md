@@ -1,0 +1,7 @@
+Before I get in the weeds, I want to take a little detour to and talk about how Flutter builds (and rebuilds) UI. This'll be important because we're about to talk about objects made to display data from providers.
+
+As you may know, you (the Flutter developer) can tell Flutter to rebuild your UI by calling `setState`. You can also manage when your UI updates with other methods on the `State` object, such as `didChangeDependencies`. But, it all comes down to the `State` object. (`StatelessWidget`, on the other hand, are rebuilt when they're changed by configuration changes passed into them.)
+
+What you may not know is that widgets are just "configuration" or blue-prints for different objects called `Elements`. And, when you call `setState`, your widget is interfacing with a singular Element, and not the Flutter or the widget tree itself. It's the Element's responsibility to tell Flutter that it has changed, and it needs to be repainted. This is done this via a method called `markNeedsBuild`, which is called internally.
+
+This matters to us (provider users) because all objects in Provider are widgets (and elements). They know how to interface with Flutter. Which means you don't have to call `setState` if you're using Provider properly, because its toolbox of widgets are handling all of that for you. This is an important piece of Provider's design.
