@@ -11,14 +11,12 @@ tags:
     - future provider
 ---
 
-Future provider is exactly what it sounds like. It provides a `Future` value to it's descendents in the tree. If you've been following along with this tutorial so far, then you may be able to deduce how this provide works on it's own. With that in mind, we'll move quickly to a code example, and see how it's used.
-
-In a nutshell, `FutureProvider` is used to provide a value that might not be ready by the time the widget tree is ready to use it's values. Therefor, the main usecase of `FutureProvider` is to ensure that a null value isn't passed to any widgets. Future provider has a initial value, which widgets can use until the `Future` value is resolved. When resolved, it the `FutureProvider` will tell it's descendents to rebuild, using the new value. 
+In a nutshell, `FutureProvider` is used to provide a value that might not be ready by the time the widget tree is ready to use it's values. Therefor, the main use-case of `FutureProvider` is to ensure that a null value isn't passed to any widgets. Future provider has a initial value, which widgets can use until the `Future` value is resolved. When resolved, it the `FutureProvider` will tell it's descendents to rebuild, using the new value. 
 
 Importantly, this means that the widgets who rely on the value of a future provider will only rebuild once. It will display the initial value, and then the provided future value, and then won't rebuild again. 
 
 <div class="aside">
-    Future provider can be configured to change again if there is, for some reason, another new value from the future. But, if you anticipate multiple values from the provider, you should likely be using a `StreamProvider`.
+Future provider can be configured to change again if there is, for some reason, another new value from the future. But, if you anticipate multiple values from the provider, you should likely be using a `StreamProvider`.
 </div>  
 
 In this example, I'm going to add onto the previous examples by adding a new class called 'Home'. 
@@ -71,8 +69,10 @@ void main() {
 }
 ```
 
-With all that set up, look at this example of using the provided values.
+### Live example
 
-<!-- iframe -->
+<iframe style="height:800px" src="https://dartpad.dev/embed-flutter.html?theme=dark&run=true&split=60&id=9877e8a152f362e7f61174e5c6803cb5"></iframe>
+
+
 
 
