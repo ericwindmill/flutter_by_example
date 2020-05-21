@@ -17,22 +17,35 @@ In a nutshell, Provider gives us an easy, low boiler-plate way to separate busin
 
 ### What does Provider do for me? 
 
-It can be used in a variety of ways in your Flutter app. It can be used in-lieu of more robust state-management libraries, or along side them. It can be used with `InheritedWidgets` and `StatefulWidgets`, or again, in place of them. It makes two jobs easy on you:
+It can be used in a variety of ways in your Flutter app. It can be used in-lieu of more robust state-management libraries, or along side them. It can be used with `InheritedWidgets` and `StatefulWidgets`, or again, in place of them. It "does" two jobs:
 
 - Separates your state from your UI
 - Manages rebuilding UI based on state changes
 
-Those things may seem somewhat contradictory, and that may be what makes Provider so cool. Consider this widget tree that uses no libraries at all:
+Which makes loads of things simpler, from reasoning about state, to testing to refactoring. It makes your codebase _scalable_.
+
+Consider this widget tree that uses no libraries at all:
 
 <!-- widget tree image -->
+This widget tree is an extremely crude version of the `Counter` app we all know and love. It passes a callback (`onPressed`) to a `FloatingActionButton` and a `counter` property down a text widget. When `onPressed` is fired, it updates the counter. 
+![counter app widget tree](https://res.cloudinary.com/duqbhmg9i/image/upload/c_scale,h_673/v1590101648/flutter_by_example/widget_tree_0_no_provider_cv4dap.png)
 
 That's fine, but what happens when you need to refactor your code? What happens if state is shared between different widgets?  And what about testing? Your logic is sprinkled throughout your app, and tied to your widgets. This makes writing tests a pain, verbose, and hard to refactor.
 
+Imagine for a moment that you decided you no longer wanted a FloatingActionButton, and you wanted a button, as a child of the column, to trigger `onPressed`. That refactor would be a pain. 
+
+(I know my drawing... err... leaves a lot to be desired. But the gist is that all of the pink text is what would have to be refactored.)
+
+![refactoring the widget tree](https://res.cloudinary.com/duqbhmg9i/image/upload/c_scale,h_673/v1590101648/flutter_by_example/widget_tree_2_no_provider_c59lkm.png)
+
 But there's a better way. (To be fair, this can be done with just plain ol InheritedWidgets as well, but provider has a nicer API and less boiler plate.) 
 
-<!-- image of provider on one side and widget tree on the other --> 
+(Disclaimer! A provided widget _is_ in the widget tree, but I drew it separately because I feel it's helpful to think of them as different entities.)
 
-It's important to note that the Providers are indeed in the widget tree, but conceptually, they are separate.
+<!-- image of provider on one side and widget tree on the other -->
+ ![widget tree with provider](https://res.cloudinary.com/duqbhmg9i/image/upload/c_scale,h_673/v1590101650/flutter_by_example/widget_tree_w_provider_fupfto.png)
+
+If you're using this architecture, you can have any widget in the tree read the Counter and trigger counter methods. Refactor away, because it's much easier. And, you can test the logic of the counter with a simple unit test, no need to bring the the UI into it.
 
 ### Is provider a State Management library?
 
