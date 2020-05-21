@@ -143,11 +143,9 @@ const Map<String, Map<String, List<String>>> TABLE_OF_CONTENTS = {
       "Stream Provider",
       "Using context extensions for more control",
       "ProxyProvider",
-//      "ValueListenableProvider (for animations)",
       "Using .value constructors",
       "The final example (A shopping cart app)",
-      // add a bunch of links throughout to the docs and shit
-      // add some images because people like images
+      'For the curious: How is provider implemented',
     ],
     "Brick: Offline First with Rest": [
       "About Brick and setup",
