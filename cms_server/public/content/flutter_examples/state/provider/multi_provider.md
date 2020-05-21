@@ -10,12 +10,11 @@ tags:
     - multi provider
 ---
 
-In the `FutureProvider` lesson, you may have noticed something a bit ugly.
+In the `FutureProvider` lesson, you may have noticed something ugly.
 
 ```dart
 void main() {
   runApp(
-    // You can wrap multiple providers 
     Provider<Person>(
       create: (_) => Person(name: 'Yohan', age: 25),
       child: FutureProvider<String>(
@@ -52,7 +51,7 @@ void main() {
 }
 ```
 
-This isn't super readable. Provider includes a fix for this: [MultiProvider]().
+This isn't super readable. Provider includes a fix for this: [MultiProvider](https://pub.dev/documentation/provider/latest/provider/MultiProvider-class.html).
 
 `MultiProvider` let's you pass in a list of providers without nesting anything,
 
@@ -74,5 +73,5 @@ void main() {
 This widget just makes code more terse and readable. Which is always nice.
 
 <div class="aside">
-If you really want to be impressed by the creator of Provider, <a href="">Remi</a>, check out his package called <a href="">nested</a>, which provides widgets that can take a list of children and nest them. This is what `MultiProvider` is built on top of.  
+If you really want to be impressed by the creator of Provider, <a href="https://github.com/rrousselGit">Remi</a>, check out his package called <a href="https://pub.dev/packages/nested">nested</a>, which provides widgets that can take a list of children and nest them. This is what `MultiProvider` is built on top of.  
 </div>
