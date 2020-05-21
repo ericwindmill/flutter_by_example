@@ -62,8 +62,10 @@ class PersonsNameLabel extends StatelessWidget {
 ```
 
 <div class="aside">
-    There are a couple other examples in the <a href="https://pub.dev/packages/provider">documentation</a> that use value constructors, but they're extremely specific and outside the scope of this tutorial.
+There are a couple other examples in the <a href="https://pub.dev/packages/provider">documentation</a> that use value constructors, but they're extremely specific and outside the scope of this tutorial.
 </div>
 
 
-<!-- iframe -->
+### Live example of a .value constructor
+
+<iframe style="height:800px" src="https://dartpad.dev/embed-flutter.html?theme=dark&run=true&split=60&id=db1df1bdb09a60f81308e589f60810d4"></iframe>
