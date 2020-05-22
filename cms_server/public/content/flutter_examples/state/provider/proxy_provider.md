@@ -12,7 +12,7 @@ tags:
 
 ProxyProvider is the tough to grok at first, but it's quite useful. It let's you pass values from one provided model to another, to create a value from two (or more) providers.
 
-<!-- diagram of passing one provider into the next -->
+![proxy provider cartoon](https://res.cloudinary.com/duqbhmg9i/image/upload/c_scale,h_800/v1590180537/flutter_by_example/proxy_provider_bwrvtq.jpg)
 
 Right off the bat, here's some things to keep in mind before looking at the code:
 
