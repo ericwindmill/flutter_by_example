@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+
 class Product {
   final String name;
   final double cost;
@@ -7,8 +9,8 @@ class Product {
   Product({this.name, this.cost});
 }
 
-class Cart {
-  final List<Product> products = [];
+class Cart with ChangeNotifier {
+  List<Product> products = [];
 
   double get total {
     return products.fold(0.0, (double currentTotal, Product nextProduct) {
@@ -17,6 +19,10 @@ class Cart {
   }
 
   void addToCart(Product product) => products.add(product);
+  void removeFromCart(Product product) {
+    products.remove(product);
+    notifyListeners();
+  }
 }
 
 class User {
@@ -66,7 +72,7 @@ class MockDatabase {
 
     var i = 0;
     while (i < 10) {
-      await Future.delayed(Duration(seconds: 6), () {
+      await Future.delayed(Duration(seconds: 1), () {
         allProducts.add(_productsInDatabase[i]);
       });
       i++;

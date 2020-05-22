@@ -9,9 +9,9 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        Provider<Cart>(create: (_) => Cart()),
         Provider<User>.value(value: user),
         Provider<Store>(create: (_) => Store()),
+        ChangeNotifierProvider<Cart>(create: (_) => Cart()),
       ],
       child: MyApp(),
     ),
@@ -68,7 +68,7 @@ class ProductsPage extends StatelessWidget {
         initialData: [],
         create: (_) => Provider.of<Store>(context).allProductsForSale,
         catchError: (BuildContext context, error) => <Product>[],
-        child: Container(),
+        updateShouldNotify: (List<Product> last, List<Product> next) => last.length == next.length,
         builder: (BuildContext context, Widget child) {
           final items = context.watch<List<Product>>();
           return ListView.builder(
@@ -80,7 +80,8 @@ class ProductsPage extends StatelessWidget {
               final item = items[index];
               return ListTile(
                 title: Text(item.name ?? ''),
-                trailing: Text(item.cost.toString() ?? ''),
+                subtitle: Text('cost: ${item.cost.toString() ?? 'free'}'),
+                trailing: Text('Add to Cart'),
                 onTap: () {
                   context.read<Cart>().addToCart(item);
                 },
@@ -96,17 +97,45 @@ class ProductsPage extends StatelessWidget {
 class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Provider(
-      create: (_) => User(name: 'Yohan'),
-      builder: (BuildContext context, Widget body) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text(context.watch<User>().name + 's Cart'),
-          ),
-          body: body,
-        );
-      },
-      child: Container(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(context.watch<User>().name + 's Cart'),
+      ),
+      body: Consumer<Cart>(
+        builder: (BuildContext context, Cart cart, Widget child) {
+          return Column(
+            children: <Widget>[
+              Expanded(
+                child: ListView.builder(
+                  itemCount: cart.products.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    if (cart.products.isEmpty) {
+                      return Text('no products in cart');
+                    }
+                    final item = cart.products[index];
+                    return ListTile(
+                      title: Text(item.name ?? ''),
+                      subtitle: Text('cost: ${item.cost.toString() ?? 'free'}'),
+                      trailing: Text('tap to remove from cart'),
+                      onTap: () {
+                        context.read<Cart>().removeFromCart(item);
+                      },
+                    );
+                  },
+                ),
+              ),
+              Divider(),
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'TOTAL: ${context.select((Cart c) => c.total)}',
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+              )
+            ],
+          );
+        },
+      ),
     );
   }
 }

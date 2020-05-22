@@ -13,7 +13,6 @@ tags:
 
 There is no new information here, but rather an app that uses multiple providers, over multiple screens. That in mind, this lesson is broken down into two parts: the full app, running in [DartPad](), followed by some explanations for some of the parts that may be harder to grok.
 
-
 <!-- iframe full app -->
 
 <!-- other shit -->
