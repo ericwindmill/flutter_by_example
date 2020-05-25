@@ -64,17 +64,4 @@ But lastly, I need to point out a few important points to remember while using p
 * Again, Provider is not opinionated about state management. It is not going to force consistency like Redux would.
 
 
-The remainder of this tutorial will walk through the usage of Provider by walking through how you'd use most of the different classes in Provider:
-
-- [Basic Usage (Provider class)](provider_class.md)
-- [MultiProvider](multi_provider.md)
-- [Value Provider Constructors](value_constructors.md)
-- [Consumer](consumer.md)
-- [Selector](selector.md)
-- [Context extension methods](context_of.md)
-- [ChangeNotifierProvider](change_notifier_provider.md)
-- [FutureProvider](future_provider.md)
-- [StreamProvider](stream_provider.md)
-- [ProxyProvider](proxy_provider.md)
-- [A more complex app example](final_example.md)
-- [Bonus for the curious: How is Provider implemented](bonus_provider_implementation.md)
+The remainder of this tutorial will walk through the usage of Provider by walking through how you'd use most of the different classes in Provider.
