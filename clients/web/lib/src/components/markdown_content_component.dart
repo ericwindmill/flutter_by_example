@@ -22,7 +22,10 @@ import 'package:web/src/directives/markdown_directive.dart';
   pipes: [BlocPipe],
 )
 class MarkdownContentComponent {
-  bool get contentLoaded => (state is PageConfigurationBlocStateLoaded);
+  bool get contentLoaded {
+    print(state);
+    return (state is PageConfigurationBlocStateLoaded);
+  }
 
   @Input()
   PageConfigurationBlocState state;

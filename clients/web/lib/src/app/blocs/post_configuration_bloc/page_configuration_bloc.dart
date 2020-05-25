@@ -28,6 +28,7 @@ class PageConfigurationBloc extends Bloc<PageConfigurationBlocEvent, PageConfigu
       final pagination = Pagination.getForFrontmatter(postConfig.frontmatter);
       postConfig.frontmatter.previousPost = pagination.previousPost;
       postConfig.frontmatter.nextPost = pagination.nextPost;
+      print('yielding');
       yield PageConfigurationBlocStateLoaded(postConfig);
 
     }

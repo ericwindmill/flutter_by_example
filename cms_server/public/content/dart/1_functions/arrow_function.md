@@ -1,5 +1,5 @@
 ---
-title: "'Arrow' functions"
+title: "Arrow functions"
 author: "Eric"
 category: "Dart"
 subSection: "Dart Fundamentals"
