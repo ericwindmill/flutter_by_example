@@ -13,7 +13,7 @@ Say our system tracks every pizza a customer orders. This is an association, wit
 First, we'll make the association model in `lib/app/models/pizza.dart`:
 
 ```dart
-@ConnectOfflineFirst()
+@ConnectOfflineFirstWithRest()
 class Pizza extends OfflineFirstWithRestModel {
   /// Read more about `@Sqlite`: https://github.com/greenbits/brick/tree/master/packages/brick_sqlite#fields
   @Sqlite(unique: true)
