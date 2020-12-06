@@ -4,44 +4,51 @@ import 'package:web/src/app/repositories/table_of_contents_mem_cache.dart';
 import 'package:web/src/app/table_of_contents.dart';
 
 class Pagination {
-  PostFrontmatter previousPost;
-  PostFrontmatter nextPost;
-  String _nextTitle;
-  String _previousTitle;
+  final PostFrontmatter previousPost;
+  final PostFrontmatter nextPost;
 
-  Pagination.getForFrontmatter(PostFrontmatter frontmatter) {
-    _getPreviousAndNextPostTitlesForFrontmatter(frontmatter);
-    previousPost = _previousPost(frontmatter);
-    nextPost = _nextPost(frontmatter);
+  Pagination._({
+    this.previousPost,
+    this.nextPost,
+  });
+
+  factory Pagination.getForFrontmatter(PostFrontmatter frontmatter) {
+    return Pagination._(
+      previousPost: _previousPost(frontmatter),
+      nextPost: _nextPost(frontmatter),
+    );
   }
 
-  void _getPreviousAndNextPostTitlesForFrontmatter(PostFrontmatter frontmatter) {
-    final sortedPostNames =
-        TABLE_OF_CONTENTS[frontmatter.category][frontmatter.subSection].toList();
-    sortedPostNames.forEach((String postTitle) {
-      final postPosition = sortedPostNames.indexOf(frontmatter.title);
-      if (postPosition > -1) {
-        if (postPosition > 0) {
-          _previousTitle = sortedPostNames[postPosition - 1];
-        }
-        if (postPosition < sortedPostNames.length - 1) {
-          _nextTitle = sortedPostNames[postPosition + 1];
-        }
-      }
-      // micro optimization
-      if (_previousTitle != null || _nextTitle != null) return;
-    });
+  static PostFrontmatter _previousPost(PostFrontmatter currentPost) {
+    final sortedPostNames = TABLE_OF_CONTENTS[currentPost.category]
+            [currentPost.subSection]
+        .toList();
+    final postPosition = sortedPostNames.indexOf(currentPost.title);
+
+    // If post can't be found or if it's the first in the sub section
+    if (postPosition <= 0 || sortedPostNames.length == 1) return null;
+
+    return _findInTableOfContents(sortedPostNames[postPosition - 1]);
   }
 
-  PostFrontmatter _previousPost(PostFrontmatter frontmatter) {
+  static PostFrontmatter _nextPost(PostFrontmatter currentPost) {
+    final sortedPostNames = TABLE_OF_CONTENTS[currentPost.category]
+            [currentPost.subSection]
+        .toList();
+    final postPosition = sortedPostNames.indexOf(currentPost.title);
+
+    // if post can't be found or if the sub section only has one value
+    if (postPosition < 0 || sortedPostNames.length == 1) return null;
+
+    // if post is last in sub section
+    if (postPosition == (sortedPostNames.length - 1)) return null;
+
+    return _findInTableOfContents(sortedPostNames[postPosition + 1]);
+  }
+
+  static PostFrontmatter _findInTableOfContents(String postTitle) {
     return MemCache().flatTableOfContents?.firstWhere((PostFrontmatter f) {
-      return f.title == _previousTitle;
-    }, orElse: () => null);
-  }
-
-  PostFrontmatter _nextPost(PostFrontmatter frontmatter) {
-    return MemCache().flatTableOfContents?.firstWhere((PostFrontmatter f) {
-      return f.title == _nextTitle;
+      return f.title == postTitle;
     }, orElse: () => null);
   }
 }
